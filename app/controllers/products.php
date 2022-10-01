@@ -1,7 +1,8 @@
 <?php
-class Products{
+class Products extends controller {
     function index()
     {
-        echo "this is product controller and inside index method";
+        $data['page_title']="Products";
+        $this->view("samrons/index",$data);
     }
 }

@@ -2,10 +2,9 @@
 class Home extends controller {
 
     public function index($a="",$b=""){
-        echo $a;
-        echo $b;
-
-        $this->view("home");
+        
+        $data['page_title']="Home";
+        $this->view("samrons/index",$data);
 
     }
 }
