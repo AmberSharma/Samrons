@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +39,9 @@
                 <span class="text-muted px-2">|</span>
                 <a class="text-dark" href="">Support</a>
                 <span class="text-muted px-2">|</span>
-                <a class="text-dark" href="admin/index">Admin</a>
+                <a class="text-dark" href="<?php ROOT ?>/admin/index">Admin</a>
+
+
             </div>
         </div>
         <div class="col-lg-6 text-center text-lg-right">
@@ -57,14 +61,28 @@
                 <a class="text-dark pl-2" href="">
                     <i class="fab fa-youtube"></i>
                 </a>
+                <?php if(isset( $data['user_data']) ): ?>
+                    <span class="text-muted px-2">|</span>
+                    <b style="font: 25px">Welcome  <?php echo $data['user_data']["username"] ?></b>
+                <?php endif;?>
+                <?php if(isset( $data['user_data']) ): ?>
+                    <a href="logout" class="nav-item nav-link">Logout</a>
+                    <?php else:?>
+                    <a href="login" class="nav-item nav-link">Login</a>
+                    <a href="signup" class="nav-item nav-link">Register</a>
+                <?php endif;?>
+
+
+
+
             </div>
         </div>
     </div>
     <div class="row align-items-center py-3 px-xl-5">
         <div class="col-lg-3 d-none d-lg-block">
-            <a href="" class="text-decoration-none">
-                <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
-            </a>
+
+                <img src="<?php echo ASSETS ?>img/logo.png" height="100">
+
         </div>
         <div class="col-lg-6 col-6 text-left">
             <form action="">
@@ -145,10 +163,7 @@
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <div class="navbar-nav ml-auto py-0">
-                        <a href="login" class="nav-item nav-link">Login</a>
-                        <a href="" class="nav-item nav-link">Register</a>
-                    </div>
+
                 </div>
             </nav>
             <div id="header-carousel" class="carousel slide" data-ride="carousel">

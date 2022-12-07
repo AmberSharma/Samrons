@@ -1,4 +1,7 @@
-  <?php $this->view("samrons/header",$data); ?>
+  <?php $this->view("samrons/header",$data);
+  
+  ?>
+
     <!-- Featured Start -->
     <div class="container-fluid pt-5">
         <div class="row px-xl-5 pb-3">

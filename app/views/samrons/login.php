@@ -1,4 +1,4 @@
-<?php $this->view("samrons/header",$data); ?>
+<?php $this->view("samrons/loginheader",$data); ?>
 
 <!-- Contact Start -->
     <div class="container-fluid pt-5">
@@ -7,15 +7,15 @@
             <div class="col-lg-7 mb-5">
                 <div class="contact-form">
                     <div id="success"></div>
-                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                    <form  method="post">
                         <div class="control-group">
-                            <input type="text" class="form-control" id="name" placeholder="Username"
-                                required="required" data-validation-required-message="Please enter your username" />
+                            <input type="text" class="form-control" id="lemail" placeholder="Email/Phone Number"
+                                required="required" data-validation-required-message="Please enter your email" name="ulemail" />
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="password" class="form-control" id="email" placeholder="Your Password"
-                                required="required" data-validation-required-message="Please enter your password" />
+                            <input type="password" class="form-control" id="lpass" placeholder="Your Password"
+                                required="required" data-validation-required-message="Please enter your password" name="ulpass"/>
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">

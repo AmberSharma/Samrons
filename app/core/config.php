@@ -1,0 +1,14 @@
+<?php
+define("WEBSITE_TITLE",'SAMRONS');
+define("DB_NAME",'samrons');
+define("DB_USER","root");
+define("DB_PASS","root");
+define("DB_TYPE","mysql");
+define("DB_HOST","localhost");
+define("DEBUG",true);
+if(DEBUG){
+    ini_set("display_errors",1);
+}
+else{
+    ini_set("display_errors",0);
+}

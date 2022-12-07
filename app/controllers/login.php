@@ -2,9 +2,16 @@
 class Login extends controller {
 
     public function index($a="",$b=""){
-print("hello");
+
         $data['page_title']="Login";
-        $this->view("samrons/login",$data);
+        if($_SERVER["REQUEST_METHOD"]=="POST")
+        {
+            //die("inside login");
+            $user=$this->load_model("user");
+            $user->login($_POST);
+        }
+        $this->view("samrons/admin/login",$data);
+//        $this->view("samrons/admin/page-register", $data);
 
     }
 }
