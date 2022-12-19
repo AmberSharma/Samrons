@@ -288,3 +288,1081 @@ Stack trace:
 [07-Dec-2022 23:44:15 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
 [07-Dec-2022 23:45:14 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
 [07-Dec-2022 23:45:58 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[08-Dec-2022 13:29:57 Asia/Calcutta] PHP Notice:  Trying to get property 'url_address' of non-object in /var/www/html/Samrons/public_html/app/models/user.class.php on line 272
+[08-Dec-2022 13:30:01 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[08-Dec-2022 16:28:41 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[08-Dec-2022 16:36:17 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[08-Dec-2022 16:37:49 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[08-Dec-2022 16:41:28 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[08-Dec-2022 16:42:57 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[08-Dec-2022 16:44:15 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 10:30:20 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 10:52:52 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 22:18:42 Asia/Calcutta] PHP Notice:  Trying to get property 'url_address' of non-object in /var/www/html/Samrons/public_html/app/models/user.class.php on line 272
+[09-Dec-2022 22:28:39 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 22:45:20 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 22:52:54 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 22:55:20 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:10:11 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:13:53 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:14:10 Asia/Calcutta] PHP Notice:  Undefined index: optionid in /var/www/html/Samrons/public_html/app/controllers/vendor.php on line 35
+[09-Dec-2022 23:16:21 Asia/Calcutta] PHP Notice:  Undefined index: optionid in /var/www/html/Samrons/public_html/app/controllers/vendor.php on line 35
+[09-Dec-2022 23:16:33 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:16:47 Asia/Calcutta] PHP Notice:  Undefined index: optionid in /var/www/html/Samrons/public_html/app/controllers/vendor.php on line 35
+[09-Dec-2022 23:21:21 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:23:55 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:26:59 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:29:43 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:33:02 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:34:33 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:36:00 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:36:55 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:37:12 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:37:55 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:45:09 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:45:49 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:50:06 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:53:26 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:53:38 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:54:58 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:55:29 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:55:56 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:57:26 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:57:51 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[09-Dec-2022 23:59:34 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[10-Dec-2022 00:08:17 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[10-Dec-2022 00:10:38 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[10-Dec-2022 00:14:33 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[10-Dec-2022 00:16:59 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[10-Dec-2022 00:18:57 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[10-Dec-2022 00:19:12 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[10-Dec-2022 00:19:41 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[10-Dec-2022 00:21:28 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[10-Dec-2022 00:22:36 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 10:22:54 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 10:25:22 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 10:26:14 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 10:29:44 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 10:31:14 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 10:48:07 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 10:51:54 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 11:01:47 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 11:04:00 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 11:05:26 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 11:07:40 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 11:09:09 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 11:10:16 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 11:15:19 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 15:38:22 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 15:40:22 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 15:41:37 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 15:42:27 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 15:44:25 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 15:46:46 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 15:47:18 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 15:52:30 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 15:55:15 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 15:57:29 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 15:58:17 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 23:33:14 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[12-Dec-2022 23:38:23 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 00:09:18 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 19:48:53 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 19:54:33 Asia/Calcutta] PHP Notice:  Trying to get property 'url_address' of non-object in /var/www/html/Samrons/public_html/app/models/user.class.php on line 272
+[13-Dec-2022 19:54:52 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 19:56:51 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 19:57:05 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 19:57:20 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 19:57:36 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 20:15:51 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 20:18:43 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 20:20:07 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 20:20:37 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 20:25:01 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 20:25:38 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 20:30:05 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 20:30:32 Asia/Calcutta] PHP Parse error:  syntax error, unexpected ''productdetails[0][name]]);' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /var/www/html/Samrons/public_html/app/controllers/vendor.php on line 46
+[13-Dec-2022 20:31:49 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 20:32:14 Asia/Calcutta] PHP Warning:  Use of undefined constant name - assumed 'name' (this will throw an Error in a future version of PHP) in /var/www/html/Samrons/public_html/app/controllers/vendor.php on line 46
+[13-Dec-2022 20:33:23 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 20:43:24 Asia/Calcutta] PHP Notice:  Undefined index: productdetails in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 27
+[13-Dec-2022 20:43:24 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 27
+[13-Dec-2022 20:43:24 Asia/Calcutta] PHP Notice:  Undefined variable: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 29
+[13-Dec-2022 20:46:16 Asia/Calcutta] PHP Warning:  Illegal string offset 'name' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 28
+[13-Dec-2022 20:50:51 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 28
+[13-Dec-2022 20:59:19 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 21:06:00 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 21:17:19 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 21:17:57 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 21:21:47 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 21:35:16 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 21:35:17 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 21:44:39 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 21:44:41 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 21:45:58 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 21:45:59 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 21:46:44 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 21:46:45 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 21:47:49 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 21:47:49 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 21:49:12 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 21:49:12 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 21:52:35 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 21:52:35 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 21:53:41 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 21:53:41 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 21:56:39 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 21:56:39 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 21:58:32 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 21:58:32 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 22:00:19 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 22:00:19 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 22:03:58 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 22:03:59 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 22:04:13 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 22:04:14 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 22:05:48 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 22:05:49 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 22:06:31 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 22:06:31 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 22:08:34 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 22:08:35 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 22:09:42 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 22:09:42 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 22:14:42 Asia/Calcutta] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:34
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/vendor.php(47): vendormodel->add_productDetails(Array)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): vendor->addProductDetails('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 34
+[13-Dec-2022 22:18:41 Asia/Calcutta] PHP Parse error:  syntax error, unexpected '$productInfo' (T_VARIABLE), expecting ',' or ')' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 31
+[13-Dec-2022 22:19:03 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 22:19:04 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 22:30:06 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 22:30:08 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 22:34:00 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[13-Dec-2022 22:34:00 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[13-Dec-2022 22:37:08 Asia/Calcutta] PHP Fatal error:  Uncaught Error: [] operator not supported for strings in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:41
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/vendor.php(47): vendormodel->add_productDetails(Array)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): vendor->addProductDetails('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 41
+[13-Dec-2022 22:37:18 Asia/Calcutta] PHP Warning:  trim() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[13-Dec-2022 22:37:18 Asia/Calcutta] PHP Warning:  trim() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[13-Dec-2022 23:06:36 Asia/Calcutta] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /var/www/html/Samrons/public_html/app/core/database.php on line 47
+[13-Dec-2022 23:06:36 Asia/Calcutta] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /var/www/html/Samrons/public_html/app/core/database.php on line 47
+[13-Dec-2022 23:06:36 Asia/Calcutta] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /var/www/html/Samrons/public_html/app/core/database.php on line 47
+[13-Dec-2022 23:06:36 Asia/Calcutta] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /var/www/html/Samrons/public_html/app/core/database.php on line 47
+[13-Dec-2022 23:06:36 Asia/Calcutta] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /var/www/html/Samrons/public_html/app/core/database.php on line 47
+[14-Dec-2022 00:14:40 Asia/Calcutta] PHP Notice:  Trying to get property 'url_address' of non-object in /var/www/html/Samrons/public_html/app/models/user.class.php on line 272
+[14-Dec-2022 00:15:08 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 00:15:08 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 00:31:15 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 00:31:16 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 00:31:28 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 00:31:28 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 00:31:37 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 00:31:38 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 00:33:35 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 00:33:35 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 00:34:32 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 00:34:32 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 00:35:08 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 00:35:08 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 00:37:58 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 00:37:58 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 00:52:12 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 00:52:13 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 00:54:35 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 00:54:35 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 00:56:53 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 00:56:53 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:03:28 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:03:28 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:03:29 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:05:16 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:05:16 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:07:31 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:07:32 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:08:29 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:08:29 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:15:53 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:15:54 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:16:40 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:16:40 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:18:13 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:18:14 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:20:03 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:20:03 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:22:40 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:22:45 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:22:47 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:22:47 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:25:10 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:25:10 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:26:57 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:26:58 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:28:14 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:28:15 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:31:48 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:31:49 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:44:21 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:44:22 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 01:50:51 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 01:50:53 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 09:23:23 Asia/Calcutta] PHP Notice:  Trying to get property 'url_address' of non-object in /var/www/html/Samrons/public_html/app/models/user.class.php on line 272
+[14-Dec-2022 09:23:38 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 09:23:38 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 09:57:43 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 57
+[14-Dec-2022 11:24:39 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::write() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:81
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/vendor.php(47): vendormodel->add_productDetails(Array)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): vendor->addProductDetails('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 81
+[14-Dec-2022 11:28:25 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::write() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:81
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/vendor.php(47): vendormodel->add_productDetails(Array)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): vendor->addProductDetails('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 81
+[14-Dec-2022 11:30:13 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::write() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:82
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/vendor.php(47): vendormodel->add_productDetails(Array)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): vendor->addProductDetails('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 82
+[14-Dec-2022 11:39:50 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 11:39:51 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 12:14:54 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 12:14:55 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 12:16:07 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 12:16:07 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 12:16:07 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 12:16:07 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 12:16:07 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 12:16:07 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 12:16:07 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 12:17:10 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 12:17:10 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 12:31:06 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 12:31:07 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 12:49:18 Asia/Calcutta] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in /var/www/html/Samrons/public_html/app/core/database.php on line 47
+[14-Dec-2022 12:50:55 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 12:50:56 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 12:51:08 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 12:51:08 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 12:54:57 Asia/Calcutta] PHP Notice:  Undefined offset: 5 in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[14-Dec-2022 22:55:45 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 71
+[14-Dec-2022 22:55:45 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 22:56:19 Asia/Calcutta] PHP Notice:  Trying to get property 'url_address' of non-object in /var/www/html/Samrons/public_html/app/models/user.class.php on line 272
+[14-Dec-2022 23:00:35 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 73
+[14-Dec-2022 23:00:35 Asia/Calcutta] PHP Fatal error:  Cannot declare class vendormodel, because the name is already in use in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 4
+[14-Dec-2022 23:00:42 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 73
+[14-Dec-2022 23:00:42 Asia/Calcutta] PHP Fatal error:  Cannot declare class vendormodel, because the name is already in use in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 4
+[14-Dec-2022 23:02:10 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 73
+[14-Dec-2022 23:02:10 Asia/Calcutta] PHP Fatal error:  Cannot declare class vendormodel, because the name is already in use in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 4
+[14-Dec-2022 23:02:12 Asia/Calcutta] PHP Notice:  Undefined index: source in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 73
+[14-Dec-2022 23:02:12 Asia/Calcutta] PHP Fatal error:  Cannot declare class vendormodel, because the name is already in use in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 4
+[14-Dec-2022 23:08:17 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 23:09:54 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:121
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(65): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[14-Dec-2022 23:11:30 Asia/Calcutta] PHP Notice:  Undefined variable: db in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[14-Dec-2022 23:11:30 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to a member function read() on null in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:121
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(65): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[14-Dec-2022 23:11:54 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:122
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(65): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[14-Dec-2022 23:15:47 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:121
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(68): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[14-Dec-2022 23:15:50 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:121
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(68): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[14-Dec-2022 23:15:52 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:121
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(68): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[14-Dec-2022 23:16:48 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:122
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(67): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[14-Dec-2022 23:17:50 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:121
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(67): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[14-Dec-2022 23:17:53 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:121
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(67): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[14-Dec-2022 23:18:31 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:121
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(67): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[14-Dec-2022 23:18:32 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:121
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(67): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[14-Dec-2022 23:18:32 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:121
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(67): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[14-Dec-2022 23:18:48 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:121
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(67): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[14-Dec-2022 23:19:13 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:121
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(67): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[14-Dec-2022 23:20:38 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 23:26:14 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:121
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(90): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/controllers/admin.php(67): Admin->getCategories()
+#2 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addProduts('home')
+#3 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#4 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[14-Dec-2022 23:26:29 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 23:29:52 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 23:30:13 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to a member function get_options() on null in /var/www/html/Samrons/public_html/app/controllers/admin.php:75
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->getOptions('home')
+#1 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#2 {main}
+  thrown in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 75
+[14-Dec-2022 23:30:15 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to a member function get_options() on null in /var/www/html/Samrons/public_html/app/controllers/admin.php:75
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->getOptions('home')
+#1 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#2 {main}
+  thrown in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 75
+[14-Dec-2022 23:30:32 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to a member function get_options() on null in /var/www/html/Samrons/public_html/app/controllers/admin.php:75
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->getOptions('home')
+#1 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#2 {main}
+  thrown in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 75
+[14-Dec-2022 23:32:38 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 23:33:04 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 23:37:46 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 23:39:55 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 23:40:35 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 23:41:41 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::write() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:72
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/vendor.php(47): vendormodel->add_productDetails(Array)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): vendor->addProductDetails('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 72
+[14-Dec-2022 23:43:28 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[14-Dec-2022 23:43:49 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::write() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:72
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/vendor.php(47): vendormodel->add_productDetails(Array)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): vendor->addProductDetails('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 72
+[14-Dec-2022 23:45:44 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 11:20:33 Asia/Calcutta] PHP Notice:  Trying to get property 'url_address' of non-object in /var/www/html/Samrons/public_html/app/models/user.class.php on line 272
+[15-Dec-2022 11:20:38 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::read() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php:127
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/admin.php(56): vendormodel->get_categories(0)
+#1 /var/www/html/Samrons/public_html/app/core/app.php(32): Admin->addCategories('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(16): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 127
+[15-Dec-2022 11:26:28 Asia/Calcutta] PHP Notice:  Array to string conversion in /var/www/html/Samrons/public_html/app/models/user.class.php on line 270
+[15-Dec-2022 11:26:59 Asia/Calcutta] PHP Notice:  Array to string conversion in /var/www/html/Samrons/public_html/app/models/user.class.php on line 270
+[15-Dec-2022 11:28:17 Asia/Calcutta] PHP Notice:  Array to string conversion in /var/www/html/Samrons/public_html/app/models/user.class.php on line 270
+[15-Dec-2022 11:29:12 Asia/Calcutta] PHP Notice:  Trying to get property 'url_address' of non-object in /var/www/html/Samrons/public_html/app/models/user.class.php on line 270
+[15-Dec-2022 11:29:40 Asia/Calcutta] PHP Notice:  Trying to get property 'url_address' of non-object in /var/www/html/Samrons/public_html/app/models/user.class.php on line 270
+[15-Dec-2022 11:30:57 Asia/Calcutta] PHP Notice:  Trying to get property 'url_address' of non-object in /var/www/html/Samrons/public_html/app/models/user.class.php on line 270
+[15-Dec-2022 11:32:03 Asia/Calcutta] PHP Notice:  Array to string conversion in /var/www/html/Samrons/public_html/app/models/user.class.php on line 270
+[15-Dec-2022 11:33:45 Asia/Calcutta] PHP Warning:  Use of undefined constant url_address - assumed 'url_address' (this will throw an Error in a future version of PHP) in /var/www/html/Samrons/public_html/app/models/user.class.php on line 272
+[15-Dec-2022 11:40:00 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 11:48:04 Asia/Calcutta] PHP Warning:  Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 39
+[15-Dec-2022 11:48:04 Asia/Calcutta] PHP Notice:  Undefined index: id in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 39
+[15-Dec-2022 11:48:28 Asia/Calcutta] PHP Notice:  Undefined index: id in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 39
+[15-Dec-2022 11:49:29 Asia/Calcutta] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 39
+[15-Dec-2022 11:50:30 Asia/Calcutta] PHP Warning:  Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP) in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 39
+[15-Dec-2022 11:50:59 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 14:21:01 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 14:24:44 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 14:52:20 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 36
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 109
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: extension in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 111
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 115
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 107
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 109
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: extension in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 111
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 115
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 107
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 109
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: extension in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 111
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 115
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 107
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 109
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: extension in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 111
+[15-Dec-2022 14:57:11 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 115
+[15-Dec-2022 15:00:01 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 15:01:02 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 36
+[15-Dec-2022 15:01:02 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 109
+[15-Dec-2022 15:01:02 Asia/Calcutta] PHP Notice:  Undefined index: extension in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[15-Dec-2022 15:01:02 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 111
+[15-Dec-2022 15:01:02 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 115
+[15-Dec-2022 15:10:51 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 15:13:54 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 15:16:53 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 15:19:28 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 15:20:59 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 15:25:49 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 15:29:51 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 36
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 42
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 42
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 42
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 42
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 42
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 42
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 42
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 42
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 42
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 74
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 75
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 81
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 81
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 93
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 94
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 94
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 120
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 120
+[15-Dec-2022 15:31:46 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 130
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 37
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 43
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 43
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 43
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 43
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 43
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 43
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 43
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 43
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 43
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 75
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 82
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 82
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 94
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[15-Dec-2022 15:33:26 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 131
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 78
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 15:33:58 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 132
+[15-Dec-2022 15:40:37 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 78
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 15:41:53 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 132
+[15-Dec-2022 15:42:03 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 78
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 15:42:04 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 132
+[15-Dec-2022 15:43:46 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 78
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 15:45:54 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 132
+[15-Dec-2022 15:47:30 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 15:47:55 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 15:50:23 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 15:51:06 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 15:51:06 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 111
+[15-Dec-2022 15:51:06 Asia/Calcutta] PHP Notice:  Undefined index: extension in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[15-Dec-2022 15:51:06 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 113
+[15-Dec-2022 15:51:06 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 117
+[15-Dec-2022 23:08:55 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 23:22:11 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 23:23:12 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 23:23:12 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 111
+[15-Dec-2022 23:23:12 Asia/Calcutta] PHP Notice:  Undefined index: extension in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[15-Dec-2022 23:23:12 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 113
+[15-Dec-2022 23:23:12 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 117
+[15-Dec-2022 23:24:25 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 23:25:01 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 23:25:01 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 23:25:01 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 23:25:01 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 78
+[15-Dec-2022 23:25:01 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:25:01 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:25:01 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 23:25:01 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:25:01 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:25:01 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:25:01 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:25:01 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 132
+[15-Dec-2022 23:25:38 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 23:26:06 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 23:26:06 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 23:26:06 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 23:26:06 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 78
+[15-Dec-2022 23:26:06 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:26:06 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:26:06 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 23:26:06 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:26:06 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:26:06 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:26:06 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:26:06 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 132
+[15-Dec-2022 23:29:27 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 78
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:30:10 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 132
+[15-Dec-2022 23:31:07 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 78
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:32:26 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 132
+[15-Dec-2022 23:41:00 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 23:41:16 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 78
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:41:55 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 132
+[15-Dec-2022 23:42:24 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Warning:  Illegal string offset 'name' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Warning:  Illegal string offset 'name' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 78
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:43:00 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 132
+[15-Dec-2022 23:44:49 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 78
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:45:45 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 132
+[15-Dec-2022 23:46:47 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 23:46:47 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:46:47 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:46:47 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:46:47 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:46:47 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:46:47 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:46:47 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:46:47 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:46:47 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 23:46:47 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 23:46:47 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 78
+[15-Dec-2022 23:46:48 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:46:48 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:46:48 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 23:46:48 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:46:48 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:46:48 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:46:48 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:46:48 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 132
+[15-Dec-2022 23:48:23 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 23:49:49 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 23:49:49 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 44
+[15-Dec-2022 23:49:49 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 23:49:49 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 23:49:49 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 78
+[15-Dec-2022 23:49:49 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:49:49 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:49:49 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 23:49:49 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:49:49 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:49:49 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:49:49 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:49:49 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 132
+[15-Dec-2022 23:53:15 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Warning:  Illegal string offset 'name' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Warning:  Illegal string offset 'name' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Warning:  Illegal string offset 'name' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Warning:  Illegal string offset 'name' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Warning:  Illegal string offset 'name' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Warning:  Illegal string offset 'name' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Warning:  Illegal string offset 'name' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Warning:  Illegal string offset 'name' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Warning:  Illegal string offset 'name' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Warning:  Illegal string offset 'name' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Warning:  Illegal string offset 'name' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 76
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Notice:  Undefined index: prodesc in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 77
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Notice:  Undefined index: category in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 78
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[15-Dec-2022 23:54:17 Asia/Calcutta] PHP Notice:  Undefined index: proname in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 132
+[16-Dec-2022 00:01:10 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 00:01:31 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[16-Dec-2022 00:01:31 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[16-Dec-2022 00:01:31 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[16-Dec-2022 00:01:31 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[16-Dec-2022 00:01:31 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[16-Dec-2022 00:02:46 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 00:03:06 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[16-Dec-2022 00:03:06 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[16-Dec-2022 00:03:06 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[16-Dec-2022 00:03:06 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[16-Dec-2022 00:03:06 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[16-Dec-2022 00:04:14 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 49
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 49
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 49
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 55
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 59
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 61
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 94
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[16-Dec-2022 00:04:30 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 121
+[16-Dec-2022 00:05:40 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 49
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 49
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 49
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 55
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 59
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 61
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 55
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 55
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 55
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 55
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 55
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 55
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 55
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 55
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: value in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 55
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 45
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 94
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Warning:  pathinfo() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 116
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 108
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Warning:  pathinfo() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 116
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 108
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Warning:  pathinfo() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 116
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 123
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 123
+[16-Dec-2022 00:06:43 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 123
+[16-Dec-2022 00:08:37 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 00:09:32 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 38
+[16-Dec-2022 00:09:32 Asia/Calcutta] PHP Warning:  pathinfo() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 00:09:32 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[16-Dec-2022 00:09:32 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 116
+[16-Dec-2022 00:09:32 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 108
+[16-Dec-2022 00:09:32 Asia/Calcutta] PHP Warning:  pathinfo() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 00:09:32 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[16-Dec-2022 00:09:32 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 116
+[16-Dec-2022 09:45:55 Asia/Calcutta] PHP Warning:  Use of undefined constant url_address - assumed 'url_address' (this will throw an Error in a future version of PHP) in /var/www/html/Samrons/public_html/app/models/user.class.php on line 277
+[16-Dec-2022 09:47:17 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Warning:  pathinfo() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 116
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 108
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Warning:  pathinfo() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 116
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 108
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Warning:  pathinfo() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 116
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 108
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Warning:  pathinfo() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[16-Dec-2022 09:53:56 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 116
+[16-Dec-2022 10:00:33 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[16-Dec-2022 10:00:33 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 116
+[16-Dec-2022 10:00:33 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 108
+[16-Dec-2022 10:00:33 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[16-Dec-2022 10:00:33 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 116
+[16-Dec-2022 10:00:33 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 108
+[16-Dec-2022 10:00:33 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[16-Dec-2022 10:00:33 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 116
+[16-Dec-2022 10:00:33 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 108
+[16-Dec-2022 10:00:33 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[16-Dec-2022 10:00:33 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 116
+[16-Dec-2022 10:05:58 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 114
+[16-Dec-2022 10:05:58 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:05:58 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:05:58 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 114
+[16-Dec-2022 10:05:58 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:05:58 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:05:58 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 114
+[16-Dec-2022 10:05:58 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:05:58 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:05:58 Asia/Calcutta] PHP Notice:  Undefined index: productimage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 114
+[16-Dec-2022 10:05:58 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:06:54 Asia/Calcutta] PHP Notice:  Undefined index: productImage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 114
+[16-Dec-2022 10:06:54 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:06:54 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:06:54 Asia/Calcutta] PHP Notice:  Undefined index: productImage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 114
+[16-Dec-2022 10:06:54 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:06:54 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:06:54 Asia/Calcutta] PHP Notice:  Undefined index: productImage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 114
+[16-Dec-2022 10:06:54 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:06:54 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:06:54 Asia/Calcutta] PHP Notice:  Undefined index: productImage in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 114
+[16-Dec-2022 10:06:54 Asia/Calcutta] PHP Warning:  move_uploaded_file() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:10:26 Asia/Calcutta] PHP Notice:  Undefined index: options in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[16-Dec-2022 10:10:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 83
+[16-Dec-2022 10:10:26 Asia/Calcutta] PHP Notice:  Undefined variable: optionValueId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 95
+[16-Dec-2022 10:10:26 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[16-Dec-2022 10:10:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[16-Dec-2022 10:10:26 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[16-Dec-2022 10:10:26 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 122
+[16-Dec-2022 10:12:19 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:12:19 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:12:19 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:15:25 Asia/Calcutta] PHP Warning:  move_uploaded_file(/var/www/html/Samrons/public_html/public/../app/uploads/57_62/BxeBQ2WFbV.jpg): failed to open stream: No such file or directory in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:15:25 Asia/Calcutta] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php4WBqLh' to '/var/www/html/Samrons/public_html/public/../app/uploads/57_62/BxeBQ2WFbV.jpg' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:15:25 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:15:25 Asia/Calcutta] PHP Warning:  move_uploaded_file(/var/www/html/Samrons/public_html/public/../app/uploads/57_62/rCZW3yjvbP.jpg): failed to open stream: No such file or directory in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:15:25 Asia/Calcutta] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpTqtxLw' to '/var/www/html/Samrons/public_html/public/../app/uploads/57_62/rCZW3yjvbP.jpg' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:15:25 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:15:25 Asia/Calcutta] PHP Warning:  move_uploaded_file(/var/www/html/Samrons/public_html/public/../app/uploads/57_62/Yzhld7AeeJ.jpg): failed to open stream: No such file or directory in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:15:25 Asia/Calcutta] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpETb6LL' to '/var/www/html/Samrons/public_html/public/../app/uploads/57_62/Yzhld7AeeJ.jpg' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:15:25 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:15:25 Asia/Calcutta] PHP Warning:  move_uploaded_file(/var/www/html/Samrons/public_html/public/../app/uploads/57_62/IwMN2dUqIF.jpg): failed to open stream: No such file or directory in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:15:25 Asia/Calcutta] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpf293O0' to '/var/www/html/Samrons/public_html/public/../app/uploads/57_62/IwMN2dUqIF.jpg' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:17:43 Asia/Calcutta] PHP Warning:  move_uploaded_file(/var/www/html/Samrons/public_html/public/../app/uploads//6767_66/F6GffPgnOg.jpg): failed to open stream: No such file or directory in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:17:43 Asia/Calcutta] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpKa7rXT' to '/var/www/html/Samrons/public_html/public/../app/uploads//6767_66/F6GffPgnOg.jpg' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:17:43 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:17:43 Asia/Calcutta] PHP Warning:  move_uploaded_file(/var/www/html/Samrons/public_html/public/../app/uploads//6767_66/C7ivaXgHv7.jpg): failed to open stream: No such file or directory in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:17:43 Asia/Calcutta] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpPQiEaL' to '/var/www/html/Samrons/public_html/public/../app/uploads//6767_66/C7ivaXgHv7.jpg' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:17:43 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:17:43 Asia/Calcutta] PHP Warning:  move_uploaded_file(/var/www/html/Samrons/public_html/public/../app/uploads//6767_66/OeKRVzuaA0.jpg): failed to open stream: No such file or directory in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:17:43 Asia/Calcutta] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php1qrspC' to '/var/www/html/Samrons/public_html/public/../app/uploads//6767_66/OeKRVzuaA0.jpg' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:17:44 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:17:44 Asia/Calcutta] PHP Warning:  move_uploaded_file(/var/www/html/Samrons/public_html/public/../app/uploads//6767_66/7Mtd28d3Sk.jpg): failed to open stream: No such file or directory in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:17:44 Asia/Calcutta] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpkwR8Et' to '/var/www/html/Samrons/public_html/public/../app/uploads//6767_66/7Mtd28d3Sk.jpg' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:22:42 Asia/Calcutta] PHP Warning:  move_uploaded_file(/var/www/html/Samrons/public_html/public/../app/uploads/67_70/ZqoUm5Z0Hu.jpg): failed to open stream: No such file or directory in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:22:42 Asia/Calcutta] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpUmV09Z' to '/var/www/html/Samrons/public_html/public/../app/uploads/67_70/ZqoUm5Z0Hu.jpg' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:22:42 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:22:42 Asia/Calcutta] PHP Warning:  move_uploaded_file(/var/www/html/Samrons/public_html/public/../app/uploads/67_70/47olIooDci.jpg): failed to open stream: No such file or directory in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:22:42 Asia/Calcutta] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpjSliyX' to '/var/www/html/Samrons/public_html/public/../app/uploads/67_70/47olIooDci.jpg' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:22:42 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:22:42 Asia/Calcutta] PHP Warning:  move_uploaded_file(/var/www/html/Samrons/public_html/public/../app/uploads/67_70/90QZ34lHdP.jpg): failed to open stream: No such file or directory in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:22:42 Asia/Calcutta] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpsfWHWU' to '/var/www/html/Samrons/public_html/public/../app/uploads/67_70/90QZ34lHdP.jpg' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:22:42 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:22:42 Asia/Calcutta] PHP Warning:  move_uploaded_file(/var/www/html/Samrons/public_html/public/../app/uploads/67_70/wkukyEHYhZ.jpg): failed to open stream: No such file or directory in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:22:42 Asia/Calcutta] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpH6gdlS' to '/var/www/html/Samrons/public_html/public/../app/uploads/67_70/wkukyEHYhZ.jpg' in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 10:25:30 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:25:30 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 10:25:30 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:02:00 Asia/Calcutta] PHP Warning:  Use of undefined constant url_address - assumed 'url_address' (this will throw an Error in a future version of PHP) in /var/www/html/Samrons/public_html/app/models/user.class.php on line 277
+[16-Dec-2022 11:02:27 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 11:06:30 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 11:10:13 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:10:13 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:10:13 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:10:13 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:10:13 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:10:13 Asia/Calcutta] PHP Notice:  Undefined offset: 5 in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 125
+[16-Dec-2022 11:15:35 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:15:35 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:15:35 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:15:35 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:15:35 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:15:35 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:15:35 Asia/Calcutta] PHP Notice:  Undefined offset: 5 in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 125
+[16-Dec-2022 11:16:55 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:16:55 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:16:55 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:16:55 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:16:55 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:16:55 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 110
+[16-Dec-2022 11:16:55 Asia/Calcutta] PHP Notice:  Undefined offset: 5 in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 125
+[16-Dec-2022 11:25:36 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 109
+[16-Dec-2022 11:25:36 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 109
+[16-Dec-2022 11:25:36 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 109
+[16-Dec-2022 11:25:36 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 109
+[16-Dec-2022 11:25:36 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 109
+[16-Dec-2022 11:25:36 Asia/Calcutta] PHP Notice:  Undefined offset: 5 in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 124
+[16-Dec-2022 13:15:11 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 13:16:36 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 13:18:02 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 37
+[16-Dec-2022 13:18:02 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 112
+[16-Dec-2022 13:28:43 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 13:33:27 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 13:34:00 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 37
+[16-Dec-2022 13:34:00 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[16-Dec-2022 13:34:00 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[16-Dec-2022 13:34:00 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 125
+[16-Dec-2022 13:34:00 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 125
+[16-Dec-2022 13:34:02 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 37
+[16-Dec-2022 13:34:02 Asia/Calcutta] PHP Notice:  Undefined index: skuId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[16-Dec-2022 13:34:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 96
+[16-Dec-2022 13:34:02 Asia/Calcutta] PHP Notice:  Undefined variable: productVariantId in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 125
+[16-Dec-2022 13:34:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 125
+[16-Dec-2022 13:34:43 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 13:36:53 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 13:38:10 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 13:39:42 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 13:40:22 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 13:44:31 Asia/Calcutta] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE) in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 56
+[16-Dec-2022 13:44:41 Asia/Calcutta] PHP Parse error:  syntax error, unexpected '$data' (T_VARIABLE) in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 56
+[16-Dec-2022 13:45:40 Asia/Calcutta] PHP Notice:  Undefined index: filename in /var/www/html/Samrons/public_html/public/images.php on line 5
+[16-Dec-2022 13:51:30 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 37
+[16-Dec-2022 13:51:30 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 113
+[16-Dec-2022 13:56:30 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 37
+[16-Dec-2022 13:56:30 Asia/Calcutta] PHP Notice:  Array to string conversion in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 79
+[16-Dec-2022 13:56:30 Asia/Calcutta] PHP Notice:  Array to string conversion in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 79
+[16-Dec-2022 13:56:30 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 13:57:23 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 37
+[16-Dec-2022 13:57:23 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 13:58:53 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 37
+[16-Dec-2022 13:58:53 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 13:59:49 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 37
+[16-Dec-2022 13:59:50 Asia/Calcutta] PHP Notice:  Array to string conversion in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 79
+[16-Dec-2022 13:59:50 Asia/Calcutta] PHP Notice:  Array to string conversion in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 79
+[16-Dec-2022 13:59:50 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 14:01:07 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 37
+[16-Dec-2022 14:01:07 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
+[16-Dec-2022 17:28:54 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 37
+[16-Dec-2022 17:28:55 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 119

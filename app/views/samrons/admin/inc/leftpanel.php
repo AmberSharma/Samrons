@@ -75,6 +75,7 @@
                         <li><i class="menu-icon fa fa-sign-in"></i><a href="register.php">Register</a></li>
                         <li><i class="menu-icon fa fa-paper-plane"></i><a href="pages-forget.html">Forget Pass</a></li>
                         <li><i class="menu-icon fa fa-sign-in"></i><a href="addCategories">Add Category</a></li>
+                        <li><i class="menu-icon fa fa-sign-in"></i><a href="addProduts">Add Products</a></li>
                     </ul>
                 </li>
             </ul>

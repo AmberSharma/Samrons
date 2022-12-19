@@ -1,58 +1,57 @@
 <?php
 
-class Database{
+class Database
+{
 
-    public static  $conn;
+    public static $conn;
 
     function __construct()
     {
-        try{
-
-            $string=DB_TYPE.":host=".DB_HOST.";dbname=".DB_NAME;
-            self::$conn=new PDO($string,DB_USER,DB_PASS);
-        }
-        catch (PDOException $e)
-        {
+        try {
+            $string = DB_TYPE . ":host=" . DB_HOST . ";dbname=" . DB_NAME;
+            self::$conn = new PDO($string, DB_USER, DB_PASS);
+        } catch (PDOException $e) {
             die($e->getMessage());
-    }
+        }
 
     }
+
     public static function getInstance()
     {
-        if(self::$conn)
-        {
+        if (self::$conn) {
             return self::$conn;
         }
-       return $instance = new self();
+
+        return $instance = new self();
 
     }
-   public  function read($query,$data=[])
-   {
 
-       $stm=self::$conn->prepare($query);
+    public function read($query, $data = [])
+    {
 
-       $result=$stm->execute($data);
-       if($result){
-           $data=$stm->fetchAll(PDO::FETCH_ASSOC);
-           if(is_array($data) && !empty($data))
-           {
-               return $data;
-           }
-       }
-       return false;
-   }
-   public function write($query,$data=[])
-   {
-       $stm=self::$conn->prepare($query);
-       $stm->execute($data);
-       print_r($stm);
-       print_r($data);
-       if(self::$conn->lastInsertId() != "")
-       {
-           return self::$conn-> lastInsertId();
-       }
-       return false;
-   }
+        $stm = self::$conn->prepare($query);
+
+        $result = $stm->execute($data);
+        if ($result) {
+            $data = $stm->fetchAll(PDO::FETCH_ASSOC);
+            if (is_array($data) && !empty($data)) {
+                return $data;
+            }
+        }
+        return false;
+    }
+
+    public function write($query, $data = [])
+    {
+        $stm = self::$conn->prepare($query);
+        $stm->execute($data);
+        print_r($stm);
+        print_r($data);
+        if (self::$conn->lastInsertId() != "") {
+            return self::$conn->lastInsertId();
+        }
+        return false;
+    }
 
 }
 

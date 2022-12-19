@@ -28,4 +28,23 @@ class vendor extends controller
             return $data;
         }
     }
+    public function getoptionValues()
+    {
+
+        $vendata = $this->load_model("vendormodel");
+        if (!empty($_POST["source"]) && $_POST["source"] == "script") {
+            print_r($vendata->get_optionvalues($_POST['optionid']));
+        }
+        else {
+            $data['optionvalues'] = $vendata->get_optionvalues($_POST['optionid']);
+            return json_encode($data, true);
+        }
+
+    }
+    public function addProductDetails()
+    {
+        $vendata = $this->load_model("vendormodel");
+        $vendata->add_productDetails($_POST);
+
+    }
 }

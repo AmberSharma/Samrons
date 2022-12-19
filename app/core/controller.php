@@ -15,7 +15,7 @@ class controller
 
         if(file_exists("../app/models/".$model.".class.php"))
         {
-            include "../app/models/".$model.".class.php";
+            include_once "../app/models/".$model.".class.php";
             return $m = new $model();
         }
         return false;

@@ -3,6 +3,11 @@ use App\Utils\BaseConstants;
 
 class User
 {
+    private $db;
+
+    public function  __construct() {
+        $this->db = Database::getInstance();
+    }
     private $error = "";
 
     public function sign_up()
@@ -31,7 +36,7 @@ class User
             $this->error .= "Password do not match<br>";
 
         }
-        $db=Database::getInstance();
+
 /*$sql="select * from users where email=:email limit 1";
 $arr['email']= $data['uemail'];
         $check=$db->read($sql,$arr);
@@ -84,7 +89,7 @@ $arr['email']= $data['uemail'];
                     :photo,
                     :sign,
                     :caccountnumber)";
-               $result=$db->write($query,$data);
+               $result=$this->db->write($query,$data);
 
                if (!file_exists(FILEUPLOAD.$result)) {
                    $dir_path=getcwd()."/../app/uploads/";
@@ -140,7 +145,7 @@ $arr['email']= $data['uemail'];
                         :upass,
                         :uphone )";
 
-               $result=$db->write($query,$data);
+               $result=$this->db->write($query,$data);
                if(!empty($result)){
                    $message = "You are Successfully Registered. Please Proceed to Login";
                    header("Location:".ROOT."signup?message={$message}");
@@ -156,7 +161,7 @@ $arr['email']= $data['uemail'];
             return "Email is not in valid format";
         }
         else {
-            $db = Database::getInstance();
+
             if($usertype=="User") {
                 $sql = "select count(1) as count from users where email=:uemail";
             }
@@ -164,7 +169,7 @@ $arr['email']= $data['uemail'];
                 $sql = "select count(1) as count from vendors where email=:uemail";
             }
             $arr['uemail'] = $email;
-            $checkIfEmailExists = $db->read($sql, $arr);
+            $checkIfEmailExists = $this->db->read($sql, $arr);
             if (is_array($checkIfEmailExists) && $checkIfEmailExists[0]->count != 0) {
                 return "This email is already registered";
             }
@@ -176,7 +181,7 @@ $arr['email']= $data['uemail'];
             return "Phone Number is not valid";
         }
         else {
-            $db = Database::getInstance();
+
             if($usertype=="User") {
                 $sql = "select count(1) as count from users where phone_number=:uphone";
             }
@@ -185,7 +190,7 @@ $arr['email']= $data['uemail'];
                 $sql = "select count(1) as count from vendors where phone_number=:uphone";
             }
             $arr['uphone'] = $phone;
-            $checkIfPhoneExists = $db->read($sql, $arr);
+            $checkIfPhoneExists = $this->db->read($sql, $arr);
             if (is_array($checkIfPhoneExists) && $checkIfPhoneExists[0]->count != 0) {
                 return "This Phone Number is already registered";
             }
@@ -206,7 +211,7 @@ $arr['email']= $data['uemail'];
 
     public function login()
     {
-print_r($_POST);
+
         $data = array();
         $phone=0;
 
@@ -225,7 +230,7 @@ print_r($_POST);
         else {
             $this->error = "plese enter a valid email or phone number";
         }
-        $db=Database::getInstance();
+
 
         if ($this->error =='') {
 
@@ -241,7 +246,7 @@ print_r($_POST);
 
                 $query = "select * from users where email=:uemail and password=:upass";
             }
-            $result=$db->read($query,$data);
+            $result=$this->db->read($query,$data);
             if(is_array($result)){
                 $_SESSION['url_address']=$result[0]["url_address"];
                 print_r( $_SESSION['url_address']);
@@ -254,7 +259,7 @@ print_r($_POST);
 
         }
         elseif ($_POST['chktype']=='Vendor'){
-                print_r("Vendor");
+
 
 
             if($phone==1)
@@ -263,13 +268,13 @@ print_r($_POST);
                 $query = "select * from vendors where phone_number=:uphone and password=:upass";
             }
             else {
-
+                print_r("Vendor");
                 $query = "select * from vendors where email=:uemail and password=:upass";
             }
-            $result=$db->read($query,$data);
-
+            $result=$this->db->read($query,$data);
+            print_r($result);
             if(is_array($result)){
-                $_SESSION['url_address']=$result[0]->url_address;
+                $_SESSION['url_address']=$result[0][url_address];
                 print_r( $_SESSION['url_address']);
 
                 header("Location:".ROOT."admin/dashboard");
@@ -311,10 +316,10 @@ print_r($_POST);
         {
             $arr["url"]=$_SESSION["url_address"];
 
-            $db = Database::getInstance();
+
             $sql = "select * from users where url_address=:url";
 
-            $checklogin = $db->read($sql, $arr);
+            $checklogin = $this->db->read($sql, $arr);
 
             if (is_array($checklogin) ) {
                 return json_decode(json_encode($checklogin[0]), true);

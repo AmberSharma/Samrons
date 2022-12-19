@@ -15,10 +15,10 @@ function fileValidation(id) {
         if (fileInput.files && fileInput.files[0]) {
             let reader = new FileReader();
             let imagePreview = id+"ImagePreview";
-            reader.onload = function(e) {
-                document.getElementById(imagePreview).style.display='block';
-                document.getElementById(imagePreview).innerHTML = '<img height="50" width="50" src="' + e.target.result +'" />';
-            };
+            // reader.onload = function(e) {
+            //     document.getElementById(imagePreview).style.display='block';
+            //     document.getElementById(imagePreview).innerHTML = '<img height="50" width="50" src="' + e.target.result +'" />';
+            // };
 
             reader.readAsDataURL(fileInput.files[0]);
         }
