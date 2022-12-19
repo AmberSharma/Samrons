@@ -2,8 +2,12 @@
 <header id="header" class="header">
     <div class="top-left">
         <div class="navbar-header">
-            <a class="navbar-brand" href="./"><img src="<?php echo ASSETS ?>img/logo.png" alt="Logo"></a>
-            <a class="navbar-brand hidden" href="./"><img src="../app/views/samrons/admin/images/logo2.png" alt="Logo"></a>
+            <a class="navbar-brand" href="./">
+                <img src="<?php echo ASSETS ?>img/logo-4.png" alt="Logo">
+            </a>
+<!--            <a class="navbar-brand hidden" href="./">-->
+<!--                <img src="../app/views/samrons/admin/images/logo2.png" alt="Logo">-->
+<!--            </a>-->
             <script type="text/javascript" src="<?php echo ASSETS ?>js/script.js"></script>
             <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
         </div>
