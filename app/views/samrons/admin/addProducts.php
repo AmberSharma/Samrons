@@ -165,20 +165,24 @@ include_once "inc/leftpanel.php";
                     <div class="col-lg-4">
                         <div class="card">
                             <div class="card-header"><strong>Product Category</strong></div>
-                            <label>Parent Category</label>
-                            <div class="form-group row">
-                                <div class="col-sm-12">
-                                    <select id="cat__0" class="form-control category-subset" name="category">
-                                        <option> ---Select Category---</option>
-                                        <?php
-                                        if (!empty($data['categories'])) {
-                                            $categoriesArr = json_decode($data['categories'], true);
-                                            foreach ($categoriesArr as $category) {
-                                                echo "<option value='" . $category['id'] . "'>" . $category['name'] . "</option>";
-                                            }
-                                        }
-                                        ?>
-                                    </select>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <div class="form-floating">
+                                            <select id="cat__0" class="form-control category-subset" name="category">
+                                                <option> ---Select Category---</option>
+                                                <?php
+                                                if (!empty($data['categories'])) {
+                                                    $categoriesArr = json_decode($data['categories'], true);
+                                                    foreach ($categoriesArr as $category) {
+                                                        echo "<option value='" . $category['id'] . "'>" . $category['name'] . "</option>";
+                                                    }
+                                                }
+                                                ?>
+                                            </select>
+                                            <label>Parent Category</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -272,31 +276,6 @@ include_once "inc/leftpanel.php";
     </div><!-- /#right-panel -->
 
     <!-- Right Panel -->
-
-    <!-- Scripts -->
-
-    <!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>-->
-    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>-->
-    <!--<script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>-->
-    <!---->
-    <!---->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/datatables.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/dataTables.bootstrap.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/dataTables.buttons.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/buttons.bootstrap.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/jszip.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/vfs_fonts.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/buttons.html5.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/buttons.print.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/buttons.colVis.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/datatables-init.js"></script>-->
-
-
-    <!--<script type="text/javascript">-->
-    <!--    $(document).ready(function() {-->
-    <!--        $('#bootstrap-data-table-export').DataTable();-->
-    <!--    } );-->
-    <!--</script>-->
 
 
 </body>
