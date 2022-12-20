@@ -77,9 +77,6 @@ $(document).ready(function() {
                     valueCombination[index][key] = [];
                 }
                 valueCombination[index][key] = item.value;
-
-
-
             });
         });
 
@@ -138,14 +135,33 @@ $(document).ready(function() {
 
     $("#addCategoryButton").click(function () {
         if($("#addCategoryForm").valid()) {
+            let data = new FormData();
+            let formData = $('form').serializeArray();
+
+            $.each(formData, function (key, input) {
+                if(input.name == "category") {
+                    if (input.value != 0) {
+                        data.append(input.name, input.value);
+                    }
+                } else {
+                    data.append(input.name, input.value);
+                }
+            });
+            let formField = $('input[name="categoryimage"]');
+            formField.each(function(key, item) {
+                let fileData = item.files;
+                for (var i = 0; i < fileData.length; i++) {
+                    data.append("categoryimage[]", fileData[i]);
+                }
+            })
+
             $.ajax({
                 url: '/vendor/addCategories',   // sending ajax request to this url
                 type: 'post',
-                data: {
-                    'cname': $('#cname').val(),
-                    'desc': $('#desc').val(),
-                    'parentcat': categoryId,
-                },
+                dataType: "JSON",
+                processData: false,
+                contentType: false,
+                data: data,
                 success: function (response) {
 
                     // reset form fields after submit

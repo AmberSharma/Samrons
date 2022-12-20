@@ -83,7 +83,7 @@ include_once "inc/leftpanel.php";
                                 <div class="form-group row">
                                     <div class="col-sm-6">
                                         <div class="form-floating">
-                                            <select id="cat__0" class="form-control category-subset">
+                                            <select id="cat__0" name="category" class="form-control category-subset">
                                                 <option></option>
                                                 <?php
                                                 if (!empty($data['categories'])) {

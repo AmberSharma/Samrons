@@ -9,7 +9,17 @@ class User
         $this->db = Database::getInstance();
     }
     private $error = "";
-
+    public function get_categories($parentid)
+    {
+        $data['parent_id']=$parentid;
+        //$db=Database::getInstance();
+        $sql="select id,parent_id,name,category_image from categories where parent_id=:parent_id";
+        $categories = $this->db->read($sql, $data);
+        if (is_array($categories) )
+        {
+            return json_encode($categories, true);
+        }
+    }
     public function sign_up()
     {
 

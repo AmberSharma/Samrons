@@ -12,7 +12,6 @@ class vendor extends controller
         //$data['categories']=$vendata->get_categories(0);
 
         $vendata->add_categories($_POST);
-
     }
 
     public function getsubcategories()
