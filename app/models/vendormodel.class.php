@@ -13,16 +13,31 @@ class vendormodel
     public function add_categories()
     {
         $data = array();
+
         $_POST = array_map('trim', $_POST);
 
         $data['cname']  = $_POST['cname'];
         $data['desc']   = $_POST['desc'];
-        $data['parentcat']   = $_POST['parentcat'];
+        $data['parentcat']   = isset($_POST['category'])? $_POST['category']: 0;
+        $data['catimage'] =$this->generateRandomString();
+        $info = pathinfo($_FILES["categoryimage"]["name"][0]);
+        $ext = $info["extension"];
+        $data['catimage']=$data['catimage'].".".$ext;
 
-
-        $query="insert into categories(parent_id,name,description) values (:parentcat,:cname,:desc)";
+        $query="insert into categories(parent_id,name,description,category_image) values (:parentcat,:cname,:desc,:catimage)";
         $result=$this->db->write($query,$data);
+        if (!file_exists(FILEUPLOAD."category")) {
+            $dir_path = getcwd() . "/../app/uploads/";
+            mkdir(getcwd() . "/../app/uploads/" . "category", 0777, true);
 
+            $info = pathinfo($_FILES["categoryimage"]["name"][0]);
+            $ext = $info["extension"];
+            $filename = $data['catimage'];
+
+
+            $target_dir = $dir_path ."category" . "/" . $filename;
+            move_uploaded_file($_FILES["categoryimage"]["tmp_name"][0], $target_dir);
+        }
 
         if(is_array($result)){
             $message = "You are Successfully Registered. Try Login after couple of hours after Admin Approval";
