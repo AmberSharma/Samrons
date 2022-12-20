@@ -10,12 +10,14 @@ class vendor extends controller
 //        {
 //            $data['user_data']=$user_data;
 //        }
-        $data['page_title']="Home";
+        $data['page_title']="";
+        $this->view("samrons/admin/addCategories",$data);
         $vendata = $this->load_model("vendormodel");
         //$data['categories']=$vendata->get_categories(0);
 
          $vendata->add_categories($_POST);
-        $this->view("samrons/admin/addCategories",$data);
+
+
 
     }
     public function getsubcategories()

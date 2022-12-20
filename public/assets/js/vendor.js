@@ -36,7 +36,7 @@ $(document).ready(function() {
                         html += '<div class="col-sm-6">';
                         html += '<label>Sub Category</label>';
                         html += '<select id="' + attributeId + '" class="form-control category-subset" name="category">';
-                        html += '<option> ---Select Sub Category---</option>';
+                        html += '<option value="0"> ---Select Sub Category---</option>';
 
                         if (response !== undefined) {
                             response.forEach(function (item, index) {
@@ -146,14 +146,32 @@ $(document).ready(function() {
                 $('#cat__' + (categoryDropdownLength - 1)).addClass('error');
             }
 
+            let data = new FormData();
+            let formData = $('form').serializeArray();
+
+            $.each(formData, function (key, input) {
+                if(input.name == "category") {
+                    if (input.value != 0) {
+                        data.append(input.name, input.value);
+                    }
+                } else {
+                    data.append(input.name, input.value);
+                }
+            });
+            let formField = $('input[name="categoryimage"]');
+            formField.each(function(key, item) {
+                let fileData = item.files;
+                for (var i = 0; i < fileData.length; i++) {
+                    data.append("categoryimage[]", fileData[i]);
+                }
+            })
             $.ajax({
                 url: '/vendor/addCategories',   // sending ajax request to this url
                 type: 'post',
-                data: {
-                    'cname': $('#cname').val(),
-                    'desc': $('#desc').val(),
-                    'parentcat': categoryId,
-                },
+                dataType: "JSON",
+                processData: false,
+                contentType: false,
+                data: data,
                 success: function (response) {
 
                     // reset form fields after submit

@@ -1,4 +1,5 @@
   <?php $this->view("samrons/header",$data);
+  print_r($data['parentCategoryData']);die("ghhhhj");
   
   ?>
 
@@ -37,6 +38,7 @@
     <!-- Categories Start -->
     <div class="container-fluid pt-5">
         <div class="row px-xl-5 pb-3">
+            <?php foreach ($data['parentCategoryData'] as $key =>$catdata)?>
             <div class="col-lg-4 col-md-6 pb-1">
                 <div class="cat-item d-flex flex-column border mb-4" style="padding: 30px;">
                     <p class="text-right">15 Products</p>
