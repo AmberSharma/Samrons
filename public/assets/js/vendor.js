@@ -32,18 +32,23 @@ $(document).ready(function() {
                     if (response.length > 0) {
                         let attributeId = 'cat__' + (elementIdNum + 1);
                         response = JSON.parse(response);
-                        let html = '<div class="form-group row subcategory" >';
-                        html += '<div class="col-sm-6">';
-                        html += '<label>Sub Category</label>';
-                        html += '<select id="' + attributeId + '" class="form-control category-subset" name="category">';
-                        html += '<option> ---Select Sub Category---</option>';
-
                         if (response !== undefined) {
+                            let parentClass = self.parent().parent().attr("class");
+                            let html = '';
+                            html = '<div class="form-group row subcategory" >';
+                            html += '<div class="'+parentClass+'">';
+                            html += '<div class="form-floating">';
+                            html += '<select id="' + attributeId + '" class="form-control category-subset" name="category">';
+                            html += '<option> ---Select Sub Category---</option>';
                             response.forEach(function (item, index) {
                                 html += '<option value=' + item['id'] + '>' + item['name'] + '</option>';
                             });
-
-                            self.parent().parent().after(html);
+                            html += '</select>';
+                            html += '<label>Sub Category</label>';
+                            html += '</div>';
+                            html += '</div>';
+                            html += '</div>';
+                            self.parent().parent().parent().after(html);
                             $("#" + attributeId).on('change', function () {
                                 renderSubCategory($(this));
                             });
@@ -132,20 +137,7 @@ $(document).ready(function() {
     }
 
     $("#addCategoryButton").click(function () {
-        if($('#cname').val().length == 0) {
-            $('#cname').addClass('error');
-        }
-        else if($('#desc').val().length == 0) {
-            $('#desc').addClass('error');
-        } else {
-            let categoryDropdownLength = $("[id^=cat__]").length;
-            let categoryId = $('#cat__' + (categoryDropdownLength - 1)).val();
-            if ((categoryDropdownLength - 1) == 0) {
-                categoryId = 0;
-            } else if (isNaN(parseInt(categoryId))) {
-                $('#cat__' + (categoryDropdownLength - 1)).addClass('error');
-            }
-
+        if($("#addCategoryForm").valid()) {
             $.ajax({
                 url: '/vendor/addCategories',   // sending ajax request to this url
                 type: 'post',

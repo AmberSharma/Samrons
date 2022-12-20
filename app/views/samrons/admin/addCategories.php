@@ -62,7 +62,7 @@ include_once "inc/leftpanel.php";
                             <strong class="card-title">Add Category</strong>
                         </div>
                         <div class="card-body">
-                            <form  method="post" enctype="multipart/form-data">
+                            <form id="addCategoryForm" method="post" enctype="multipart/form-data">
 
                                 <div class="form-group row">
                                     <div class="col-sm-6">
@@ -139,24 +139,6 @@ include_once "inc/leftpanel.php";
 <!-- Right Panel -->
 
 <!-- Scripts -->
-
-<script src="<?php echo ASSETS ?>js/data-table/datatables.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/dataTables.bootstrap.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/dataTables.buttons.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/buttons.bootstrap.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/jszip.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/vfs_fonts.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/buttons.html5.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/buttons.print.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/buttons.colVis.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/datatables-init.js"></script>
-
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#bootstrap-data-table-export').DataTable();
-    } );
-</script>
 
 
 </body>
