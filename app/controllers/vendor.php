@@ -1,38 +1,50 @@
 <?php
 
-
 class vendor extends controller
 {
-    use BaseTrait;
+    use \App\Core\BaseTrait;
 
-    public function addCategories()
+    /** @var vendormodel $vendorModel */
+    private $vendorModel;
+
+
+    public function __construct()
     {
-        $data['page_title'] = "Add Category";
-        $vendata = $this->load_model("vendormodel");
-        //$data['categories']=$vendata->get_categories(0);
+        $this->vendorModel = $this->load_model("vendormodel");
+    }
 
-        $vendata->add_categories($_POST);
+    public function index(){
+
+        $data['page_title']="Home";
+
+        $this->view("samrons/admin/dashboard",$data);
+
+    }
+
+    public function addProducts(){
+        $data['options'] = $this->getOptions();
+        $data['categories'] = $this->getCategories();
+
+        $this->view("samrons/admin/addProducts",$data);
+
     }
 
     public function getsubcategories()
     {
-        $vendata = $this->load_model("vendormodel");
         if (!empty($_POST["source"]) && $_POST["source"] == "script") {
-            print_r($vendata->get_categories($_POST['parentid']));
+            print_r($this->vendorModel->get_categories($_POST['parentid']));
         } else {
-            $data['categories'] = $vendata->get_categories($_POST['parentid']);
+            $data['categories'] = $this->vendorModel->get_categories($_POST['parentid']);
             return $data;
         }
     }
 
     public function getoptionValues()
     {
-
-        $vendata = $this->load_model("vendormodel");
         if (!empty($_POST["source"]) && $_POST["source"] == "script") {
-            print_r($vendata->get_optionvalues($_POST['optionid']));
+            print_r($this->vendorModel->get_optionvalues($_POST['optionid']));
         } else {
-            $data['optionvalues'] = $vendata->get_optionvalues($_POST['optionid']);
+            $data['optionvalues'] = $this->vendorModel->get_optionvalues($_POST['optionid']);
             return json_encode($data, true);
         }
 
@@ -40,8 +52,32 @@ class vendor extends controller
 
     public function addProductDetails()
     {
-        $vendata = $this->load_model("vendormodel");
-        $vendata->add_productDetails($_POST);
+        $this->vendorModel->add_productDetails();
+    }
 
+    public function addBulkProducts()
+    {
+        $this->vendorModel->add_bulkProductDetails();
+    }
+
+    public function getOptions() {
+        if (isset($_POST["source"]) && $_POST["source"] == "script") {
+            print_r($this->vendorModel->get_options());
+        } else {
+            return $this->vendorModel->get_options();
+        }
+    }
+
+    public function getCategories() {
+        $parentId = 0;
+
+        if(!empty($_POST["parentid"])) {
+            $parentId = $_POST["parentid"];
+        }
+        if (isset($_POST["source"]) && $_POST["source"] == "script") {
+            print_r($this->vendorModel->get_categories($parentId));
+        } else {
+            return $this->vendorModel->get_categories($parentId);
+        }
     }
 }

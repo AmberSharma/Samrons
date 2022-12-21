@@ -45,8 +45,6 @@ class Database
     {
         $stm = self::$conn->prepare($query);
         $stm->execute($data);
-        print_r($stm);
-        print_r($data);
         if (self::$conn->lastInsertId() != "") {
             return self::$conn->lastInsertId();
         }

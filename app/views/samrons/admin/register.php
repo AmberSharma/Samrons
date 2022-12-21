@@ -42,9 +42,9 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6">
-                                <label>User Name</label>
-                                <input type="text" class="form-control" id="uname" placeholder="User Name" name="uname"
-                                       required="required" data-validation-required-message="Please enter your username">
+                                <label>Name</label>
+                                <input type="text" class="form-control" id="uname" placeholder="Name" name="uname"
+                                       required="required" data-validation-required-message="Please enter your name">
                             </div>
                             <div class="col-sm-6">
                                 <label>Phone Number</label>

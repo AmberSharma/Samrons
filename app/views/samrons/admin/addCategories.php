@@ -1,4 +1,3 @@
-<? print_r( $data); ?>
 <?php
 include_once "inc/header.php";
 ?>
@@ -62,6 +61,9 @@ include_once "inc/leftpanel.php";
                             <strong class="card-title">Add Category</strong>
                         </div>
                         <div class="card-body">
+                            <div class="alert alert-success" style="display:none;">
+                                <strong>Success!</strong> Category Got added Successfully
+                            </div>
                             <form id="addCategoryForm" method="post" enctype="multipart/form-data">
 
                                 <div class="form-group row">
@@ -98,8 +100,7 @@ include_once "inc/leftpanel.php";
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input class="form-control" type="file" name="categoryimage" id="categoryimage"
-                                               onchange="return fileValidation(this.id);">
+                                        <input class="form-control" type="file" name="categoryimage" id="categoryimage">
                                     </div>
                                 </div>
 

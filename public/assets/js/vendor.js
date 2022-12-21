@@ -39,7 +39,7 @@ $(document).ready(function() {
                             html += '<div class="'+parentClass+'">';
                             html += '<div class="form-floating">';
                             html += '<select id="' + attributeId + '" class="form-control category-subset" name="category">';
-                            html += '<option> ---Select Sub Category---</option>';
+                            html += '<option value="0"> ---Select Sub Category---</option>';
                             response.forEach(function (item, index) {
                                 html += '<option value=' + item['id'] + '>' + item['name'] + '</option>';
                             });
@@ -136,7 +136,8 @@ $(document).ready(function() {
     $("#addCategoryButton").click(function () {
         if($("#addCategoryForm").valid()) {
             let data = new FormData();
-            let formData = $('form').serializeArray();
+            let formData = $("#addCategoryForm").serializeArray();
+            data.append('source',  'script');
 
             $.each(formData, function (key, input) {
                 if(input.name == "category") {
@@ -151,21 +152,38 @@ $(document).ready(function() {
             formField.each(function(key, item) {
                 let fileData = item.files;
                 for (var i = 0; i < fileData.length; i++) {
-                    data.append("categoryimage[]", fileData[i]);
+                    data.append("categoryimage", fileData[i]);
                 }
             })
 
             $.ajax({
-                url: '/vendor/addCategories',   // sending ajax request to this url
+                url: '/admin/addCategories',   // sending ajax request to this url
                 type: 'post',
                 dataType: "JSON",
                 processData: false,
                 contentType: false,
                 data: data,
-                success: function (response) {
+                success: function (data) {
+                    let response = JSON.parse(JSON.stringify(data));
+                    $(".invalid-feedback").remove();
+                    if(response.success == false) {
+                        $.each(response.error, function(index,jsonObject){
+                            $.each(jsonObject, function(key,val){
+                                let html = '<div id="'+index+'-error" class="error invalid-feedback">';
+                                html += val;
+                                html += '</div>';
+                                $("#"+index).addClass("is-invalid").after(html);
+                            });
+                        });
+                    }
 
-                    // reset form fields after submit
-                    //$("#regForm")[0].reset();
+                    if (response.success == true) {
+                        $('.alert').show()
+                        $(".alert").delay(4000).slideUp(1000, function() {
+                            $(this).hide();
+                        });
+                        $("#addCategoryForm")[0].reset();
+                    }
                 },
                 error: function (e) {
                     $("#result").html("Some error encountered.");
