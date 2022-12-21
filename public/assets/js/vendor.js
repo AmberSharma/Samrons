@@ -32,18 +32,23 @@ $(document).ready(function() {
                     if (response.length > 0) {
                         let attributeId = 'cat__' + (elementIdNum + 1);
                         response = JSON.parse(response);
-                        let html = '<div class="form-group row subcategory" >';
-                        html += '<div class="col-sm-6">';
-                        html += '<label>Sub Category</label>';
-                        html += '<select id="' + attributeId + '" class="form-control category-subset" name="category">';
-                        html += '<option value="0"> ---Select Sub Category---</option>';
-
                         if (response !== undefined) {
+                            let parentClass = self.parent().parent().attr("class");
+                            let html = '';
+                            html = '<div class="form-group row subcategory" >';
+                            html += '<div class="'+parentClass+'">';
+                            html += '<div class="form-floating">';
+                            html += '<select id="' + attributeId + '" class="form-control category-subset" name="category">';
+                            html += '<option value="0"> ---Select Sub Category---</option>';
                             response.forEach(function (item, index) {
                                 html += '<option value=' + item['id'] + '>' + item['name'] + '</option>';
                             });
-
-                            self.parent().parent().after(html);
+                            html += '</select>';
+                            html += '<label>Sub Category</label>';
+                            html += '</div>';
+                            html += '</div>';
+                            html += '</div>';
+                            self.parent().parent().parent().after(html);
                             $("#" + attributeId).on('change', function () {
                                 renderSubCategory($(this));
                             });
@@ -72,9 +77,6 @@ $(document).ready(function() {
                     valueCombination[index][key] = [];
                 }
                 valueCombination[index][key] = item.value;
-
-
-
             });
         });
 
@@ -132,22 +134,10 @@ $(document).ready(function() {
     }
 
     $("#addCategoryButton").click(function () {
-        if($('#cname').val().length == 0) {
-            $('#cname').addClass('error');
-        }
-        else if($('#desc').val().length == 0) {
-            $('#desc').addClass('error');
-        } else {
-            let categoryDropdownLength = $("[id^=cat__]").length;
-            let categoryId = $('#cat__' + (categoryDropdownLength - 1)).val();
-            if ((categoryDropdownLength - 1) == 0) {
-                categoryId = 0;
-            } else if (isNaN(parseInt(categoryId))) {
-                $('#cat__' + (categoryDropdownLength - 1)).addClass('error');
-            }
-
+        if($("#addCategoryForm").valid()) {
             let data = new FormData();
-            let formData = $('form').serializeArray();
+            let formData = $("#addCategoryForm").serializeArray();
+            data.append('source',  'script');
 
             $.each(formData, function (key, input) {
                 if(input.name == "category") {
@@ -162,20 +152,38 @@ $(document).ready(function() {
             formField.each(function(key, item) {
                 let fileData = item.files;
                 for (var i = 0; i < fileData.length; i++) {
-                    data.append("categoryimage[]", fileData[i]);
+                    data.append("categoryimage", fileData[i]);
                 }
             })
+
             $.ajax({
-                url: '/vendor/addCategories',   // sending ajax request to this url
+                url: '/admin/addCategories',   // sending ajax request to this url
                 type: 'post',
                 dataType: "JSON",
                 processData: false,
                 contentType: false,
                 data: data,
-                success: function (response) {
+                success: function (data) {
+                    let response = JSON.parse(JSON.stringify(data));
+                    $(".invalid-feedback").remove();
+                    if(response.success == false) {
+                        $.each(response.error, function(index,jsonObject){
+                            $.each(jsonObject, function(key,val){
+                                let html = '<div id="'+index+'-error" class="error invalid-feedback">';
+                                html += val;
+                                html += '</div>';
+                                $("#"+index).addClass("is-invalid").after(html);
+                            });
+                        });
+                    }
 
-                    // reset form fields after submit
-                    //$("#regForm")[0].reset();
+                    if (response.success == true) {
+                        $('.alert').show()
+                        $(".alert").delay(4000).slideUp(1000, function() {
+                            $(this).hide();
+                        });
+                        $("#addCategoryForm")[0].reset();
+                    }
                 },
                 error: function (e) {
                     $("#result").html("Some error encountered.");

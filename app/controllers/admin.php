@@ -1,5 +1,10 @@
 <?php
-class Admin extends controller {
+use App\Utils\BaseConstants;
+require_once "BaseTrait.php";
+
+class Admin extends controller
+{
+    use \App\Core\BaseTrait;
 
     /** @var vendormodel $vendorModel */
     private $vendorModel;
@@ -43,56 +48,49 @@ class Admin extends controller {
         $this->view("samrons/admin/datatable",$data);
 
     }
-    public function addCategories(){
-//        $user=$this->load_model("user");
-//        $user_data=$user->check_login();
-//        if(is_array($user_data))
-//        {
-//            $data['user_data']=$user_data;
-//        }
-        $data['page_title']="Home";
-        /*$vendata = $this->load_model("adminmodel");
-        $data['vendordata']= $vendata->get_vendor();*/
-        //$vendata = $this->load_model("vendormodel");
+    public function addNewCategory(){
+        $data['page_title']="Add Category";
         $data['categories']=$this->vendorModel->get_categories(0);
 
-
         $this->view("samrons/admin/addCategories",$data);
-
-    }
-    public function addProduts(){
-//        $user=$this->load_model("user");
-//        $user_data=$user->check_login();
-//        if(is_array($user_data))
-//        {
-//            $data['user_data']=$user_data;
-//        }
-        $data['page_title']="Home";
-        $data['options']=$this->getOptions();
-        $data['categories']=$this->getCategories();
-
-        $this->view("samrons/admin/addProducts",$data);
-
     }
 
-    public function getOptions() {
-        if (isset($_POST["source"]) && $_POST["source"] == "script") {
-            print_r($this->vendorModel->get_options());
+    public function addCategories()
+    {
+        $response = [];
+
+        $this->validateFieldExists([
+            BaseConstants::CATEGORY_NAME,
+            BaseConstants::CATEGORY_DESCRIPTION
+        ], $_POST);
+
+        $this->validateFieldExists([
+            BaseConstants::CATEGORY_IMAGE
+        ], $_FILES);
+
+        $errors = $this->getError();
+
+        if (!isset($errors[BaseConstants::CATEGORY_NAME]))
+            $_POST[BaseConstants::CATEGORY_NAME] = $this->validateFormData("input", BaseConstants::CATEGORY_NAME, $_POST[BaseConstants::CATEGORY_NAME]);
+        if (!isset($errors[BaseConstants::CATEGORY_DESCRIPTION]))
+            $_POST[BaseConstants::CATEGORY_DESCRIPTION] = $this->validateFormData("input", BaseConstants::CATEGORY_DESCRIPTION, $_POST[BaseConstants::CATEGORY_DESCRIPTION]);
+        if (!isset($errors[BaseConstants::CATEGORY_IMAGE]))
+            $_FILES[BaseConstants::CATEGORY_IMAGE] = $this->validateFormData("image", BaseConstants::CATEGORY_IMAGE, $_FILES[BaseConstants::CATEGORY_IMAGE]);
+
+        if (!empty($this->getError())) {
+            $response["success"] = false;
+            $response["error"] = $this->getError();
         } else {
-            return $this->vendorModel->get_options();
+            $response["success"] = $this->vendorModel->add_categories();
+            if (!empty($response["success"])) {
+                $response["message"] = "Category got added Successfully";
+            } else {
+                $response["error"] = "Could not add new Category";
+            }
         }
-    }
 
-    public function getCategories() {
-        $parentId = 0;
-
-        if(!empty($_POST["parentid"])) {
-            $parentId = $_POST["parentid"];
-        }
-        if (isset($_POST["source"]) && $_POST["source"] == "script") {
-            print_r($this->vendorModel->get_categories($parentId));
-        } else {
-            return $this->vendorModel->get_categories($parentId);
+        if ($_POST["source"] == "script") {
+            print_r(json_encode($response, true));
         }
     }
 }
