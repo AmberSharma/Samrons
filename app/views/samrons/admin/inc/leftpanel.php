@@ -83,9 +83,19 @@
 <!--                        <li><i class="menu-icon fa fa-sign-in"></i><a href="login.php">Login</a></li>-->
 <!--                        <li><i class="menu-icon fa fa-sign-in"></i><a href="register.php">Register</a></li>-->
 <!--                        <li><i class="menu-icon fa fa-paper-plane"></i><a href="pages-forget.html">Forget Pass</a></li>-->
-                        <li><i class="menu-icon fa fa-sign-in"></i><a href="addNewCategory">Add Category</a></li>
-                        <li><i class="menu-icon fa fa-sign-in"></i><a href="addProducts">Add Products</a></li>
-                        <li><i class="menu-icon fa fa-sign-in"></i><a href="addBulkProducts">Add Bulk Products</a></li>
+                        <?php
+                            if (isset($_SESSION["type"]) == 1) {
+                        ?>
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="addProducts">Add Products</a></li>
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="bulkUploadImages">Bulk Upload Images</a></li>
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="addBulkProducts">Add Bulk Products</a></li>
+                        <?php
+                            } else {
+                        ?>
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="addNewCategory">Add Category</a></li>
+                        <?php
+                            }
+                        ?>
                     </ul>
                 </li>
             </ul>

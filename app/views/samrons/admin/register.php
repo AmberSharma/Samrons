@@ -1,7 +1,6 @@
 <?php
     include_once "inc/header.php";
 ?>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="<?php echo ASSETS ?>js/script.js"></script>
 <body class="bg-dark">
 
@@ -9,106 +8,110 @@
         <div class="container">
             <div class="login-content">
                 <div class="login-logo">
-                    <a href="index.php">
-                        <img class="align-content" src="images/logo.png" alt="">
+                    <a href="/">
+                        <img class="align-content" src="<?php echo ASSETS ?>img/logo-3.png" alt="">
                     </a>
                 </div>
                 <div class="login-form">
+                    <?php
+                    if (isset($_REQUEST["message"])) {
+                    ?>
+                        <div class="alert alert-success">
+                            <strong>Success!</strong> <?php echo $_REQUEST["message"]; ?>
+                        </div>
+                    <?php
+                    }
+                    ?>
+                    <?php
+                    if (isset($data["errors"])) {
+                        ?>
+                        <div class="alert alert-danger">
+                            <strong>Error!</strong>
+                            <div>
+                            <?php
+                            foreach ($data["errors"] as $key => $value) {
+                                ?>
+                                <strong><?php echo $key.": " ?> </strong> <?php echo implode(",", $value);?><br/>
+                                <?php
+                            }
+                            ?>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    ?>
 
-                    <div style="margin-bottom: 2%">
-                        <span style="color: #00c292; font-size: 20px;"><b><?php echo isset($_REQUEST["message"])?$_REQUEST["message"]:""; ?></b></span>
-                    </div>
-                    <form  method="post" enctype="multipart/form-data">
+                    <form  method="post" enctype="multipart/form-data" id="registerForm">
                         <div class="row">
                             <label>Register As:</label>
-<!--                        <div class="btn-group col">-->
-<!---->
-<!--                            <input type="radio" class="btn-check radio_user_type" id="chkUser" name="chktype" autocomplete="off"  value="User" checked />-->
-<!--                            <label class="btn btn-warning" for="chkUser">Customer</label>-->
-<!---->
-<!--                            <input type="radio" class="btn-check radio_user_type"  id="chkVendor" name="chktype" value="Vendor" autocomplete="off" />-->
-<!--                            <label class="btn btn-warning" for="chkVendor">Vendor</label>-->
-<!---->
-<!--                        </div>-->
-                            <div class="btn-group" data-toggle="buttons">
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check user_type" name="chktype" id="chkUser" value="User" autocomplete="off">
+                                <label class="btn btn-outline-warning" for="chkUser">Customer</label>
 
-                                <label class="btn btn-warning active">
-                                    <input type="radio" name="chktype" id="chkUser" autocomplete="off" value="User" checked> Customer
-                                </label>
-                                <label class="btn btn-warning">
-                                    <input type="radio" name="chktype" id="chkVendor" autocomplete="off" value="Vendor"> Vendor
-                                </label>
+                                <input type="radio" class="btn-check user_type" name="chktype" id="chkVendor" value="Vendor" autocomplete="off" checked>
+                                <label class="btn btn-outline-warning" for="chkVendor">Vendor</label>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label>Name</label>
-                                <input type="text" class="form-control" id="uname" placeholder="Name" name="uname"
-                                       required="required" data-validation-required-message="Please enter your name">
+                                <input type="text" class="form-control" id="uname" placeholder="Name" name="uname">
                             </div>
                             <div class="col-sm-6">
                                 <label>Phone Number</label>
-                                <input type="number" class="form-control" id="uphone" placeholder="Phone Number" name="uphone"
-                                       required="required" data-validation-required-message="Please enter your Phone Number">
+                                <input type="number" class="form-control" id="uphone" placeholder="Phone Number" name="uphone">
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Email address</label>
-                            <input type="email" class="form-control" id="uemail" placeholder="Email Address" name="uemail"
-                                   required="required" data-validation-required-message="Please enter your Email">
+                            <input type="email" class="form-control" id="uemail" placeholder="Email Address" name="uemail">
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label>Password</label>
-                                <input type="password" class="form-control" id="upass" placeholder="Password" name="upass"
-                                       required="required" data-validation-required-message="Please enter your password">
+                                <input type="password" class="form-control" id="upass" placeholder="Password" name="upass">
                             </div>
                             <div class="col-sm-6">
                                 <label>Confirm Password</label>
-                                <input type="text" class="form-control" id="upass2" placeholder="Confirm Password" name="upass2"
-                                       required="required" data-validation-required-message="Please retype your password">
+                                <input type="text" class="form-control" id="upass2" placeholder="Confirm Password" name="upass2">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label>Aadhar Number</label>
-                                <input type="number" class="form-control" id="aadhar" placeholder="Aadhar Number" name="aadhar"
-                                       required="required" data-validation-required-message="please enter a valid aadhar number">
+                                <input type="text" class="form-control" id="aadhar" placeholder="Aadhar Number" name="aadhar">
                             </div>
                             <div class="col-sm-6">
                                 <label>Pancard Number</label>
-                                <input type="text" class="form-control" id="pancard" placeholder="Pancard Number" name="pancard"
-                                       required="required" data-validation-required-message="please enter a valid pancard number">
+                                <input type="text" class="form-control" id="pancard" placeholder="Pancard Number" name="pancard">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label>GST Number</label>
-                                <input type="text" class="form-control" id="gst" placeholder="GST Number" name="gst"
-                                       required="required" data-validation-required-message="please enter a valid GST number">
+                                <input type="text" class="form-control" id="gst" placeholder="GST Number" name="gst">
                             </div>
                             <div class="col-sm-6">
                                 <label>Current Account Number</label>
-                                <input type="text" class="form-control" id="caccountnumber" placeholder="Current Account Number" name="caccountnumber"
-                                       required="required" data-validation-required-message="please enter a valid account number">
+                                <input type="text" class="form-control" id="caccountnumber" placeholder="Current Account Number" name="caccountnumber">
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label for="formFile" class="form-label">Cancel Cheque</label><div id="cancelchequeImagePreview" style="height: 20px; width: 10%; display: none;"></div>
-                                <input class="form-control" type="file" name="cancelcheque" id="cancelcheque" onchange="return fileValidation(this.id);">
+                                <input class="form-control" type="file" name="cancelcheque" id="cancelcheque">
 
                             </div>
                             <div class="col-sm-6">
                                 <label for="formFile" class="form-label">Photo</label>
-                                <input class="form-control" type="file" name="photo" id="photo" onchange="return fileValidation(this.id);">
+                                <input class="form-control" type="file" name="photo" id="photo">
                                 <div id="photoImagePreview" style="height: 20px; width: 10%; display: none;"></div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label for="formFile" class="form-label">Signature</label>
-                                <input class="form-control" type="file"  name="sign" id="sign" onchange="return fileValidation(this.id);">
+                                <input class="form-control" type="file"  name="sign" id="sign">
                                 <div id="signImagePreview" style="height: 20px; width: 10%; display: none;"></div>
                             </div>
                         </div>
@@ -135,12 +138,6 @@
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
-    <script src="assets/js/main.js"></script>
 
 </body>
 </html>

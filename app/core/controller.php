@@ -1,7 +1,11 @@
 <?php
+use App\Utils\BaseConstants;
+require_once getcwd()."/../app/controllers/BaseTrait.php";
 
 class controller
 {
+    use \App\Core\BaseTrait;
+
     function view($path,$data =[])
     {
 

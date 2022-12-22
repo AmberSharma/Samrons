@@ -80,4 +80,13 @@ class vendor extends controller
             return $this->vendorModel->get_categories($parentId);
         }
     }
+
+    public function bulkUploadImages() {
+        $data['page_title']="Bulk Upload Images";
+        $this->view("samrons/admin/bulkUploadImages",$data);
+    }
+
+    public function saveUploadedImages() {
+        $this->vendorModel->save_uploaded_images();
+    }
 }

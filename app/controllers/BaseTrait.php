@@ -12,10 +12,10 @@ trait BaseTrait
     ];
     private $error = [];
 
-    public function validateFieldExists($fields, $data) {
-        foreach($fields as $fieldName) {
-            if(!isset($data[$fieldName])) {
-                $this->setError($fieldName, "Cannot be empty");
+    public function validateFieldExists($fields, $fieldNames, $data) {
+        foreach($fields as $key => $fieldFormName) {
+            if(!isset($data[$fieldFormName])) {
+                $this->setError($fieldNames[0], "Cannot be empty");
             }
         }
     }
@@ -46,7 +46,7 @@ trait BaseTrait
                 break;
             case "phone":
                 $this->data = trim($data);
-                if (preg_match('/^[0-9]{10}+$/', $this->data)) {
+                if (!preg_match('/^[0-9]{10}+$/', $this->data)) {
                     $this->setError($fieldName, "Invalid Phone Number");
                 }
                 break;
@@ -56,6 +56,30 @@ trait BaseTrait
                     $this->setError($fieldName, "Invalid Email Address");
                 }
                 $this->data = filter_var($this->data, FILTER_SANITIZE_EMAIL);
+                break;
+            case "password":
+                $this->data = trim($data);
+                if (!preg_match("/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/", $this->data)) {
+                    $this->setError($fieldName, "Invalid Password");
+                }
+                break;
+            case "aadhar":
+                $this->data = trim($data);
+                if (!preg_match("/^[2-9]{1}[0-9]{3}\s[0-9]{4}\s[0-9]{4}$/", $this->data)) {
+                    $this->setError($fieldName, "Invalid Aadhar");
+                }
+                break;
+            case "gst":
+                $this->data = trim($data);
+                if (!preg_match("/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/", $this->data)) {
+                    $this->setError($fieldName, "Invalid GST");
+                }
+                break;
+            case "pancard":
+                $this->data = trim($data);
+                if (!preg_match("/^[A-Z]{5}\d{4}[A-Z]{1}$/", $this->data)) {
+                    $this->setError($fieldName, "Invalid GST");
+                }
                 break;
         }
 

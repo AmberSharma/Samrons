@@ -62,9 +62,14 @@ class Admin extends controller
         $this->validateFieldExists([
             BaseConstants::CATEGORY_NAME,
             BaseConstants::CATEGORY_DESCRIPTION
+        ], [
+            BaseConstants::CATEGORY_NAME,
+            BaseConstants::CATEGORY_DESCRIPTION
         ], $_POST);
 
         $this->validateFieldExists([
+            BaseConstants::CATEGORY_IMAGE
+        ], [
             BaseConstants::CATEGORY_IMAGE
         ], $_FILES);
 
