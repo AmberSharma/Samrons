@@ -51,6 +51,25 @@ class vendormodel
         return false;
     }
 
+    public function save_uploaded_images() {
+        echo "<pre>";print_r($_FILES);print_r($_SESSION);echo "</pre>";
+        if (!empty($_FILES["bulkUploadImages"])) {
+            foreach ($_FILES["bulkUploadImages"]["name"] as $key => $value) {
+                $data["image_name"] = $this->generateRandomString();
+                $info = pathinfo($value);
+                $data["image_name"] .= ".".$info["extension"];
+
+                $target_dir = getcwd(). "/../app/uploads/bulk_images/".$_SESSION["url_address"]."/".$data["image_name"];
+                if (!is_dir(getcwd(). "/../app/uploads/bulk_images")) {
+                    mkdir(getcwd(). "/../app/uploads/bulk_images", 0777, true);
+                    mkdir(getcwd(). "/../app/uploads/bulk_images/".$_SESSION["url_address"], 0777, true);
+                }
+
+                move_uploaded_file($_FILES["bulkUploadImages"]["tmp_name"][$key], $target_dir);
+            }
+        }
+    }
+
     public function add_bulkProductDetails() {
         echo "Here";
     }

@@ -378,4 +378,55 @@ $(document).ready(function() {
     $("input[name=tags]").each(function(i, obj) {
         new Tagify(obj)
     });
+
+    $("#bulkUploadImages").change(function(){
+        let appendToDiv = $("#uploadedImageDiv");
+        $(".img-wrap").remove();
+        if (this.files) {
+            var filesAmount = this.files.length;
+
+            for (i = 0; i < filesAmount; i++) {
+                var reader = new FileReader();
+
+                reader.onload = function(event) {
+                    let html = '<div class="img-wrap">';
+                    html += '<span class="close">&times;</span>';
+                    html += '<img alt="uploadedImage" class="img-thumbnail" src="'+event.target.result+'" width="190" height="190" style="margin: 3px;">';
+                    html += "</div>";
+                    appendToDiv.append($.parseHTML(html));
+                }
+
+                reader.readAsDataURL(this.files[i]);
+            }
+        }
+    });
+
+    $("#bulkUploadImagesButton").click(function () {
+        let data = new FormData();
+
+        let formField = $('#bulkUploadImages');
+        data.append("source", "script");
+        formField.each(function(key, item) {
+            let fileData = item.files;
+            console.log(fileData);
+            for (var i = 0; i < fileData.length; i++) {
+                data.append("bulkUploadImages[]", fileData[i]);
+            }
+        })
+
+        $.ajax({
+            url: '/vendor/saveUploadedImages',   // sending ajax request to this url
+            type: 'post',
+            dataType: "JSON",
+            processData: false,
+            contentType: false,
+            data: data,
+            success: function (response) {
+
+            },
+            error: function (e) {
+                $("#result").html("Some error encountered.");
+            }
+        });
+    });
 });
