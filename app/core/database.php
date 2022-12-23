@@ -28,7 +28,6 @@ class Database
 
     public function read($query, $data = [])
     {
-
         $stm = self::$conn->prepare($query);
 
         $result = $stm->execute($data);
@@ -43,10 +42,9 @@ class Database
 
     public function write($query, $data = [])
     {
+        //print_r($data);die("dsfds");
         $stm = self::$conn->prepare($query);
         $stm->execute($data);
-        print_r($stm);
-        print_r($data);
         if (self::$conn->lastInsertId() != "") {
             return self::$conn->lastInsertId();
         }

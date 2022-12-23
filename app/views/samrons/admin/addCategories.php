@@ -1,4 +1,3 @@
-<? print_r( $data); ?>
 <?php
 include_once "inc/header.php";
 ?>
@@ -62,7 +61,10 @@ include_once "inc/leftpanel.php";
                             <strong class="card-title">Add Category</strong>
                         </div>
                         <div class="card-body">
-                            <form  method="post" enctype="multipart/form-data">
+                            <div class="alert alert-success" style="display:none;">
+                                <strong>Success!</strong> Category Got added Successfully
+                            </div>
+                            <form id="addCategoryForm" method="post" enctype="multipart/form-data">
 
                                 <div class="form-group row">
                                     <div class="col-sm-6">
@@ -98,8 +100,7 @@ include_once "inc/leftpanel.php";
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input class="form-control" type="file" name="categoryimage" id="categoryimage"
-                                               onchange="return fileValidation(this.id);">
+                                        <input class="form-control" type="file" name="categoryimage" id="categoryimage">
                                     </div>
                                 </div>
 
@@ -139,24 +140,6 @@ include_once "inc/leftpanel.php";
 <!-- Right Panel -->
 
 <!-- Scripts -->
-
-<script src="<?php echo ASSETS ?>js/data-table/datatables.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/dataTables.bootstrap.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/dataTables.buttons.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/buttons.bootstrap.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/jszip.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/vfs_fonts.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/buttons.html5.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/buttons.print.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/buttons.colVis.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/datatables-init.js"></script>
-
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#bootstrap-data-table-export').DataTable();
-    } );
-</script>
 
 
 </body>

@@ -26,4 +26,3 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="<?php echo ASSETS ?>css/style.css" rel="stylesheet">
 </head>
-

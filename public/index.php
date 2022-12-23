@@ -2,8 +2,8 @@
 session_start();
 
 $path=$_SERVER['REQUEST_SCHEME']."://".$_SERVER['SERVER_NAME']."/";
-/*echo "<pre>";print_r($_SERVER);
-die($path);*/
+//echo "<pre>";print_r($_SERVER);
+//print_r($path);echo "</pre>";
 include "../app/init.php";
 //define(("VIEWS",))
 define('ROOT',$path);

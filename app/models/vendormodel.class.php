@@ -13,36 +13,67 @@ class vendormodel
     public function add_categories()
     {
         $data = array();
-
         $_POST = array_map('trim', $_POST);
 
         $data['cname']  = $_POST['cname'];
-        $data['desc']   = $_POST['desc'];
-        $data['parentcat']   = isset($_POST['category'])? $_POST['category']: 0;
+        $data['description']   = $_POST['desc'];
+        $data['parentcat']   = isset($_POST['category']) && ctype_digit($_POST['category'])? $_POST['category']: 0;
         $data['catimage'] =$this->generateRandomString();
-        $info = pathinfo($_FILES["categoryimage"]["name"][0]);
+        $info = pathinfo($_FILES["categoryimage"]["name"]);
         $ext = $info["extension"];
         $data['catimage']=$data['catimage'].".".$ext;
 
-        $query="insert into categories(parent_id,name,description,category_image) values (:parentcat,:cname,:desc,:catimage)";
+        $query="INSERT INTO categories(
+                    parent_id,
+                    name,
+                    description,
+                    category_image
+                    ) values (
+                    :parentcat,
+                    :cname,
+                    :description,
+                    :catimage)";
+
         $result=$this->db->write($query,$data);
-        if (!file_exists(FILEUPLOAD."category")) {
+        if (!empty($result) ) {
             $dir_path = getcwd() . "/../app/uploads/";
-            mkdir(getcwd() . "/../app/uploads/" . "category", 0777, true);
-
-            $info = pathinfo($_FILES["categoryimage"]["name"][0]);
-            $ext = $info["extension"];
+            if (!file_exists(getcwd() . "/../app/uploads/category")) {
+                mkdir(getcwd() . "/../app/uploads/" . "category", 0777, true);
+            }
             $filename = $data['catimage'];
-
 
             $target_dir = $dir_path ."category" . "/" . $filename;
             move_uploaded_file($_FILES["categoryimage"]["tmp_name"][0], $target_dir);
+
+            return true;
         }
 
-        if(is_array($result)){
-            $message = "You are Successfully Registered. Try Login after couple of hours after Admin Approval";
+        return false;
+    }
+
+    public function save_uploaded_images() {
+        echo "<pre>";print_r($_FILES);print_r($_SESSION);echo "</pre>";
+        if (!empty($_FILES["bulkUploadImages"])) {
+            foreach ($_FILES["bulkUploadImages"]["name"] as $key => $value) {
+                $data["image_name"] = $this->generateRandomString();
+                $info = pathinfo($value);
+                $data["image_name"] .= ".".$info["extension"];
+
+                $target_dir = getcwd(). "/../app/uploads/bulk_images/".$_SESSION["url_address"]."/".$data["image_name"];
+                if (!is_dir(getcwd(). "/../app/uploads/bulk_images")) {
+                    mkdir(getcwd(). "/../app/uploads/bulk_images", 0777, true);
+                    mkdir(getcwd(). "/../app/uploads/bulk_images/".$_SESSION["url_address"], 0777, true);
+                }
+
+                move_uploaded_file($_FILES["bulkUploadImages"]["tmp_name"][$key], $target_dir);
+            }
         }
     }
+
+    public function add_bulkProductDetails() {
+        echo "Here";
+    }
+
     public function add_productDetails()
     {
 

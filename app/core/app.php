@@ -10,12 +10,8 @@ class App
     public function __construct()
     {
         $url = $this->parseURL();
-
-
         if (file_exists(self::CONTROLLER_PATH . strtolower($url[0]) . ".php")) {
-
             $this->controller = strtolower($url[0]);
-
             unset($url[0]);
         }
         require self::CONTROLLER_PATH . $this->controller . ".php";
