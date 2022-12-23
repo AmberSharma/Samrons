@@ -212,4 +212,41 @@ print_r($data['proname']);
         }
         return $randomString;
     }
+    function getOneLevel($catId){
+        $data['parentcatid']=$catId;
+
+        $query="SELECT id FROM categories WHERE parent_id=:parentcatid";
+
+        $catIdArr= $this->db->read($query, $data);
+        $catIds = [];
+
+        if(is_array($catIdArr)){
+            foreach ($catIdArr as $key=>$value){
+                $catIds[]=$value['id'];
+            }
+        }
+
+        return $catIds;
+    }
+
+    function getChildren($parent_id, $tree_string=array()) {
+        $tree = array();
+        // getOneLevel() returns a one-dimensional array of child ids
+        $tree = $this->getOneLevel($parent_id);
+        if(count($tree)>0 && is_array($tree)){
+            $tree_string=array_merge($tree_string,$tree);
+        }
+        foreach ($tree as $key => $val) {
+            $this->getChildren($val, $tree_string);
+        }
+
+        return $tree_string;
+    }
+    function getProductDataForShop($categoryIds){
+
+        $data['CategoriesId']=$categoryIds;
+
+        $query="SELECT * FROM products as p left join product_variants as pv on p.id=pv.product_id WHERE p.category_id in(:parentcatid)";
+        $catIdArr= $this->db->read($query, $data);
+    }
 }
