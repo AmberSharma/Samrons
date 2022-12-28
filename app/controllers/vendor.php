@@ -47,9 +47,14 @@ class vendor extends controller
             $data['optionvalues'] = $this->vendorModel->get_optionvalues($_POST['optionid']);
             return json_encode($data, true);
         }
-
     }
 
+    public function viewProducts($productId = "") {
+        $data['page_title']="Home";
+        $data['productData'] = $this->vendorModel->get_productDetails($productId);
+        $this->view("samrons/admin/dashboard",$data);
+
+    }
     public function addProductDetails()
     {
         $this->vendorModel->add_productDetails();
@@ -57,7 +62,10 @@ class vendor extends controller
 
     public function addBulkProducts()
     {
-        $this->vendorModel->add_bulkProductDetails();
+        $data['page_title']="Add Bulk Products";
+        $data['categories'] = $this->getCategories();
+        $this->view("samrons/admin/addBulkProducts",$data);
+        //$this->vendorModel->add_bulkProductDetails();
     }
 
     public function getOptions() {
@@ -89,4 +97,13 @@ class vendor extends controller
     public function saveUploadedImages() {
         $this->vendorModel->save_uploaded_images();
     }
+
+    public function getUploadedImagesUrl() {
+        echo json_encode($this->vendorModel->get_uploaded_images_url(), true);
+    }
+
+    public function removeUploadedImages() {
+        echo json_encode($this->vendorModel->remove_uploaded_images(), true);
+    }
+
 }

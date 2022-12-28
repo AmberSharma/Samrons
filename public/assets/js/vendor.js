@@ -63,15 +63,49 @@ $(document).ready(function() {
         }
     }
 
+    function renderUploadedImages(response) {
+        let self = $("#savedImageDiv").html('');
+        response = JSON.parse(JSON.stringify(response));
+
+        html = '<table class="table table-bordered" style="text-align: center">';
+        html += '<thead class="thead-dark">';
+        html += '<tr>';
+        html += '<th scope="col">Image</th>';
+        html += '<th scope="col">URL</th>';
+        html += '<th scope="col">Action</th>';
+        html += '</tr>';
+        html += '</thead>';
+        html += '<tbody>';
+
+        response.forEach(function (item) {
+            html += '<tr>';
+            html += '<td>';
+            html += '<img alt="uploadedImage" class="img-thumbnail" src="'+item+'" width="150" height="150" style="margin: 3px;">';
+            html += '</td>';
+            html += '<td>';
+            html += item;
+            html += '</td>';
+            html += '<td style="text-align: center;">';
+            html += '<button class="btn btn-warning clipboard-icon"><i class="fa fa-copy"></i></button>';
+            html += '<button class="btn btn-info remove-icon"><i class="fa fa-trash"></i></button>';
+            html += '</td>';
+            html += '</tr>';
+        });
+
+        html += '</tbody>';
+        html += '</table>';
+
+        self.append(html);
+    }
 
     function optionValueCombination(element) {
+        element.parent().next().html('');
         let valueCombination = [];
         $("*[id^=optionvalue__]").each(function(index) {
             if (valueCombination[index] === undefined) {
                 valueCombination[index] = [];
             }
             let indexValues = JSON.parse($(this).val());
-            console.log(indexValues);
             indexValues.forEach(function(item, key) {
                 if (valueCombination[index][key] === undefined) {
                     valueCombination[index][key] = [];
@@ -80,9 +114,7 @@ $(document).ready(function() {
             });
         });
 
-
         valueCombination = cartesianProduct(valueCombination);
-        console.log(valueCombination);
         let html = '';
         if (valueCombination !== undefined) {
             html += '<table id="bootstrap-data-table" class="table table-striped table-bordered table-danger">';
@@ -91,39 +123,25 @@ $(document).ready(function() {
             html += '<th>Variant</th>';
             html += '<th>SKU Id</th>';
             html += '<th>Quantity</th>';
-            html += '<th>Price</th>';
             html += '<th>Image</th>';
             html += '</tr>';
             html += '</thead>';
             html += '<tbody>';
             valueCombination.forEach(function (item, index) {
                 html += '<tr class="'+ tableClasses[index] +'">';
-                // html += '<div class="form-group row" >';
-                // html += '<div class="col-sm-1">';
                 html += '<td>';
                 html += item.join("/");
                 html +='<input type="hidden" id="valueCombination" name="valueCombination" value='+item+'>'
-                // html += "</div>";
-                // html += '<div class="col-sm-2">';
                 html += '</td>';
                 html += '<td>';
                 html += '<input type="text" name="skuId" class="form-control"/>';
-                // html += "</div>";
-                // html += '<div class="col-sm-2">';
                 html += '</td>';
                 html += '<td>';
                 html += '<input type="text" name="quantity" class="form-control"/>';
-                // html += "</div>";
-                // html += '<div class="col-sm-2">';
-                html += '</td>';
-                html += '<td>';
-                html += '<input type="text" name="price" class="form-control"/>';
                 html += '</td>';
                 html += '<td>';
                 html += ' <input class="form-control" type="file" name="productimage" id="productimage" onchange="return fileValidation(this.id);">';
                 html += '</td>';
-                // html += "</div>";
-                // html += "</div>";
             });
 
             html += '</tbody>';
@@ -195,7 +213,7 @@ $(document).ready(function() {
     $('#plus').on('click',function () {
         let self = $(this);
         $.ajax({
-            url: '/admin/getOptions',   // sending ajax request to this url
+            url: '/vendor/getOptions',   // sending ajax request to this url
             type: 'post',
             data: {
                 'source': 'script'
@@ -217,7 +235,7 @@ $(document).ready(function() {
 
                     html += "</select>";
                     html += "</div>";
-                    html += '<div class="col-sm-6 optionval">\n';
+                    html += '<div class="col-sm-8 optionval">\n';
                     let optionValueSelector = '<input type="textarea" id="optionvalue__'+optionValueSelectorLength+'" placeholder="Enter Option Values" class="form-control" name="optionvalues"></div></div>';
                     html += optionValueSelector;
 
@@ -261,89 +279,31 @@ $(document).ready(function() {
 
     $("#refresh").click(function () {
         optionValueCombination($(this));
-        optionValueCombinationSave($(this));
+        //optionValueCombinationSave($(this));
     });
 
-   /* function renderOptionValues(element) {
-        let self = elemen t;
-        let elementId = element.attr("id");
-        let elementIdNum = elementId.split("__")[1];
-        if (elementIdNum === undefined) {
-            elementIdNum = 0;
-        } else {
-            elementIdNum = parseInt(elementIdNum);
-        }
-        let optionid=element.val();
-        self.removeClass('error');
-        self.parent().nextAll('.optionval').remove();
-        if (!isNaN(parseInt(optionid))) {
-            $.ajax({
-                url: '/vendor/getoptionValues',   // sending ajax request to this url
-                type: 'post',
-                data: {
-                    'optionid': optionid,
-                    'source': 'script'
-                },
-                success: function (response) {
-                    if (response.length > 0) {
-                        let attributeId = 'pro__' + (elementIdNum + 1);
-                        response = JSON.parse(response);
-                        let html = '';
-                        html += '<div class="col-sm-4 optionval">';
-                        html += '<select id="' + attributeId + '" class="form-control selectpicker" multiple data-live-search="true">';
-                        html += '<option> ---Select Option Value---</option>';
-
-                        if (response !== undefined) {
-                            response.forEach(function (item, index) {
-                                html += '<option value=' + item['id'] + '>' + item['value_name'] + '</option>';
-                            });
-                            html += '</select>';
-                            html += '</div></div>';
-                            html += '<div class="col-sm-2 optionval optionbutton">';
-                            html += '<button type="button" class="btn btn-primary"><i class="fa fa-plus"></i></button>';
-                            html += '</div>';
-
-                            self.parent().after(html);
-                            $('.selectpicker').selectpicker();
-                        }
-                    }
-                },
-                error: function (e) {
-                    $("#result").html("Some error encountered.");
-                }
-
-            });
-        }
-    }*/
     $("#addProductDetails").click(function () {
-        //let data = new FormData();
-        // let formData = $("form").serializeArray();
-        // let formDataLength = formData.length;
-        //
-        // let fileData = $('input[name="productimage"]')[0].files;
-        // for (var i = 0; i < fileData.length; i++) {
-        //     //formData.append("productimage[]", fileData[i]);
-        //     formData[formDataLength] = {
-        //         "name": "productimage",
-        //         "value": [{
-        //             'lastMod': fileData[i].lastModified,
-        //             'lastModDate': fileData[i].lastModifiedDate,
-        //             'name': fileData[i].name,
-        //             'size': fileData[i].size,
-        //             'type': fileData[i].type
-        //         }]
-        //     }
-        //     //JSON.stringify(formData[formDataLength].value);
-        //     formDataLength += 1;
-        // }
-        // console.log(formData);
-
         let data = new FormData();
         let formData = $('form').serializeArray();
-
+        let count
         $.each(formData, function (key, input) {
-            data.append("productdetails["+key+"][name]", input.name);
-            data.append("productdetails["+key+"][value]", input.value);
+            if(input.name === "category") {
+                if (input.value !== 0) {
+                    data.append("productdetails[" + input.name + "]", input.value);
+                }
+            }
+            else if (input.name === "options"
+                || input.name === "optionvalues"
+                || input.name === "valueCombination"
+                || input.name === "skuId"
+                || input.name === "quantity"
+            ) {
+                data.append("productdetails["+input.name+"]["+key+"]", input.value);
+            } else {
+                data.append("productdetails[" + input.name + "]", input.value);
+                // data.append("productdetails["+key+"][name]", input.name);
+                // data.append("productdetails["+key+"][value]", input.value);
+            }
         });
         let formField = $('input[name="productimage"]');
         formField.each(function(key, item) {
@@ -398,6 +358,58 @@ $(document).ready(function() {
 
                 reader.readAsDataURL(this.files[i]);
             }
+        }
+    });
+    $("#bulkUploadImagesUrlButton").click(function () {
+        $.ajax({
+            url: '/vendor/getUploadedImagesUrl',   // sending ajax request to this url
+            type: 'get',
+            dataType: "JSON",
+            processData: false,
+            contentType: false,
+            success: function (response) {
+                renderUploadedImages(response);
+            },
+            error: function (e) {
+                $("#result").html("Some error encountered.");
+            }
+        });
+    });
+
+    $("#savedImageDiv").on("click", ".remove-icon", function(){
+        let url = $(this).parent().prev().html().split("/").pop();
+        $.ajax({
+            url: '/vendor/removeUploadedImages',   // sending ajax request to this url
+            type: 'post',
+            dataType: "JSON",
+            data: {
+                "url": url,
+            },
+            success: function (response) {
+                renderUploadedImages(response);
+            },
+            error: function (e) {
+                $("#result").html("Some error encountered.");
+            }
+        });
+    });
+
+    $("#savedImageDiv").on("click", ".clipboard-icon", function(){
+        let url = $(this).parent().prev().html();
+        if (window.isSecureContext && navigator.clipboard) {
+            navigator.clipboard.writeText(url);
+        } else {
+            const textArea = document.createElement("textarea");
+            textArea.value = url;
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+            } catch (err) {
+                console.error('Unable to copy to clipboard', err);
+            }
+            document.body.removeChild(textArea);
         }
     });
 
