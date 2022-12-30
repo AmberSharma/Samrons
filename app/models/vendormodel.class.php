@@ -133,6 +133,14 @@ class vendormodel
         $urladd['url_address']='ojmcQKenIh';
         $query="select id from vendors where url_address=:url_address";
         $vendor_id = $this->db->read($query, $urladd);
+        $query="select id,name from options";
+        $optionData = $this->db->read($query);
+        print_r($optionData);
+        foreach ($optionData as $key =>$value)
+        {
+            $optionDataArr[$value['id']]=$value['name'];
+        }
+        print_r($optionDataArr);
         print_r($vendor_id[0]['id']);
         $productInfo=[];
         foreach($_POST["productdetails"] as $column => $columnValue)
@@ -182,11 +190,47 @@ class vendormodel
         $productData['category_id']=$data['category'];*/
         $data['vendor_id']=$vendor_id[0]['id'];
 
-        $query="insert into products(name,description,category_id,vendor_id,mrp,collar,seller_price,gst,brand,weight,style_code,fabric,sleeve_lenght,country_origin,fit_shape,occasion,pattern_type,packers_detail)
- values (:name,:description,:category,:vendor_id,:mrp,:collar,:seller_price,:gst,:brand,:weight,:style_code,:fabric,:sleeve_length,:country_origin,:fit_shape,:occasion,
-:pattern_type,:packers_detail)";
+        $query="INSERT INTO products(
+            name,
+            description,
+            category_id,
+            vendor_id,
+            mrp,
+            collar,
+            seller_price,
+            gst,
+            brand,
+            weight,
+            style_code,
+            fabric,
+            sleeve_lenght,
+            country_origin,
+            fit_shape,
+            occasion,
+            pattern_type,
+            packers_detail
+        ) values (
+            :name,
+            :description,
+            :category,
+            :vendor_id,
+            :mrp,
+            :collar,
+            :seller_price,
+            :gst,
+            :brand,
+            :weight,
+            :style_code,
+            :fabric,
+            :sleeve_length,
+            :country_origin,
+            :fit_shape,
+            :occasion,
+            :pattern_type,
+            :packers_detail
+        )";
         $productId=$this->db->write($query,$data);
-        print_r($productId);
+
         $productOption['product_id']=$productId;
         foreach ($variantData['options'] as $key=>$optionId)
         {
@@ -200,8 +244,15 @@ class vendormodel
 
             }
         }
-print_r($optionValueId);
+
+
         foreach ($variantData['skuId'] as $key=>$variantsData) {
+           $valueCombination = explode(",",$variantData['valueCombination'][$key]);
+            $combination = "";
+            foreach ($variantData['options'] as $index =>$value)
+            {
+                $combination .= $optionDataArr[$value].":". $valueCombination[$index].",";
+            }
             $productVariant = array();
             $productVariant['product_id'] = $productId;
             $productVariant['quantity'] = $variantData['quantity'][$key];
@@ -211,9 +262,10 @@ print_r($optionValueId);
             $info = pathinfo($_FILES["productimage"]["name"][$key]);
             $ext = $info["extension"];
             $productVariant['productImage']=$productVariant['productImage'].$ext;
+            $productVariant["combination"] = trim($combination,",");
             print_r($productVariant);
 
-            $query = "insert into product_variants(sku_id,product_id,quantity,product_image) values (:skuId,:product_id,:quantity,:productImage)";
+            $query = "insert into product_variants(sku_id,product_id,quantity,product_image, combination) values (:skuId,:product_id,:quantity,:productImage, :combination)";
             $productVariantId[] = $this->db->write($query, $productVariant);
             if (!file_exists(FILEUPLOAD.$productVariantId[0])) {
                 $dir_path = getcwd() . "/../app/uploads/";

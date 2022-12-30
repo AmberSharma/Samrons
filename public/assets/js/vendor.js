@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    var hasVariantCombinationSelected = 0;
     var tableClasses = ['table-primary', 'table-secondary', 'table-success', 'table-danger', 'table-warning', 'table-info', 'table-light', 'table-dark']
     function cartesianProduct(arr) {
         return arr.reduce((a, b) =>
@@ -102,21 +102,30 @@ $(document).ready(function() {
         element.parent().next().html('');
         let valueCombination = [];
         $("*[id^=optionvalue__]").each(function(index) {
-            if (valueCombination[index] === undefined) {
-                valueCombination[index] = [];
-            }
-            let indexValues = JSON.parse($(this).val());
-            indexValues.forEach(function(item, key) {
-                if (valueCombination[index][key] === undefined) {
-                    valueCombination[index][key] = [];
+            if ($(this).val().length !== 0) {
+                if (valueCombination[index] === undefined) {
+                    valueCombination[index] = [];
                 }
-                valueCombination[index][key] = item.value;
-            });
+                let indexValues = JSON.parse($(this).val());
+                indexValues.forEach(function (item, key) {
+                    if (valueCombination[index][key] === undefined) {
+                        valueCombination[index][key] = [];
+                    }
+                    valueCombination[index][key] = item.value;
+                });
+            }
         });
 
+        if(valueCombination.length === 0) {
+            $(".alert-danger").html("Atleast 1 variant should be selected").show();
+            autoHideAlert();
+            return;
+        }
         valueCombination = cartesianProduct(valueCombination);
+
         let html = '';
         if (valueCombination !== undefined) {
+            hasVariantCombinationSelected = 1;
             html += '<table id="bootstrap-data-table" class="table table-striped table-bordered table-danger">';
             html += '<thead>';
             html += '<tr>';
@@ -197,9 +206,7 @@ $(document).ready(function() {
 
                     if (response.success == true) {
                         $('.alert').show()
-                        $(".alert").delay(4000).slideUp(1000, function() {
-                            $(this).hide();
-                        });
+                        autoHideAlert();
                         $("#addCategoryForm")[0].reset();
                     }
                 },
@@ -226,7 +233,7 @@ $(document).ready(function() {
                     html = '<div class="form-group row">';
                     html += '<div class="col-sm-4">';
                     html += '<select id="pro__'+ optionValueSelectorLength +'" class="form-control" name="options">';
-                    html += '<option> ---Select Option---</option>';
+                    html += '<option value=""> ---Select Option---</option>';
                     if (response !== undefined) {
                         response.forEach(function (item, index) {
                             html += '<option value=' + item['id'] + '>' + item['name'] + '</option>';
@@ -246,31 +253,15 @@ $(document).ready(function() {
                         new Tagify(obj)
                     });
 
+                    if(response.length === optionValueSelectorLength + 1) {
+                        self.remove();
+                    }
                 }
             },
             error: function (e) {
                 $("#result").html("Some error encountered.");
             }
         });
-
-        // let optionValueSelectorLength = $("[id^=optionvalue__]").length;
-        // let optionSelector=$(this).parent().parent();
-        // optionSelector = optionSelector.find("select").attr("id", "pro__"+optionValueSelectorLength).parent().html();;
-        // let html = '';
-        // html += '<div class="form-group row" style="margin-top:10px;">';
-        // html += '<div class="col-sm-4 optionval">';
-        // html += optionSelector;
-        // html += '</div>'
-        // html += '<div class="col-sm-6 optionval">\n';
-        // let optionValueSelector = '<input type="textarea" id="optionvalue__"'+optionValueSelectorLength+' placeholder="Enter Option Values" class="form-control" name="tags"></div></div>';
-        // html += optionValueSelector;
-        // $(this).parent().parent().after(html);
-        //
-        // //let input = document.querySelector('input[name=tags]')
-        // $("input[name=tags]").each(function(i, obj) {
-        //     new Tagify(obj)
-        // });
-
     });
 
     $('*[id^=cat__]').change(function(){
@@ -279,60 +270,71 @@ $(document).ready(function() {
 
     $("#refresh").click(function () {
         optionValueCombination($(this));
-        //optionValueCombinationSave($(this));
     });
 
     $("#addProductDetails").click(function () {
-        let data = new FormData();
-        let formData = $('form').serializeArray();
-        let count
-        $.each(formData, function (key, input) {
-            if(input.name === "category") {
-                if (input.value !== 0) {
+        // if (hasVariantCombinationSelected !== 1) {
+        //     $(".alert-danger").html("Variant Details and Option Value should be selected").show();
+        //     autoHideAlert();
+        //     return;
+        // }
+        // if($("#addProductForm").valid()) {
+
+            let data = new FormData();
+            let formData = $('form').serializeArray();
+            $.each(formData, function (key, input) {
+                if (input.name === "category") {
+                    if (input.value !== 0) {
+                        data.append("productdetails[" + input.name + "]", input.value);
+                    }
+                } else if (input.name === "options"
+                    || input.name === "optionvalues"
+                    || input.name === "valueCombination"
+                    || input.name === "skuId"
+                    || input.name === "quantity"
+                ) {
+                    data.append("productdetails[" + input.name + "][" + key + "]", input.value);
+                } else {
                     data.append("productdetails[" + input.name + "]", input.value);
                 }
-            }
-            else if (input.name === "options"
-                || input.name === "optionvalues"
-                || input.name === "valueCombination"
-                || input.name === "skuId"
-                || input.name === "quantity"
-            ) {
-                data.append("productdetails["+input.name+"]["+key+"]", input.value);
-            } else {
-                data.append("productdetails[" + input.name + "]", input.value);
-                // data.append("productdetails["+key+"][name]", input.name);
-                // data.append("productdetails["+key+"][value]", input.value);
-            }
-        });
-        let formField = $('input[name="productimage"]');
-        formField.each(function(key, item) {
-            let fileData = item.files;
-            for (var i = 0; i < fileData.length; i++) {
-                data.append("productimage[]", fileData[i]);
-            }
-        })
+            });
+            let formField = $('input[name="productimage"]');
+            formField.each(function (key, item) {
+                let fileData = item.files;
+                for (var i = 0; i < fileData.length; i++) {
+                    data.append("productimage[]", fileData[i]);
+                }
+            })
 
-        $.ajax({
-            url: '/vendor/addProductDetails',   // sending ajax request to this url
-            type: 'post',
-            dataType: "JSON",
-            processData: false,
-            contentType: false,
-            data: data,
-            // data: {
-            //     "productdetails": formData
-            // },
-            success: function (response) {
-
-                // reset form fields after submit
-                //$("#regForm")[0].reset();
-            },
-            error: function (e) {
-                $("#result").html("Some error encountered.");
-            }
-        });
-
+            $.ajax({
+                url: '/vendor/addProductDetails',   // sending ajax request to this url
+                type: 'post',
+                dataType: "JSON",
+                processData: false,
+                contentType: false,
+                data: data,
+                success: function (response) {
+                    response = JSON.parse(JSON.stringify(response));
+                    if (response.status == true) {
+                        $(".alert-success").html(response.message).show();
+                        autoHideAlert();
+                    } else {
+                        let html = '';
+                        for (let key in response.error) {
+                            if (response.error.hasOwnProperty(key)) {
+                                let value = response.error[key];
+                                html += key + ": " + value+ "<br/>";
+                            }
+                            $(".alert-danger").html(html).show();
+                            autoHideAlert();
+                        }
+                    }
+                },
+                error: function (e) {
+                    $("#result").html("Some error encountered.");
+                }
+            });
+        // }
     });
 
     $("input[name=tags]").each(function(i, obj) {

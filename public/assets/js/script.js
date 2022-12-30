@@ -140,7 +140,6 @@ $(document).ready(function() {
                 error: function (e) {
                     $("#result").html("Some error encountered.");
                 }
-
             });
         }
     });

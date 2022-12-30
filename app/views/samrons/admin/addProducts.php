@@ -56,7 +56,11 @@ include_once "inc/leftpanel.php";
     </div>
     <div class="content">
         <div class="animated fadeIn">
-            <form method="post" enctype="multipart/form-data">
+            <form method="post" enctype="multipart/form-data" id="addProductForm">
+                <div class="row">
+                    <div class="alert alert-success" role="alert"></div>
+                    <div class="alert alert-danger" role="alert"></div>
+                </div>
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="card">
@@ -66,7 +70,7 @@ include_once "inc/leftpanel.php";
                                     <div class="col-sm-12">
                                         <div class="form-floating">
                                             <select id="cat__0" class="form-control category-subset" name="category">
-                                                <option> ---Select Category---</option>
+                                                <option value=""> ---Select Category---</option>
                                                 <?php
                                                 if (!empty($data['categories'])) {
                                                     $categoriesArr = json_decode($data['categories'], true);
@@ -107,7 +111,7 @@ include_once "inc/leftpanel.php";
                                     <div class="col-sm-12">
                                         <div class="form-floating">
                                             <select id="progst" class="form-control category-subset" name="gst">
-                                                <option> ---Select GST---</option>
+                                                <option value="">--- SELECT GST ---</option>
                                                 <option value="5">5%</option>
                                                 <option value="12">12%</option>
                                                 <option value="18">18%</option>

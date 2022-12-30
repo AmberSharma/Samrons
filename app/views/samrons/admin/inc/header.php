@@ -32,6 +32,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
     <script src="https://unpkg.com/@yaireo/tagify"></script>
     <script src="https://unpkg.com/@yaireo/tagify@3.1.0/dist/tagify.polyfills.min.js"></script>
+    <script src="<?php echo ASSETS ?>js/common.js"></script>
     <script src="<?php echo ASSETS ?>js/validation.js"></script>
     <script src="<?php echo ASSETS ?>js/admin.js"></script>
     <script src="<?php echo ASSETS ?>js/vendor.js"></script>
