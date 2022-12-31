@@ -7,8 +7,6 @@ include_once "inc/header.php";
         font-size: 14px;
         color: #494949;
         position: relative;
-
-
     }
     .Neon * {
         -webkit-box-sizing: border-box;
@@ -140,11 +138,11 @@ include_once "inc/leftpanel.php";
                                 </div>
                                 <div style="text-align: center">
                                     <button type="button" id="bulkUploadImagesButton" class="btn btn-warning">Upload</button>
+                                    <button type="button" id="bulkUploadImagesUrlButton" class="btn btn-info">Get Image Urls</button>
                                 </div>
                             </div>
-                            <div id="uploadedImageDiv" style="padding-top: 5px;">
-
-                            </div>
+                            <div id="uploadedImageDiv" style="padding-top: 5px;"></div>
+                            <div id="savedImageDiv" style="padding-top: 5px;"></div>
                         </div>
                     </div>
                 </div>

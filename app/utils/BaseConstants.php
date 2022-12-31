@@ -34,4 +34,22 @@ class BaseConstants
     const UEMAIL = "uemail";
     const UPHONE = "uphone";
     const UPASS = "upass";
+
+    const DESCRIPTION = "description";
+    const VENDOR_ID = "vendor_id";
+    const MRP = "mrp";
+    const COLLAR = "collar";
+    const SELLER_PRICE = "seller_price";
+    const BRAND = "brand";
+    const WEIGHT = "weight";
+    const STYLE_CODE = "style_code";
+    const FABRIC = "fabric";
+    const SLEEVE_LENGTH = "sleeve_length";
+    const COUNTRY_ORIGIN = "country_origin";
+    const FIT_SHAPE = "fit_shape";
+    const OCCASION = "occasion";
+    const PATTERN_TYPE= "pattern_type";
+    const PACKERS_DETAILS = "packers_detail";
+
+    const BULK_UPLOAD_URL = ROOT."images.php?filename=";
 }

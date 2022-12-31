@@ -1,4 +1,3 @@
-
 <?php
 include_once "inc/header.php";
 ?>
@@ -9,6 +8,10 @@ include_once "inc/header.php";
 
     select.error {
         border: 2px solid #CC0000
+    }
+
+    .form-group {
+        padding-bottom: 5px;
     }
 
 </style>
@@ -43,7 +46,7 @@ include_once "inc/leftpanel.php";
                             <ol class="breadcrumb text-right">
                                 <li><a href="#">Dashboard</a></li>
                                 <li><a href="#">Table</a></li>
-                                <li class="active">Data table</li>
+                                <li class="active">Add Product</li>
                             </ol>
                         </div>
                     </div>
@@ -53,9 +56,13 @@ include_once "inc/leftpanel.php";
     </div>
     <div class="content">
         <div class="animated fadeIn">
-            <form method="post" enctype="multipart/form-data">
+            <form method="post" enctype="multipart/form-data" id="addProductForm">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="alert alert-success" role="alert"></div>
+                    <div class="alert alert-danger" role="alert"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
                         <div class="card">
                             <div class="card-header"><strong>Product Category</strong></div>
                             <div class="card-body">
@@ -63,7 +70,7 @@ include_once "inc/leftpanel.php";
                                     <div class="col-sm-12">
                                         <div class="form-floating">
                                             <select id="cat__0" class="form-control category-subset" name="category">
-                                                <option> ---Select Category---</option>
+                                                <option value=""> ---Select Category---</option>
                                                 <?php
                                                 if (!empty($data['categories'])) {
                                                     $categoriesArr = json_decode($data['categories'], true);
@@ -79,57 +86,170 @@ include_once "inc/leftpanel.php";
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
                         <div class="card">
-                            <div class="card-header"><strong>Product</strong><strong>Details</strong></div>
-                            <div class="card-body card-block">
-                                <div class="form-group"><label for="productname" class=" form-control-label">Product
-                                        Name</label><input type="text" id="proname"
-                                                           placeholder="Enter your Product Name"
-                                                           class="form-control" name="proname"></div>
-                                <div class="form-group"><label for="productdesc" class=" form-control-label">Product
-                                        Description</label><input type="text" id="prodesc" name="prodesc"
-                                                                  placeholder="Enter Product Description"
-                                                                  class="form-control"></div>
-
+                            <div class="card-header"><strong>Product Price</strong></div>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <div class="form-floating">
+                                            <input type="text" id="promrp"
+                                                   class="form-control" name="mrp">
+                                            <label>MRP (&#8377;)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <div class="form-floating">
+                                            <input type="text" id="prosellerprice"
+                                                   class="form-control" name="seller_price">
+                                            <label>Seller Price (&#8377;)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <div class="form-floating">
+                                            <select id="progst" class="form-control category-subset" name="gst">
+                                                <option value="">--- SELECT GST ---</option>
+                                                <option value="5">5%</option>
+                                                <option value="12">12%</option>
+                                                <option value="18">18%</option>
+                                                <option value="28">28%</option>
+                                            </select>
+                                            <label>GST %</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header"><strong>Product Details</strong></div>
+                            <div class="card-body card-block">
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="proname"
+                                                   class="form-control" name="name">
+                                            <label>Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="probrand"
+                                                   class="form-control" name="brand">
+                                            <label>Brand</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="proweight"
+                                                   class="form-control" name="weight">
+                                            <label>Weight</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="prostylecode"
+                                                   class="form-control" name="style_code">
+                                            <label>Style Code</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="profabric"
+                                                   class="form-control" name="fabric">
+                                            <label>Fabric</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="procollar"
+                                                   class="form-control" name="collar">
+                                            <label>Collar</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="prosleevelength"
+                                                   class="form-control" name="sleeve_length">
+                                            <label>Sleeve length</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="procountryorigin"
+                                                   class="form-control" name="country_origin">
+                                            <label>Country of Origin</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="profitshape"
+                                                   class="form-control" name="fit_shape">
+                                            <label>Fit Shape</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="prooccasion"
+                                                   class="form-control" name="occasion">
+                                            <label>Occasion</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="propatterntype"
+                                                   class="form-control" name="pattern_type">
+                                            <label>Pattern Type</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                                <textarea type="text" class="form-control" id="prodesc"
+                                                          required="required"
+                                                          style="height: 100px" name="description"></textarea>
+                                            <label>Description</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <textarea type="text" class="form-control" id="propackerdetail"
+                                                      style="height: 100px" name="packers_detail"></textarea>
+                                            <label>Packer's Detail</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
                         <div class="card">
                             <div class="card-header">
                                 <strong>Variant Details</strong>
-                                <button type="button" class="btn btn-primary" id="plus"><i class="fa fa-plus"></i>
+                                <button type="button" class="btn btn-primary" id="plus" style="float: right;"><i class="fa fa-plus"></i>
                                 </button>
                             </div>
                             <div class="card-body card-block">
-                                <!--                            <div class="form-group row">-->
-                                <!--                                <div class="col-sm-4">-->
-                                <!--                                    <select id="pro__0" class="form-control category-subset">-->
-                                <!--                                        <option> ---Select Option---</option>-->
-                                <!--                                        --><?php
-                                //                                        if (!empty($data['options'])) {
-                                //                                            $optionArr = json_decode($data['options'], true);
-                                //                                            foreach ($optionArr as $option) {
-                                //                                                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
-                                //                                            }
-                                //                                        }
-                                //                                        ?>
-                                <!--                                    </select>-->
-                                <!--                                </div>-->
-                                <!--                                <div class="col-sm-6 optionval">-->
-                                <!--                                    <input type="textarea" id="optionvalue__0" placeholder="Enter Option Values"-->
-                                <!--                                           class="form-control" name="tags">-->
-                                <!--                                </div>-->
-                                <!--                                <div class="col-sm-2">-->
-                                <!--                                    <button type="button" class="btn btn-primary" id="plus"><i class="fa fa-plus"></i>-->
-                                <!--                                    </button>-->
-                                <!--                                </div>-->
-                                <!--                            </div>-->
-
-
                             </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" style="background-color: #587319;"><strong>Final Price</strong></div>
+                            <div class="card-body card-block" style="background-color: #8ead45;"></div>
                         </div>
                     </div>
                 </div>
