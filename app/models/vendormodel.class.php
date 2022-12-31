@@ -1,5 +1,5 @@
 <?php
-
+use App\Utils\BaseConstants;
 
 class vendormodel
 {
@@ -51,8 +51,33 @@ class vendormodel
         return false;
     }
 
+    public function remove_uploaded_images() {
+        if (array_key_exists('url', $_POST)) {
+            $filename = $_POST['url'];
+            $directory = getcwd(). "/../app/uploads/bulk_images/".$_SESSION["url_address"]."/";
+            if (file_exists($directory.$filename)) {
+                unlink($directory.$filename);
+                return $this->get_uploaded_images_url();
+            } else {
+                return ["success" => false];
+            }
+        }
+        return ["success" => false];
+    }
+
+    public function get_uploaded_images_url() {
+        $directory = getcwd(). "/../app/uploads/bulk_images/".$_SESSION["url_address"]."/";
+        $images = glob($directory . "*.{jpg,png,jpeg}", GLOB_BRACE);
+        $imgUrls = [];
+        foreach($images as $image)
+        {
+            $imgUrls[] = BaseConstants::BULK_UPLOAD_URL."bulk_images/".$_SESSION["url_address"]."/".str_replace($directory, "",$image);
+        }
+
+        return $imgUrls;
+    }
+
     public function save_uploaded_images() {
-        echo "<pre>";print_r($_FILES);print_r($_SESSION);echo "</pre>";
         if (!empty($_FILES["bulkUploadImages"])) {
             foreach ($_FILES["bulkUploadImages"]["name"] as $key => $value) {
                 $data["image_name"] = $this->generateRandomString();
@@ -61,7 +86,9 @@ class vendormodel
 
                 $target_dir = getcwd(). "/../app/uploads/bulk_images/".$_SESSION["url_address"]."/".$data["image_name"];
                 if (!is_dir(getcwd(). "/../app/uploads/bulk_images")) {
-                    mkdir(getcwd(). "/../app/uploads/bulk_images", 0777, true);
+                    mkdir(getcwd() . "/../app/uploads/bulk_images", 0777, true);
+                }
+                if(!is_dir(getcwd(). "/../app/uploads/bulk_images/".$_SESSION["url_address"])) {
                     mkdir(getcwd(). "/../app/uploads/bulk_images/".$_SESSION["url_address"], 0777, true);
                 }
 
@@ -70,45 +97,76 @@ class vendormodel
         }
     }
 
+    public function get_productDetails($productId = "") {
+        $sql = "SELECT 
+                    p.id, 
+                    p.name, 
+                    p.description, 
+                    pv.quantity, 
+                    pv.price, 
+                    pv.product_image, 
+                    o.name AS option_name, 
+                    ov.value_name
+                FROM products p 
+                LEFT JOIN product_variants pv 
+                    ON p.id = pv.product_id 
+                INNER JOIN vendors ven 
+                    ON p.vendor_id = ven.id
+                    AND ven.url_address = 'ojmcQKenIh'
+                LEFT JOIN variant_values vv 
+                    ON pv.id = vv.variant_id 
+                LEFT JOIN option_values ov 
+                    ON ov.id = vv.value_id 
+                LEFT JOIN options o 
+                    ON o.id = ov.option_id WHERE ven.url_address = 'ojmcQKenIh'";
+    }
+
     public function add_bulkProductDetails() {
-        echo "Here";
     }
 
     public function add_productDetails()
     {
-
+        print_r($_POST);
         $data = array();
         $productData=array();
 
-        $urladd['url_address']=$_SESSION['url_address'];
+        $urladd['url_address']='ojmcQKenIh';
         $query="select id from vendors where url_address=:url_address";
         $vendor_id = $this->db->read($query, $urladd);
-        print_r($vendor_id[0]['id']);
-        foreach($_POST as $id=>$value)
+        $query="select id,name from options";
+        $optionData = $this->db->read($query);
+        print_r($optionData);
+        foreach ($optionData as $key =>$value)
         {
-            foreach ($value as $key=>$productInfo) {
-                switch ($productInfo['name']) {
-                    case "proname":
-                    case "prodesc":
-                    case "category":
-                        $data[$productInfo['name']] = $productInfo['value'];
-                        break;
-                    case "options":
-                    case "quantity":
-                    case "price":
-                    case "skuId":
-                    case "valueCombination":
-
-                        $data[$productInfo['name']][] = $productInfo['value'];
-                        //$value = $productInfo['value'];
-                        break;
-                    case "optionvalues":
-                        $valueArr = json_decode($productInfo['value'], true);
+            $optionDataArr[$value['id']]=$value['name'];
+        }
+        print_r($optionDataArr);
+        print_r($vendor_id[0]['id']);
+        $productInfo=[];
+        foreach($_POST["productdetails"] as $column => $columnValue)
+        {
+            switch ($column) {
+                case "options":
+                case "quantity":
+                case "skuId":
+                case "valueCombination":
+                    $variantData[$column] = array_values($columnValue);
+                    //$data[$productInfo['name']][] = $productInfo['value'];
+                    //$value = $productInfo['value'];
+                    break;
+                case "optionvalues":
+                    $columnValue = array_values($columnValue);
+                    for($i = 0; $i < count($columnValue); $i++) {
+                        $valueArr = json_decode($columnValue[$i], true);
                         $value = [];
-                        for($i = 0; $i < count($valueArr); $i ++)
-                            $value[] = $valueArr[$i]["value"];
-                        $data[$productInfo['name']][] =$value;
-                }
+                        for($j = 0; $j < count($valueArr); $j ++)
+                            $value[] = $valueArr[$j]["value"];
+                        $options[$column][] = $value;
+                    }
+                    break;
+                default:
+                    $data[$column] = $columnValue;
+            }
                 /*if (!isset($data[$productInfo['name']])) {
                     $data[$productInfo['name']] =$value;
                 } else {
@@ -116,29 +174,70 @@ class vendormodel
                     $data[$productInfo['name']] = [$previousValue];
                     $data[$productInfo['name']][] = $value;;
                 }*/
-            }
+
         }
-        print_r($data['valueCombination']);
+         print_r($options);
+        /*print_r($data['valueCombination']);
         foreach ($data['valueCombination'] as $key=>  $value)
         {
             $valueCombinations[]=explode(",",$value);
 
         }
-        print_r($valueCombinations);
-        $productData['proname']=$data['proname'];
+        print_r($valueCombinations);*/
+        /*$productData['proname']=$data['proname'];
         $productData['prodesc']=$data['prodesc'];
 
-        $productData['category_id']=$data['category'];
-        $productData['vendor_id']=$vendor_id[0]['id'];
-        $query="insert into products(name,description,category_id,vendor_id) values (:proname,:prodesc,:category_id,:vendor_id)";
-        $productId=$this->db->write($query,$productData);
+        $productData['category_id']=$data['category'];*/
+        $data['vendor_id']=$vendor_id[0]['id'];
+
+        $query="INSERT INTO products(
+            name,
+            description,
+            category_id,
+            vendor_id,
+            mrp,
+            collar,
+            seller_price,
+            gst,
+            brand,
+            weight,
+            style_code,
+            fabric,
+            sleeve_lenght,
+            country_origin,
+            fit_shape,
+            occasion,
+            pattern_type,
+            packers_detail
+        ) values (
+            :name,
+            :description,
+            :category,
+            :vendor_id,
+            :mrp,
+            :collar,
+            :seller_price,
+            :gst,
+            :brand,
+            :weight,
+            :style_code,
+            :fabric,
+            :sleeve_length,
+            :country_origin,
+            :fit_shape,
+            :occasion,
+            :pattern_type,
+            :packers_detail
+        )";
+        $productId=$this->db->write($query,$data);
+
         $productOption['product_id']=$productId;
-        foreach ($data['options'] as $key=>$optionId)
+        foreach ($variantData['options'] as $key=>$optionId)
         {
             $productOption['option_id']=$optionId;
             $query = "insert into product_options(option_id,product_id) values (:option_id,:product_id)";
             $productOptionId[] = $this->db->write($query, $productOption);
-            foreach ($data['optionvalues'][$key] as $optionValueName) {
+            foreach ($options['optionvalues'][$key] as $optionValueName) {
                 $query="insert into option_values(option_id,value_name) values (:optionId,:valueName)";
                 $optionValueArr = ["optionId" => $optionId, "valueName" => $optionValueName];
                 $optionValueId[] = $this->db->write($query, $optionValueArr);
@@ -146,30 +245,38 @@ class vendormodel
             }
         }
 
-        foreach ($data['skuId'] as $key=>$variantData) {
+
+        foreach ($variantData['skuId'] as $key=>$variantsData) {
+           $valueCombination = explode(",",$variantData['valueCombination'][$key]);
+            $combination = "";
+            foreach ($variantData['options'] as $index =>$value)
+            {
+                $combination .= $optionDataArr[$value].":". $valueCombination[$index].",";
+            }
             $productVariant = array();
             $productVariant['product_id'] = $productId;
-            $productVariant['quantity'] = $data['quantity'][$key];
-            $productVariant['price'] = $data['price'][$key];
-            $productVariant['skuId'] = $variantData;
+            $productVariant['quantity'] = $variantData['quantity'][$key];
+
+            $productVariant['skuId'] = $variantsData;
             $productVariant['productImage']=$this->generateRandomString();
             $info = pathinfo($_FILES["productimage"]["name"][$key]);
             $ext = $info["extension"];
             $productVariant['productImage']=$productVariant['productImage'].$ext;
+            $productVariant["combination"] = trim($combination,",");
             print_r($productVariant);
 
-            $query = "insert into product_variants(sku_id,product_id,quantity,price,product_image) values (:skuId,:product_id,:quantity,:price,:productImage)";
+            $query = "insert into product_variants(sku_id,product_id,quantity,product_image, combination) values (:skuId,:product_id,:quantity,:productImage, :combination)";
             $productVariantId[] = $this->db->write($query, $productVariant);
             if (!file_exists(FILEUPLOAD.$productVariantId[0])) {
                 $dir_path = getcwd() . "/../app/uploads/";
-                mkdir(getcwd() . "/../app/uploads/" . $productData['vendor_id']."/".$productData['vendor_id'] . "_" . $productVariantId[0], 0777, true);
+                mkdir(getcwd() . "/../app/uploads/" . $data['vendor_id']."/".$data['vendor_id'] . "_" . $productVariantId[0], 0777, true);
 
                 $info = pathinfo($_FILES["productimage"]["name"][$key]);
                 $ext = $info["extension"];
                 $filename = $productVariant['productImage']. "." . $ext;
 
 
-                $target_dir = $dir_path .$productData['vendor_id']."/". $productData['vendor_id'] . "_" . $productVariantId[0] . "/" . $filename;
+                $target_dir = $dir_path .$data['vendor_id']."/". $data['vendor_id'] . "_" . $productVariantId[0] . "/" . $filename;
                 move_uploaded_file($_FILES["productimage"]["tmp_name"][$key], $target_dir);
             }
         }
@@ -182,10 +289,11 @@ class vendormodel
             $query = "insert into variant_values(variant_id,product_id,value_id) values (:variant_id,:product_id,:value_id)";
             $productVariantId[] = $this->db->write($query, $variantValues);
         }
+        print_r($productVariantId);
         if(!empty($data["tags"])) {
 
         }
-print_r($data['proname']);
+
 
 
        /* $db=Database::getInstance();
