@@ -401,4 +401,96 @@ class vendormodel
         }
         return $randomString;
     }
+    function getOneLevel($catId){
+        $data['parentcatid']=$catId;
+
+        $query="SELECT id FROM categories WHERE parent_id=:parentcatid";
+
+        $catIdArr= $this->db->read($query, $data);
+        $catIds = [];
+
+        if(is_array($catIdArr)){
+            foreach ($catIdArr as $key=>$value){
+                $catIds[]=$value['id'];
+            }
+        }
+
+        return $catIds;
+    }
+
+    function getChildren($parent_id, $tree_string=array()) {
+        $tree = array();
+        // getOneLevel() returns a one-dimensional array of child ids
+        $tree = $this->getOneLevel($parent_id);
+        if(count($tree)>0 && is_array($tree)){
+            $tree_string=array_merge($tree_string,$tree);
+        }
+        foreach ($tree as $key => $val) {
+            $this->getChildren($val, $tree_string);
+        }
+
+        return $tree_string;
+    }
+
+    function getProductDataForShop($categoryIds,$type){
+
+        if ($type == 'shop') {
+
+            $query='SELECT *,pv.id as variant_id FROM products as p left join product_variants as pv on p.id=pv.product_id WHERE p.category_id in('.$categoryIds.')';
+
+            $catIdArr= $this->db->read($query);
+            if (is_array($catIdArr) ) {
+                $productDetails = [];
+
+                foreach ($catIdArr as $key => $value) {
+                    $productDetails[$value['product_id']] = $value;
+                }
+                return $productDetails;
+            }}
+
+        elseif ($type=='detail')
+        {
+            $query='SELECT p.*,group_concat(pv.id SEPARATOR "|") AS variant_id, 
+                        group_concat(quantity SEPARATOR "|") AS quantity, 
+                        group_concat(combination SEPARATOR "|") AS combination,
+                        group_concat(product_image SEPARATOR "|") AS image 
+                    FROM products AS p LEFT JOIN product_variants AS pv on p.id=pv.product_id where p.id="'.$categoryIds.'"';
+            $productDetailsArr= $this->db->read($query);
+
+            if (is_array($productDetailsArr) ){
+                $variantOption=[];
+                $variantIds=[];
+                $variantImages=[];
+                $quantity = [];
+                foreach($productDetailsArr as $key => $value) {
+                    $variantCombinations = explode( "|",$value["combination"]);
+                    $variantImages = explode( "|",$value["image"]);
+                    $variantIds = explode( "|",$value["variant_id"]);
+                    $quantity = explode( "|",$value["quantity"]);
+                    $variantWithCombination = [];
+                    foreach($variantCombinations as $key1 => $value1) {
+                        $combinationArr = explode(",", $value1);
+                        foreach ($combinationArr as $value2) {
+                            list($varaintname, $variantvalue) = explode(":", $value2);
+                            if (isset($variantWithCombination[$variantIds[$key1]])) {
+                                $variantWithCombination[$variantIds[$key1]] .= $variantvalue;
+                            } else {
+                                $variantWithCombination[$variantIds[$key1]] = [];
+                                $variantWithCombination[$variantIds[$key1]] = $variantvalue;
+                            }
+                            if (empty($variantOption[$varaintname]) || (!empty($variantOption[$varaintname]) && !in_array($variantvalue, $variantOption[$varaintname])))
+                                $variantOption[$varaintname][] = $variantvalue;
+
+                        }
+                    }
+                    unset($productDetailsArr[$key]["combination"]);
+                    unset($productDetailsArr[$key]["image"]);
+                    unset($productDetailsArr[$key]["variant_id"]);
+                    unset($productDetailsArr[$key]["quantity"]);
+                }
+
+                return [$productDetailsArr, $variantIds, $variantOption, $variantImages, $quantity, $variantWithCombination];
+            }
+        }
+    }
 }

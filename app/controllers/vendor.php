@@ -108,7 +108,7 @@ class vendor extends controller
             exit;
         }
 
-        print_r(json_encode(["success" => false, "error" => $this->getError()], true));
+        print_r(json_encode(["success" => false, "error" => $this->getError()], true));*/
     }
 
     public function bulkUploadProducts()

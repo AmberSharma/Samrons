@@ -9,6 +9,9 @@ class App
 
     public function __construct()
     {
+        if(session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         $url = $this->parseURL();
         if (file_exists(self::CONTROLLER_PATH . strtolower($url[0]) . ".php")) {
             $this->controller = strtolower($url[0]);
@@ -25,8 +28,9 @@ class App
         }
         
         $this->params = (count($url) > 0 ? array_values($url) : ["home"]);
+
         call_user_func_array([$this->controller, $this->method], $this->params);
-        //show(array_values($url));
+
     }
 
     private function parseURL()

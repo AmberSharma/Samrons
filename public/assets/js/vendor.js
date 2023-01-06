@@ -284,7 +284,7 @@ $(document).ready(function() {
             let formData = $('form').serializeArray();
             $.each(formData, function (key, input) {
                 if (input.name === "category") {
-                    if (input.value !== 0) {
+                    if (input.value !== '0') {
                         data.append("productdetails[" + input.name + "]", input.value);
                     }
                 } else if (input.name === "options"
