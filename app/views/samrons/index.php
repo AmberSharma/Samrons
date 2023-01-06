@@ -125,12 +125,12 @@
                       <div class="navbar-nav mr-auto py-0">
                           <a href="index" class="nav-item nav-link active">Home</a>
                           <a href="shop.php" class="nav-item nav-link">Shop</a>
-                          <a href="detail.html" class="nav-item nav-link">Shop Detail</a>
+                          <a href="detail.php" class="nav-item nav-link">Shop Detail</a>
                           <div class="nav-item dropdown">
                               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                               <div class="dropdown-menu rounded-0 m-0">
-                                  <a href="cart.html" class="dropdown-item">Shopping Cart</a>
-                                  <a href="checkout.html" class="dropdown-item">Checkout</a>
+                                  <a href="cart.php" class="dropdown-item">Shopping Cart</a>
+                                  <a href="checkout.php" class="dropdown-item">Checkout</a>
                               </div>
                           </div>
                           <a href="contact.html" class="nav-item nav-link">Contact</a>

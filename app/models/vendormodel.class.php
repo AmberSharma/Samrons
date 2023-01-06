@@ -130,7 +130,7 @@ class vendormodel
         $data = array();
         $productData=array();
 
-        $urladd['url_address']='ojmcQKenIh';
+        $urladd['url_address']=$_SESSION["url_address"];
         $query="select id from vendors where url_address=:url_address";
         $vendor_id = $this->db->read($query, $urladd);
         $query="select id,name from options";
@@ -176,7 +176,7 @@ class vendormodel
                 }*/
 
         }
-         print_r($options);
+
         /*print_r($data['valueCombination']);
         foreach ($data['valueCombination'] as $key=>  $value)
         {
@@ -230,7 +230,7 @@ class vendormodel
             :packers_detail
         )";
         $productId=$this->db->write($query,$data);
-
+         print_r($productId);
         $productOption['product_id']=$productId;
         foreach ($variantData['options'] as $key=>$optionId)
         {
@@ -261,24 +261,24 @@ class vendormodel
             $productVariant['productImage']=$this->generateRandomString();
             $info = pathinfo($_FILES["productimage"]["name"][$key]);
             $ext = $info["extension"];
-            $productVariant['productImage']=$productVariant['productImage'].$ext;
+            $productVariant['productImage']=$productVariant['productImage'].".".$ext;
             $productVariant["combination"] = trim($combination,",");
             print_r($productVariant);
 
             $query = "insert into product_variants(sku_id,product_id,quantity,product_image, combination) values (:skuId,:product_id,:quantity,:productImage, :combination)";
             $productVariantId[] = $this->db->write($query, $productVariant);
-            if (!file_exists(FILEUPLOAD.$productVariantId[0])) {
-                $dir_path = getcwd() . "/../app/uploads/";
-                mkdir(getcwd() . "/../app/uploads/" . $data['vendor_id']."/".$data['vendor_id'] . "_" . $productVariantId[0], 0777, true);
-
-                $info = pathinfo($_FILES["productimage"]["name"][$key]);
-                $ext = $info["extension"];
-                $filename = $productVariant['productImage']. "." . $ext;
-
-
-                $target_dir = $dir_path .$data['vendor_id']."/". $data['vendor_id'] . "_" . $productVariantId[0] . "/" . $filename;
-                move_uploaded_file($_FILES["productimage"]["tmp_name"][$key], $target_dir);
+            if (!is_dir(getcwd() . "/../app/uploads/" . $data['vendor_id']."/".$productId . "_" . $productVariantId[$key])) {
+                mkdir(getcwd() . "/../app/uploads/" . $data['vendor_id']."/".$productId . "_" . $productVariantId[$key], 0777, true);
             }
+
+            $dir_path = getcwd() . "/../app/uploads/";
+
+            $info = pathinfo($_FILES["productimage"]["name"][$key]);
+            $ext = $info["extension"];
+            $filename = $productVariant['productImage'];
+            $target_dir = $dir_path .$data['vendor_id']."/". $productId . "_" . $productVariantId[$key] . "/" . $filename;
+            move_uploaded_file($_FILES["productimage"]["tmp_name"][$key], $target_dir);
+
         }
         $variantValues=array();
         $variantValues['product_id']=$productId;
@@ -381,11 +381,66 @@ class vendormodel
 
         return $tree_string;
     }
-    function getProductDataForShop($categoryIds){
 
-        $data['CategoriesId']=$categoryIds;
+    function getProductDataForShop($categoryIds,$type){
 
-        $query="SELECT * FROM products as p left join product_variants as pv on p.id=pv.product_id WHERE p.category_id in(:parentcatid)";
-        $catIdArr= $this->db->read($query, $data);
+        if ($type == 'shop') {
+
+            $query='SELECT *,pv.id as variant_id FROM products as p left join product_variants as pv on p.id=pv.product_id WHERE p.category_id in('.$categoryIds.')';
+
+            $catIdArr= $this->db->read($query);
+            if (is_array($catIdArr) ) {
+                $productDetails = [];
+
+                foreach ($catIdArr as $key => $value) {
+                    $productDetails[$value['product_id']] = $value;
+                }
+                return $productDetails;
+            }}
+
+        elseif ($type=='detail')
+        {
+            $query='SELECT p.*,group_concat(pv.id SEPARATOR "|") AS variant_id, 
+                        group_concat(quantity SEPARATOR "|") AS quantity, 
+                        group_concat(combination SEPARATOR "|") AS combination,
+                        group_concat(product_image SEPARATOR "|") AS image 
+                    FROM products AS p LEFT JOIN product_variants AS pv on p.id=pv.product_id where p.id="'.$categoryIds.'"';
+            $productDetailsArr= $this->db->read($query);
+
+            if (is_array($productDetailsArr) ){
+                $variantOption=[];
+                $variantIds=[];
+                $variantImages=[];
+                $quantity = [];
+                foreach($productDetailsArr as $key => $value) {
+                    $variantCombinations = explode( "|",$value["combination"]);
+                    $variantImages = explode( "|",$value["image"]);
+                    $variantIds = explode( "|",$value["variant_id"]);
+                    $quantity = explode( "|",$value["quantity"]);
+                    $variantWithCombination = [];
+                    foreach($variantCombinations as $key1 => $value1) {
+                        $combinationArr = explode(",", $value1);
+                        foreach ($combinationArr as $value2) {
+                            list($varaintname, $variantvalue) = explode(":", $value2);
+                            if (isset($variantWithCombination[$variantIds[$key1]])) {
+                                $variantWithCombination[$variantIds[$key1]] .= $variantvalue;
+                            } else {
+                                $variantWithCombination[$variantIds[$key1]] = [];
+                                $variantWithCombination[$variantIds[$key1]] = $variantvalue;
+                            }
+                            if (empty($variantOption[$varaintname]) || (!empty($variantOption[$varaintname]) && !in_array($variantvalue, $variantOption[$varaintname])))
+                                $variantOption[$varaintname][] = $variantvalue;
+
+                        }
+                    }
+                    unset($productDetailsArr[$key]["combination"]);
+                    unset($productDetailsArr[$key]["image"]);
+                    unset($productDetailsArr[$key]["variant_id"]);
+                    unset($productDetailsArr[$key]["quantity"]);
+                }
+
+                return [$productDetailsArr, $variantIds, $variantOption, $variantImages, $quantity, $variantWithCombination];
+            }
+        }
     }
 }

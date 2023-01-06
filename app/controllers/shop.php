@@ -8,9 +8,10 @@ class shop extends controller {
 
         $vendata = $this->load_model("vendormodel");
       $categoriesIds=implode(",",$vendata->getChildren($categoryId, [$categoryId]));
-        $data['productdata']= $vendata->getProductDataForShop($categoriesIds);
+        $data['productdata']= $vendata->getProductDataForShop($categoriesIds,$type='shop');
 
         $data['page_title']="Shop";
+
 
         $this->view("samrons/shop",$data);
     }

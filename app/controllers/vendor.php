@@ -61,7 +61,7 @@ class vendor extends controller
     }
     public function addProductDetails()
     {
-        $this->validateFieldExists([
+       /* $this->validateFieldExists([
             BaseConstants::NAME,
             BaseConstants::DESCRIPTION,
             BaseConstants::MRP,
@@ -99,15 +99,15 @@ class vendor extends controller
         foreach($inputValidationFields as $key => $value) {
             if (!isset($errors[$key]))
                 $_POST[self::PRODUCT_DETAILS][$key] = $this->validateFormData($value, $key, $_POST[self::PRODUCT_DETAILS][$key]);
-        }
-
-        if (empty($this->getError())) {
+        }*/
+        $this->vendorModel->add_productDetails();
+       /* if (empty($this->getError())) {
             if ($this->vendorModel->add_productDetails()) {
                 print_r(json_encode(["success" => true, "message" => "Product Added Successfully"], true));
             }
         }
 
-        print_r(json_encode(["success" => false, "error" => $this->getError()], true));
+        print_r(json_encode(["success" => false, "error" => $this->getError()], true));*/
     }
 
     public function addBulkProducts()

@@ -25,4 +25,10 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="<?php echo ASSETS ?>css/style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="<?php echo ASSETS ?>js/lib/easing/easing.min.js"></script>
+    <script src="<?php echo ASSETS ?>js/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="<?php echo ASSETS ?>js/user.js"></script>
+    <script type="text/javascript" src="<?php echo ASSETS ?>js/main.js"></script>
 </head>

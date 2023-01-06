@@ -9,6 +9,9 @@ class App
 
     public function __construct()
     {
+        if(session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         $url = $this->parseURL();
         if (file_exists(self::CONTROLLER_PATH . strtolower($url[0]) . ".php")) {
             $this->controller = strtolower($url[0]);

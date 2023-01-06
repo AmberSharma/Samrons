@@ -28,7 +28,15 @@ class User
 
         return json_encode([]);
     }
-
+        public function getVariantData($variantId)
+        {
+            print_r($variantId);
+            $sql = 'SELECT p.name, p.seller_price,p.vendor_id,pv.id as variant_id,sku_id,product_id,quantity,product_image
+                        FROM product_variants as pv left join products p on p.id=pv.product_id
+                        WHERE pv.id in('.$variantId.')';
+            $variantData = $this->db->read($sql);
+            return $variantData;
+        }
     public function sign_up()
     {
         $data = array();
@@ -243,7 +251,7 @@ class User
                 $result = $this->db->read($query, $data);
 
                 if (is_array($result)) {
-                    print_r($result);
+
                     $_SESSION['url_address'] = $result[0]['url_address'];
                     $_SESSION['type'] = $result[0]['status'];
                     header("Location:" . ROOT . "vendor/dashboard");
