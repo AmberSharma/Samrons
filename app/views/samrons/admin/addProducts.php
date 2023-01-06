@@ -1,4 +1,3 @@
-
 <?php
 include_once "inc/header.php";
 ?>
@@ -9,6 +8,10 @@ include_once "inc/header.php";
 
     select.error {
         border: 2px solid #CC0000
+    }
+
+    .form-group {
+        padding-bottom: 5px;
     }
 
 </style>
@@ -22,116 +25,9 @@ include_once "inc/leftpanel.php";
 <div id="right-panel" class="right-panel">
 
     <!-- Header-->
-    <header id="header" class="header">
-        <div class="top-left">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="./"><img src="http://samrons.local/images.php?abc=1234.jpg"
-                                                       alt="Logo"></a>
-                <a class="navbar-brand hidden" href="./"><img src="../app/views/samrons/admin/images/logo2.png"
-                                                              alt="Logo"></a>
-                <script type="text/javascript" src="<?php echo ASSETS ?>js/script.js"></script>
-                <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
-            </div>
-        </div>
-        <div class="top-right">
-            <div class="header-menu">
-                <div class="header-left">
-                    <button class="search-trigger"><i class="fa fa-search"></i></button>
-                    <div class="form-inline">
-                        <form class="search-form">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Search ..."
-                                   aria-label="Search">
-                            <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
-                        </form>
-                    </div>
-
-                    <div class="dropdown for-notification">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="notification"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-bell"></i>
-                            <span class="count bg-danger">3</span>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="notification">
-                            <p class="red">You have 3 Notification</p>
-                            <a class="dropdown-item media" href="#">
-                                <i class="fa fa-check"></i>
-                                <p>Server #1 overloaded.</p>
-                            </a>
-                            <a class="dropdown-item media" href="#">
-                                <i class="fa fa-info"></i>
-                                <p>Server #2 overloaded.</p>
-                            </a>
-                            <a class="dropdown-item media" href="#">
-                                <i class="fa fa-warning"></i>
-                                <p>Server #3 overloaded.</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="dropdown for-message">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="message"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-envelope"></i>
-                            <span class="count bg-primary">4</span>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="message">
-                            <p class="red">You have 4 Mails</p>
-                            <a class="dropdown-item media" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="images/avatar/1.jpg"></span>
-                                <div class="message media-body">
-                                    <span class="name float-left">Jonathan Smith</span>
-                                    <span class="time float-right">Just now</span>
-                                    <p>Hello, this is an example msg</p>
-                                </div>
-                            </a>
-                            <a class="dropdown-item media" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="images/avatar/2.jpg"></span>
-                                <div class="message media-body">
-                                    <span class="name float-left">Jack Sanders</span>
-                                    <span class="time float-right">5 minutes ago</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                </div>
-                            </a>
-                            <a class="dropdown-item media" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="images/avatar/3.jpg"></span>
-                                <div class="message media-body">
-                                    <span class="name float-left">Cheryl Wheeler</span>
-                                    <span class="time float-right">10 minutes ago</span>
-                                    <p>Hello, this is an example msg</p>
-                                </div>
-                            </a>
-                            <a class="dropdown-item media" href="#">
-                                <span class="photo media-left"><img alt="avatar" src="images/avatar/4.jpg"></span>
-                                <div class="message media-body">
-                                    <span class="name float-left">Rachel Santos</span>
-                                    <span class="time float-right">15 minutes ago</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="user-area dropdown float-right">
-                    <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true"
-                       aria-expanded="false">
-                        <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
-                    </a>
-
-                    <div class="user-menu dropdown-menu">
-                        <a class="nav-link" href="#"><i class="fa fa-user"></i>My Profile</a>
-
-                        <a class="nav-link" href="#"><i class="fa fa-bell-o"></i>Notifications <span
-                                    class="count">13</span></a>
-
-                        <a class="nav-link" href="#"><i class="fa fa-cog"></i>Settings</a>
-
-                        <a class="nav-link" href="#"><i class="fa fa-power-off"></i>Logout</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header><!-- /header -->
+    <?php
+    include_once 'inc/menu.php';
+    ?>
     <!-- Header-->
 
     <div class="breadcrumbs">
@@ -150,7 +46,7 @@ include_once "inc/leftpanel.php";
                             <ol class="breadcrumb text-right">
                                 <li><a href="#">Dashboard</a></li>
                                 <li><a href="#">Table</a></li>
-                                <li class="active">Data table</li>
+                                <li class="active">Add Product</li>
                             </ol>
                         </div>
                     </div>
@@ -160,79 +56,223 @@ include_once "inc/leftpanel.php";
     </div>
     <div class="content">
         <div class="animated fadeIn">
-            <form method="post" enctype="multipart/form-data">
+            <form method="post" enctype="multipart/form-data" id="addProductForm">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="alert alert-success" role="alert"></div>
+                    <div class="alert alert-danger" role="alert"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
                         <div class="card">
                             <div class="card-header"><strong>Product Category</strong></div>
-                            <label>Parent Category</label>
-                            <div class="form-group row">
-                                <div class="col-sm-12">
-                                    <select id="cat__0" class="form-control category-subset" name="category">
-                                        <option> ---Select Category---</option>
-                                        <?php
-                                        if (!empty($data['categories'])) {
-                                            $categoriesArr = json_decode($data['categories'], true);
-                                            foreach ($categoriesArr as $category) {
-                                                echo "<option value='" . $category['id'] . "'>" . $category['name'] . "</option>";
-                                            }
-                                        }
-                                        ?>
-                                    </select>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <div class="form-floating">
+                                            <select id="cat__0" class="form-control category-subset" name="category">
+                                                <option value=""> ---Select Category---</option>
+                                                <?php
+                                                if (!empty($data['categories'])) {
+                                                    $categoriesArr = json_decode($data['categories'], true);
+                                                    foreach ($categoriesArr as $category) {
+                                                        echo "<option value='" . $category['id'] . "'>" . $category['name'] . "</option>";
+                                                    }
+                                                }
+                                                ?>
+                                            </select>
+                                            <label>Parent Category</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header"><strong>Product Price</strong></div>
+                            <div class="card-body">
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <div class="form-floating">
+                                            <input type="text" id="promrp"
+                                                   class="form-control" name="mrp">
+                                            <label>MRP (&#8377;)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <div class="form-floating">
+                                            <input type="text" id="prosellerprice"
+                                                   class="form-control" name="seller_price">
+                                            <label>Seller Price (&#8377;)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <div class="form-floating">
+                                            <select id="progst" class="form-control category-subset" name="gst">
+                                                <option value="">--- SELECT GST ---</option>
+                                                <option value="5">5%</option>
+                                                <option value="12">12%</option>
+                                                <option value="18">18%</option>
+                                                <option value="28">28%</option>
+                                            </select>
+                                            <label>GST %</label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="card">
-                            <div class="card-header"><strong>Product</strong><strong>Details</strong></div>
+                            <div class="card-header"><strong>Product Details</strong></div>
                             <div class="card-body card-block">
-                                <div class="form-group"><label for="productname" class=" form-control-label">Product
-                                        Name</label><input type="text" id="proname"
-                                                           placeholder="Enter your Product Name"
-                                                           class="form-control" name="proname"></div>
-                                <div class="form-group"><label for="productdesc" class=" form-control-label">Product
-                                        Description</label><input type="text" id="prodesc" name="prodesc"
-                                                                  placeholder="Enter Product Description"
-                                                                  class="form-control"></div>
-
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="proname"
+                                                   class="form-control" name="name">
+                                            <label>Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="probrand"
+                                                   class="form-control" name="brand">
+                                            <label>Brand</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="proweight"
+                                                   class="form-control" name="weight">
+                                            <label>Weight</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="prostylecode"
+                                                   class="form-control" name="style_code">
+                                            <label>Style Code</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="profabric"
+                                                   class="form-control" name="fabric">
+                                            <label>Fabric</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="procollar"
+                                                   class="form-control" name="collar">
+                                            <label>Collar</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="prosleevelength"
+                                                   class="form-control" name="sleeve_length">
+                                            <label>Sleeve length</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="procountryorigin"
+                                                   class="form-control" name="country_origin">
+                                            <label>Country of Origin</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="profitshape"
+                                                   class="form-control" name="fit_shape">
+                                            <label>Fit Shape</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="prooccasion"
+                                                   class="form-control" name="occasion">
+                                            <label>Occasion</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="propatterntype"
+                                                   class="form-control" name="pattern_type">
+                                            <label>Pattern Type</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="proneck"
+                                                   class="form-control" name="neck">
+                                            <label>Neck</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="prosolid"
+                                                   class="form-control" name="solid">
+                                            <label>Solid</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="prolength"
+                                                   class="form-control" name="length">
+                                            <label>Length</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                                <textarea type="text" class="form-control" id="prodesc"
+                                                          required="required"
+                                                          style="height: 100px" name="description"></textarea>
+                                            <label>Description</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <textarea type="text" class="form-control" id="propackerdetail"
+                                                      style="height: 100px" name="packers_detail"></textarea>
+                                            <label>Packer's Detail</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="card">
                             <div class="card-header">
                                 <strong>Variant Details</strong>
-                                <button type="button" class="btn btn-primary" id="plus"><i class="fa fa-plus"></i>
+                                <button type="button" class="btn btn-primary" id="plus" style="float: right;"><i class="fa fa-plus"></i>
                                 </button>
                             </div>
                             <div class="card-body card-block">
-                                <!--                            <div class="form-group row">-->
-                                <!--                                <div class="col-sm-4">-->
-                                <!--                                    <select id="pro__0" class="form-control category-subset">-->
-                                <!--                                        <option> ---Select Option---</option>-->
-                                <!--                                        --><?php
-                                //                                        if (!empty($data['options'])) {
-                                //                                            $optionArr = json_decode($data['options'], true);
-                                //                                            foreach ($optionArr as $option) {
-                                //                                                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
-                                //                                            }
-                                //                                        }
-                                //                                        ?>
-                                <!--                                    </select>-->
-                                <!--                                </div>-->
-                                <!--                                <div class="col-sm-6 optionval">-->
-                                <!--                                    <input type="textarea" id="optionvalue__0" placeholder="Enter Option Values"-->
-                                <!--                                           class="form-control" name="tags">-->
-                                <!--                                </div>-->
-                                <!--                                <div class="col-sm-2">-->
-                                <!--                                    <button type="button" class="btn btn-primary" id="plus"><i class="fa fa-plus"></i>-->
-                                <!--                                    </button>-->
-                                <!--                                </div>-->
-                                <!--                            </div>-->
-
-
                             </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" style="background-color: #587319;"><strong>Final Price</strong></div>
+                            <div class="card-body card-block" style="background-color: #8ead45;"></div>
                         </div>
                     </div>
                 </div>
@@ -272,31 +312,6 @@ include_once "inc/leftpanel.php";
     </div><!-- /#right-panel -->
 
     <!-- Right Panel -->
-
-    <!-- Scripts -->
-
-    <!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>-->
-    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>-->
-    <!--<script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>-->
-    <!---->
-    <!---->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/datatables.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/dataTables.bootstrap.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/dataTables.buttons.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/buttons.bootstrap.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/jszip.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/vfs_fonts.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/buttons.html5.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/buttons.print.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/buttons.colVis.min.js"></script>-->
-    <!--<script src="--><?php //echo ASSETS ?><!--js/data-table/datatables-init.js"></script>-->
-
-
-    <!--<script type="text/javascript">-->
-    <!--    $(document).ready(function() {-->
-    <!--        $('#bootstrap-data-table-export').DataTable();-->
-    <!--    } );-->
-    <!--</script>-->
 
 
 </body>

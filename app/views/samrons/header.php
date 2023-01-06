@@ -63,7 +63,7 @@
                 </a>
                 <?php if(isset( $data['user_data']) ): ?>
                     <span class="text-muted px-2">|</span>
-                    <b style="font: 25px">Welcome  <?php echo $data['user_data']["username"] ?></b>
+                    <b style="font: 25px">Welcome  <?php echo $data['user_data']["name"] ?></b>
                 <?php endif;?>
                 <?php if(isset( $data['user_data']) ): ?>
                     <a href="logout" class="nav-item nav-link">Logout</a>

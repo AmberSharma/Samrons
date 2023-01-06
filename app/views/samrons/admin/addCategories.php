@@ -1,4 +1,3 @@
-<? print_r( $data); ?>
 <?php
 include_once "inc/header.php";
 ?>
@@ -9,6 +8,10 @@ include_once "inc/header.php";
 
     select.error {
         border: 2px solid #CC0000
+    }
+
+    .form-group {
+        padding-bottom: 5px;
     }
 </style>
 <body>
@@ -58,34 +61,46 @@ include_once "inc/leftpanel.php";
                             <strong class="card-title">Add Category</strong>
                         </div>
                         <div class="card-body">
-                            <form  method="post" enctype="multipart/form-data">
+                            <div class="alert alert-success" style="display:none;">
+                                <strong>Success!</strong> Category Got added Successfully
+                            </div>
+                            <form id="addCategoryForm" method="post" enctype="multipart/form-data">
 
                                 <div class="form-group row">
                                     <div class="col-sm-6">
-                                        <label>Category Name</label>
-                                        <input type="text" class="form-control" id="cname" placeholder="Category Name" name="cname"
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="cname" placeholder="Category Name" name="cname"
                                                required="required" data-validation-required-message="Please enter category name">
+                                            <label>Category Name</label>
+                                        </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <label>Description</label>
-                                        <input type="text" class="form-control" id="desc" placeholder="Description" name="desc"
-                                               required="required" data-validation-required-message="Please enter Description">
+                                        <div class="form-floating">
+                                            <textarea type="text" class="form-control" id="desc" placeholder="Description" name="desc"
+                                                      required="required" data-validation-required-message="Please enter Description" style="height: 100px"></textarea>
+                                            <label>Description</label>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6">
-                                        <label>Parent Category</label>
-                                        <select id="cat__0" class="form-control category-subset">
-                                            <option> ---Select Category---</option>
-                                            <?php
-                                            if (!empty($data['categories'])) {
-                                                $categoriesArr = json_decode($data['categories'], true);
-                                                foreach ($categoriesArr as $category) {
-                                                    echo "<option value='" . $category['id'] . "'>" . $category['name'] . "</option>";
+                                        <div class="form-floating">
+                                            <select id="cat__0" name="category" class="form-control category-subset">
+                                                <option></option>
+                                                <?php
+                                                if (!empty($data['categories'])) {
+                                                    $categoriesArr = json_decode($data['categories'], true);
+                                                    foreach ($categoriesArr as $category) {
+                                                        echo "<option value='" . $category['id'] . "'>" . $category['name'] . "</option>";
+                                                    }
                                                 }
-                                            }
-                                            ?>
-                                        </select>
+                                                ?>
+                                            </select>
+                                            <label>Parent Category</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" type="file" name="categoryimage" id="categoryimage">
                                     </div>
                                 </div>
 
@@ -125,29 +140,6 @@ include_once "inc/leftpanel.php";
 <!-- Right Panel -->
 
 <!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
-
-
-<script src="<?php echo ASSETS ?>js/data-table/datatables.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/dataTables.bootstrap.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/dataTables.buttons.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/buttons.bootstrap.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/jszip.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/vfs_fonts.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/buttons.html5.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/buttons.print.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/buttons.colVis.min.js"></script>
-<script src="<?php echo ASSETS ?>js/data-table/datatables-init.js"></script>
-
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#bootstrap-data-table-export').DataTable();
-    } );
-</script>
 
 
 </body>
