@@ -30,7 +30,7 @@ trait BaseTrait
                 break;
             case "number":
                 $this->data = trim($data);
-                if (ctype_digit($this->data)) {
+                if (!ctype_digit($this->data)) {
                     $this->setError($fieldName, "Should be an Integer");
                 }
                 $this->data = filter_var($this->data, FILTER_SANITIZE_NUMBER_INT);
