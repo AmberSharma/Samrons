@@ -315,9 +315,10 @@ $(document).ready(function() {
                 data: data,
                 success: function (response) {
                     response = JSON.parse(JSON.stringify(response));
-                    if (response.status == true) {
+                    if (response.success == true) {
                         $(".alert-success").html(response.message).show();
                         autoHideAlert();
+                        $("#addProductForm")[0].reset();
                     } else {
                         let html = '';
                         for (let key in response.error) {

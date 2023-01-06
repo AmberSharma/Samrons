@@ -14,12 +14,40 @@ $(document).ready(function() {
         "Please check your input."
     );
 
+    $("#bulkUploadProductForm").validate({
+        rules: {
+            category: {
+                required: true,
+            },
+            bulkUploadProducts: {
+                required: true,
+                extension: "csv"
+            },
+            message: {
+                bulkUploadProducts: {
+                    extension: "Upload a file with .csv extension"
+                }
+            }
+        },
+        errorElement: "div",
+        errorPlacement: function ( error, element ) {
+            error.addClass( "invalid-feedback" );
+            error.insertAfter( element );
+        },
+        highlight: function(element) {
+            $(element).removeClass('is-valid').addClass('is-invalid');
+        },
+        unhighlight: function(element) {
+            $(element).removeClass('is-invalid').addClass('is-valid');
+        }
+    })
+
     $("#addCategoryForm").validate({
         rules: {
             categoryimage: {
                 required: true,
                 extension: "jpg|jpeg|png"
-            }
+            },
         },
         errorElement: "div",
         errorPlacement: function ( error, element ) {

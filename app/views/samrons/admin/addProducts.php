@@ -216,6 +216,29 @@ include_once "inc/leftpanel.php";
                                             <label>Pattern Type</label>
                                         </div>
                                     </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="proneck"
+                                                   class="form-control" name="neck">
+                                            <label>Neck</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="prosolid"
+                                                   class="form-control" name="solid">
+                                            <label>Solid</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-floating">
+                                            <input type="text" id="prolength"
+                                                   class="form-control" name="length">
+                                            <label>Length</label>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6">

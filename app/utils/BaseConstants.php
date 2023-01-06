@@ -50,6 +50,14 @@ class BaseConstants
     const OCCASION = "occasion";
     const PATTERN_TYPE= "pattern_type";
     const PACKERS_DETAILS = "packers_detail";
+    const SIZE = "size";
+    const COLOR = "color";
+    const NECK = "neck";
+    const SOLID = "solid";
+    const LENGTH = "length";
+    const SKU_ID = "skuId";
+    const QUANTITY = "quantity";
+    const IMAGE_URL = "image_url";
 
     const BULK_UPLOAD_URL = ROOT."images.php?filename=";
 }
