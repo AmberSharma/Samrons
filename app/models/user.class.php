@@ -59,7 +59,8 @@ class User
             $data['cancelcheque'] = $this->generateRandomString();
             $data['photo'] = $this->generateRandomString();
             $data['sign'] = $this->generateRandomString();
-
+            $data['status'] = "inactive";
+            $data['type'] = 2;
             $query = "INSERT INTO " . BaseConstants::VENDOR_TABLE . " (
                     url_address,
                     create_datetime,
@@ -73,7 +74,10 @@ class User
                     cheque,
                     photo,
                     signature,
-                    current_account_number) 
+                    current_account_number,
+                    status,
+                    type
+                    ) 
                 values (
                     :url_address,
                     :date,
@@ -87,7 +91,10 @@ class User
                     :cancelcheque,
                     :photo,
                     :sign,
-                    :caccountnumber)";
+                    :caccountnumber,
+                    :status,
+                    :type
+                    )";
             $result = $this->db->write($query, $data);
 
             if (!file_exists(FILEUPLOAD . $result)) {

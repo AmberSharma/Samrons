@@ -42,9 +42,10 @@ class Database
 
     public function write($query, $data = [])
     {
-        //print_r($data);die("dsfds");
         $stm = self::$conn->prepare($query);
         $stm->execute($data);
+
+        //$stm->debugDumpParams();
         if (self::$conn->lastInsertId() != "") {
             return self::$conn->lastInsertId();
         }

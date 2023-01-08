@@ -137,7 +137,7 @@ class vendormodel
             $data = array();
             $productData = array();
 
-            $urladd['url_address'] = 'mE5QioxhdW';
+            $urladd['url_address'] = $_SESSION["url_address"];
             $query = "select id from vendors where url_address=:url_address";
             $vendor_id = $this->db->read($query, $urladd);
             $query = "select id,name from options";
@@ -175,28 +175,20 @@ class vendormodel
 //                    }
                         break;
                     default:
-                        $data[$column] = $columnValue;
+                        $data[$column] = strip_tags($columnValue);
                 }
             }
 
-            //TODO - Remove when possible
-            if (!isset($data["neck"])) {
-                $data["neck"] = "test";
-            }
-            if (!isset($data["solid"])) {
-                $data["solid"] = "test";
-            }
-            if (!isset($data["length"])) {
-                $data["length"] = "test";
-            }
+            $data["tag"] = "";
             foreach ($data as $key1 => $value1) {
                 if (!in_array($key1, ["description", "category", "vendor_id", "gst", "weight"]))
-                    $data["tag"] = $value1 . " ";
+                    $data["tag"] .= $value1 . " ";
             }
 
-            if (!isset($data["final_price"])) {
-                $data["final_price"] = "test";
-            }
+
+            $data["final_price"] = $data["seller_price"] + 50;
+            $data["amount_to_seller"] = $this->getAmountToSeller((int)$data["seller_price"]);
+
 
             $data['vendor_id'] = $vendor_id[0]['id'];
             $query = "INSERT INTO products(
@@ -222,7 +214,8 @@ class vendormodel
                 solid,
                 length,
                 tag,
-                final_price       
+                final_price,
+                amount_to_seller       
             ) values (
                 :name,
                 :description,
@@ -246,8 +239,10 @@ class vendormodel
                 :solid,
                 :length,
                 :tag,
-                :final_price
+                :final_price,
+                :amount_to_seller
             )";
+
             $productId = $this->db->write($query, $data);
             if (empty($productId)) {
                 return ["success" => false, "error" => "Could not save product"];
@@ -314,8 +309,17 @@ class vendormodel
                     mkdir(getcwd() . "/../app/uploads/" . $data['vendor_id'] . "/" . $productId . "_" . $productVariantId[$key], 0777, true);
                 }
                 if (!empty($productVariantImageUrl['url'])) {
-                    rename(getcwd() . "/../app/uploads/bulk_images/" . $urladd['url_address'] . "/" . $productVariantImageUrl['url'],
-                        getcwd() . "/../app/uploads/" . $data['vendor_id'] . "/" . $productId . "_" . $productVariantId[$key] . "/" . $productVariantImageUrl['url']);
+                    $oldFile = getcwd() . "/../app/uploads/bulk_images/" . $urladd['url_address'] . "/" . $productVariantImageUrl['url'];
+                    $dummyImgPath = getcwd() . "/../app/uploads/bulk_images/dummy-product.jpg";
+                    $newName = getcwd() . "/../app/uploads/" . $data['vendor_id'] . "/" . $productId . "_" . $productVariantId[$key] . "/" . $productVariantImageUrl['url'];
+                    $renamed = false;
+                    if ( file_exists($oldFile) && is_readable($oldFile) ) {
+                        $renamed = rename($oldFile, $newName);
+                    }
+
+                    if(!$renamed) {
+                        copy($dummyImgPath , $newName);
+                    }
                 } else {
 
                     $dir_path = getcwd() . "/../app/uploads/";
@@ -324,7 +328,12 @@ class vendormodel
                     $ext = $info["extension"];
                     $filename = $productVariant['productImage'];
                     $target_dir = $dir_path .$data['vendor_id']."/". $productId . "_" . $productVariantId[$key] . "/" . $filename;
-                    move_uploaded_file($_FILES["productimage"]["tmp_name"][$key], $target_dir);
+                    $moved = move_uploaded_file($_FILES["productimage"]["tmp_name"][$key], $target_dir);
+                    if (!$moved) {
+                        $dummyImgPath = getcwd() . "/../app/uploads/bulk_images/dummy-product.jpg";
+                        $newName = getcwd() . "/../app/uploads/" . $data['vendor_id'] . "/" . $productId . "_" . $productVariantId[$key] . "/" . $productVariantImageUrl['url'];
+                        copy($dummyImgPath , $newName);
+                    }
                 }
             }
 //            $variantValues = array();
@@ -350,7 +359,7 @@ class vendormodel
              if(is_array($result)){
                  $message = "You are Successfully Registered. Try Login after couple of hours after Admin Approval";
              }*/
-            return ["status" => true, "message" => "Product Added Successfully"];
+            return ["success" => true, "message" => "Product Added Successfully"];
         } catch (Exception $e) {
             return ["success" => false, "error" => "Could Not Save Product and its variants"];
         }
@@ -430,6 +439,31 @@ class vendormodel
         }
 
         return $tree_string;
+    }
+
+    public function getAmountToSeller ($sellerPrice) {
+        switch ($sellerPrice) {
+            case $sellerPrice > 0 && $sellerPrice <= 100:
+                $amountToSeller = ($sellerPrice - (20 / 100) * $sellerPrice);
+                break;
+            case $sellerPrice > 100 && $sellerPrice <= 300:
+                $amountToSeller = ($sellerPrice - (10 / 100) * $sellerPrice);
+                break;
+            case $sellerPrice > 300 && $sellerPrice <= 400:
+                $amountToSeller = ($sellerPrice - (8 / 100) * $sellerPrice);
+                break;
+            case $sellerPrice > 400 && $sellerPrice <= 600:
+                $amountToSeller = ($sellerPrice - (6 / 100) * $sellerPrice);
+                break;
+            case $sellerPrice > 600 && $sellerPrice <= 1000:
+                $amountToSeller = ($sellerPrice - (5 / 100) * $sellerPrice);
+                break;
+            default:
+                $amountToSeller = ($sellerPrice - (2 / 100) * $sellerPrice);
+                break;
+        }
+
+        return $amountToSeller;
     }
 
     function getProductDataForShop($categoryIds,$type){
