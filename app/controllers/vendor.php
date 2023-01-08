@@ -108,13 +108,11 @@ class vendor extends controller
             exit;
         }
 
-        print_r(json_encode(["success" => false, "error" => $this->getError()], true));*/
+        print_r(json_encode(["success" => false, "error" => $this->getError()], true));
     }
 
     public function bulkUploadProducts()
     {
-        print_r($_POST);
-        print_r($_FILES);
         $fileMimes = array(
             'application/vnd.ms-excel','text/plain','text/csv','text/tsv'
         );
@@ -128,22 +126,41 @@ class vendor extends controller
                 $data["errors"]["Validation Error"] = ["Header Columns do not match with the template. Missing Header Column(s): ".implode(",", $missingColumns)];
             } else {
 //                 Parse data from CSV file line by line
-                $count = 0;
+
                 $_POST["productdetails"]["category"] =$_POST["category"];
                 unset($_POST["category"]);
+                $count = 0;
                 while (($getData = fgetcsv($csvFile, 500, ",")) !== FALSE) {
                     if ($count > 500) {
                         break;
                     }
+                    $variantValidationCount = 0;
                     foreach ($getData as $key => $value) {
-                        echo ProductCsvMapping::PRODUCT_COLUMN_MAPPING[$getHeader[$key]];
+                        if (in_array($getHeader[$key], ProductCsvMapping::REQUIRED_ATTRIBUTES)) {
+                            if (empty($value)) {
+                                $data["errors"]["Validation Error"][] =  $getHeader[$key] ." cannot be empty";
+                            }
+                        }
+
+                        if (in_array($getHeader[$key], ProductCsvMapping::VARIANT_VALIDATION)) {
+                            if (empty($value)) {
+                                $variantValidationCount ++;
+                                if ($variantValidationCount == count(ProductCsvMapping::VARIANT_VALIDATION)) {
+                                    $data["errors"]["Validation Error"][] = implode(",", ProductCsvMapping::VARIANT_VALIDATION). " can't all be blank";
+                                }
+                            }
+                        }
                         switch(ProductCsvMapping::PRODUCT_COLUMN_MAPPING[$getHeader[$key]]) {
                             case BaseConstants::SIZE:
                             case BaseConstants::COLOR:
                             case BaseConstants::SKU_ID:
                             case BaseConstants::QUANTITY:
                             case BaseConstants::IMAGE_URL:
-                                $_POST["productdetails"][ProductCsvMapping::PRODUCT_COLUMN_MAPPING[$getHeader[$key]]] = explode("#", $value);
+                                if (preg_match('/[\'^£$%&*()}{@~?><>,|=_+¬-]/', $value))
+                                {
+                                    $data["errors"]["Validation Error"][] = $getHeader[$key]." contains special characters other than #";
+                                }
+                                $_POST["productdetails"][ProductCsvMapping::PRODUCT_COLUMN_MAPPING[$getHeader[$key]]] = array_map('trim', explode("#", $value));
                                 break;
 
                             default:
@@ -157,32 +174,48 @@ class vendor extends controller
                     );
                     $counter = count($_POST["productdetails"][BaseConstants::SIZE]) * count($_POST["productdetails"][BaseConstants::COLOR]);
                     if (count($_POST["productdetails"][BaseConstants::SKU_ID]) != $counter) {
-                        $data["errors"]["Validation Error"] = ["Number of values passed to SKU Id is not equal to (Size * Color)"];
+                        $data["errors"]["Validation Error"][] = "Number of values passed to SKU Id is not equal to (Size * Color)";
                     }
                     if (count($_POST["productdetails"][BaseConstants::QUANTITY]) != $counter) {
-                        $data["errors"]["Validation Error"] = ["Number of values passed to Quantity is not equal to (Size * Color)"];
+                        $data["errors"]["Validation Error"][] = "Number of values passed to Quantity is not equal to (Size * Color)";
                     }
                     if (count($_POST["productdetails"][BaseConstants::IMAGE_URL]) != $counter) {
-                        $data["errors"]["Validation Error"] = ["Number of values passed to Image Url is not equal to (Size * Color)"];
+                        $data["errors"]["Validation Error"][] = "Number of values passed to Image Url is not equal to (Size * Color)";
                     }
 
                     $count ++;
-                }
 
+                    if (empty($data["errors"])) {
+
+                        $result = $this->vendorModel->add_productDetails();
+                        if (!$result["success"]) {
+                            $finalOutput[$count][] = $result["error"];
+                        } else {
+                            $finalOutput[$count][] = $result["message"];
+                        }
+
+                    } else {
+                        $finalOutput[$count][] = implode("\n", $data["errors"]["Validation Error"]);
+                    }
+
+                    unset($data);
+                }
                 if (!$count) {
                     $data["errors"]["Validation Error"] = ["Uploaded File donot have any data to process"];
                 }
+
+
                 fclose($csvFile);
             }
+            $this->downloadCSV("product_upload_result.csv",$finalOutput);
+            exit;
         }
         else
         {
             $data["errors"]["Validation Error"] = ["Upload a file with only .csv extension"];
         }
-        //echo "<pre>";print_r($_POST);echo "</pre>";die("Fdsfsd");
-        if (empty($data["errors"])) {
-            $this->vendorModel->add_productDetails();
-        }
+        //echo "<pre>";print_r($data);print_r($_POST);echo "</pre>";die("sdgfsdfg");
+
         $data['page_title']="Bulk Upload Products";
         $data['categories'] = $this->getCategories();
         $this->view("samrons/admin/bulkUploadProducts",$data);
@@ -227,15 +260,21 @@ class vendor extends controller
         echo json_encode($this->vendorModel->remove_uploaded_images(), true);
     }
 
-    public function downloadCSV() {
-        $fileName = "product_details.csv";
+    public function downloadCSV($fileName = "product_details.csv", $data = []) {
+        //$fileName = "product_details.csv";
         $delimiter = ",";
 
         $f = fopen('php://memory', 'w');
         // loop over the input array
         //foreach (ProductCsvMapping::PRODUCT_COLUMN_MAPPING  as $line) {
             // generate csv lines from the inner arrays
+        if (empty($data)) {
             fputcsv($f, array_keys(ProductCsvMapping::PRODUCT_COLUMN_MAPPING), $delimiter);
+        } else {
+            foreach ($data  as $line) {
+                fputcsv($f, $line, $delimiter);
+            }
+        }
         //}
         // reset the file pointer to the start of the file
         fseek($f, 0);

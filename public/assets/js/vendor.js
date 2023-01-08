@@ -8,6 +8,7 @@ $(document).ready(function() {
     }
 
     function renderSubCategory(element) {
+        console.log("Fdsgsdgsd");
         let self = element;
         let elementId = element.attr("id");
         let elementIdNum = elementId.split("__")[1];
@@ -18,7 +19,7 @@ $(document).ready(function() {
         }
         let parentcatid=element.val();
         self.removeClass('error');
-        self.parent().parent().nextAll('.subcategory').remove();
+        self.parent().parent().parent().nextAll('.subcategory').remove();
         if (!isNaN(parseInt(parentcatid))) {
             $.ajax({
                 url: '/vendor/getsubcategories',   // sending ajax request to this url
@@ -39,7 +40,7 @@ $(document).ready(function() {
                             html += '<div class="'+parentClass+'">';
                             html += '<div class="form-floating">';
                             html += '<select id="' + attributeId + '" class="form-control category-subset" name="category">';
-                            html += '<option value="0"> ---Select Sub Category---</option>';
+                            html += '<option value=""> ---Select Sub Category---</option>';
                             response.forEach(function (item, index) {
                                 html += '<option value=' + item['id'] + '>' + item['name'] + '</option>';
                             });
@@ -443,5 +444,20 @@ $(document).ready(function() {
                 $("#result").html("Some error encountered.");
             }
         });
+    });
+
+    $("#bulkUploadProductForm").submit( function(eventObj) {
+        console.log("Fdsgdfgfdgfd");
+        let categoryId = 0;
+        $("select[name^='category']").each(function() {
+            if($(this).val() != "0") {
+                categoryId = $(this).val();
+            }
+        });
+        $("<input />").attr("type", "hidden")
+            .attr("name", "category")
+            .attr("value", categoryId)
+            .appendTo("#bulkUploadProductForm");
+        return true;
     });
 });
