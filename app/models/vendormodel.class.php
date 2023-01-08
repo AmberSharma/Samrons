@@ -39,13 +39,14 @@ class vendormodel
         $result = $this->db->write($query, $data);
         if (!empty($result)) {
             $dir_path = getcwd() . "/../app/uploads/";
-            if (!file_exists(getcwd() . "/../app/uploads/category")) {
+            if (!is_dir(getcwd() . "/../app/uploads/category")){
                 mkdir(getcwd() . "/../app/uploads/" . "category", 0777, true);
             }
+            
             $filename = $data['catimage'];
 
             $target_dir = $dir_path . "category" . "/" . $filename;
-            move_uploaded_file($_FILES["categoryimage"]["tmp_name"][0], $target_dir);
+            move_uploaded_file($_FILES["categoryimage"]["tmp_name"], $target_dir);
 
             return true;
         }
