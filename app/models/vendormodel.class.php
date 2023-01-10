@@ -1,11 +1,13 @@
 <?php
 
 use App\Utils\BaseConstants;
+use Ramsey\Uuid\Uuid;
+require_once 'basemodel.class.php';
 
-class vendormodel
+class vendormodel extends basemodel
 {
 
-    private $db;
+    protected $db;
 
     public function __construct()
     {
@@ -24,13 +26,15 @@ class vendormodel
         $info = pathinfo($_FILES["categoryimage"]["name"]);
         $ext = $info["extension"];
         $data['catimage'] = $data['catimage'] . "." . $ext;
-
+        $data['id'] = Uuid::uuid4();
         $query = "INSERT INTO categories(
+                    id,
                     parent_id,
                     name,
                     description,
                     category_image
                     ) values (
+                    :id,
                     :parentcat,
                     :cname,
                     :description,
@@ -192,7 +196,9 @@ class vendormodel
 
 
             $data['vendor_id'] = $vendor_id[0]['id'];
+            $data['id'] = Uuid::uuid4();
             $query = "INSERT INTO products(
+                id,
                 name,
                 description,
                 category_id,
@@ -218,6 +224,7 @@ class vendormodel
                 final_price,
                 amount_to_seller       
             ) values (
+                :id,
                 :name,
                 :description,
                 :category,
@@ -287,14 +294,16 @@ class vendormodel
                 }
 
                 $productVariant["combination"] = trim($combination, ",");
-
+                $productVariant["id"] = Uuid::uuid4();
                 $query = "INSERT INTO product_variants(
+                    id,
                     sku_id,
                     product_id,
                     quantity,
                     product_image, 
                     combination
                 ) values (
+                    :id,
                     :skuId,
                     :product_id,
                     :quantity,

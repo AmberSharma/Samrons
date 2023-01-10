@@ -36,35 +36,7 @@ $this->view("samrons/header",$data);
                 </div>
             </div>
         </div>
-        <div class="row align-items-center py-3 px-xl-5">
-            <div class="col-lg-3 d-none d-lg-block">
-                <a href="" class="text-decoration-none">
-                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
-                </a>
-            </div>
-            <div class="col-lg-6 col-6 text-left">
-                <form action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for products">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
-                            </span>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-3 col-6 text-right">
-                <a href="" class="btn border">
-                    <i class="fas fa-heart text-primary"></i>
-                    <span class="badge">0</span>
-                </a>
-                <a href="/cart/viewCart" class="btn border">
-                    <i class="fas fa-shopping-cart text-primary"></i>
-                    <span class="badge" id="cartcount">0</span>
-                </a>
-            </div>
-        </div>
+        <?php include_once 'inc/searchbar.php';?>
     </div>
     <!-- Topbar End -->
 
@@ -199,7 +171,7 @@ $this->view("samrons/header",$data);
                     </div>
 
                 </div>-->
-                <h3 class="font-weight-semi-bold mb-4 "><span>&#8377;</span><?php echo $data['productdata'][0]['mrp'] ?></h3>
+                <h3 class="font-weight-semi-bold mb-4 "><span>&#8377;</span><?php echo $data['productdata'][0]['seller_price'] ?></h3>
                 <p class="mb-4"><?php echo ucfirst($data['productdata'][0]['description'] )?></p>
                 <?php foreach ($data['variant_options'] as $key =>$variantOption)
                 {
@@ -262,42 +234,32 @@ foreach ($data['variant_combination'] as $key =>$value)
                     </div>
                     <div class="tab-pane fade" id="tab-pane-2">
                         <h4 class="mb-3">Product Details</h4>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="list-group list-group-flush">
+                        <?php
+                        $extraValue=['id','name','description','vendor_id','category_id','mrp','seller_price','gst',"amount_to_seller", "final_price", "tag"];
+                        $count = 0;
+                        foreach ($data['productdata'][0] as $key =>$value) {
+                            if (!empty($value) && !in_array($key, $extraValue)) {
+                                if ($count == 0) {
+                                    ?>
+                                    <div class="row">
                                     <?php
-                                    $extraValue=['id','name','description','vendor_id','category_id','mrp','seller_price','gst',];
-                                    foreach ($data['productdata'][0] as $key =>$value)
-                                    {
-                                        if( ! in_array($key,$extraValue))
-                                        {
-                                            ?>
-                                    <li>
-                                        <?php echo ucfirst($key) ?> <?php echo ucfirst($value) ?></li><br>
-                                    </li>
-                                      <?php }
-                                    } ?>
-
-                                  </ul>
-                            </div>
-                           <!-- <div class="col-md-6">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item px-0">
-                                        Sit erat duo lorem duo ea consetetur, et eirmod takimata.
-                                    </li>
-                                    <li class="list-group-item px-0">
-                                        Amet kasd gubergren sit sanctus et lorem eos sadipscing at.
-                                    </li>
-                                    <li class="list-group-item px-0">
-                                        Duo amet accusam eirmod nonumy stet et et stet eirmod.
-                                    </li>
-                                    <li class="list-group-item px-0">
-                                        Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
-                                    </li>
-                                  </ul>
-                            </div>-->
-                        </div>
+                                }
+                                ?>
+                                <div class="col-md-6">
+                                    <?php $count++; ?>
+                                    <strong style="color: #5c6bc0"><?php echo ucfirst($key).": "; ?></strong><?php echo ucfirst($value) ?>
+                                </div>
+                                <?php
+                                if ($count == 2) {
+                                    $count = 0;
+                                    ?>
+                                    </div>
+                                    <br/>
+                                    <?php
+                                }
+                            }
+                        }
+                        ?>
                     </div>
         <!--            <div class="tab-pane fade" id="tab-pane-3">
                         <div class="row">

@@ -1,4 +1,5 @@
 <?php
+require_once "../vendor/autoload.php";
 include "../app/core/config.php";
 include "../app/core/controller.php";
 include "../app/core/functions.php";

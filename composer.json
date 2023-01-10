@@ -1,0 +1,6 @@
+{
+  "name": "Samrons",
+  "require": {
+    "ramsey/uuid": "^4.2"
+  }
+}

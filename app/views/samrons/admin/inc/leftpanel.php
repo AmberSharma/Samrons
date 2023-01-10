@@ -84,16 +84,17 @@
 <!--                        <li><i class="menu-icon fa fa-sign-in"></i><a href="register.php">Register</a></li>-->
 <!--                        <li><i class="menu-icon fa fa-paper-plane"></i><a href="pages-forget.html">Forget Pass</a></li>-->
                         <?php
-                            if (isset($_SESSION["type"]) == 1) {
+                            if (isset($_SESSION["type"])  && $_SESSION["type"] == 1) {
+                        ?>
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="/admin/addNewCategory">Add Category</a></li>
+                                <li><i class="menu-icon fa fa-sign-in"></i><a href="/admin/vendorList">Approve Vendors</a></li>
+                        <?php
+                            } else {
                         ?>
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="addProducts">Add Products</a></li>
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="bulkUploadImages">Bulk Upload Images</a></li>
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="bulkUploadProducts">Bulk Upload Products</a></li>
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="viewProducts">View Products</a></li>
-                        <?php
-                            } else {
-                        ?>
-                            <li><i class="menu-icon fa fa-sign-in"></i><a href="addNewCategory">Add Category</a></li>
                         <?php
                             }
                         ?>

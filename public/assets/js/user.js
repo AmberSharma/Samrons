@@ -4,6 +4,9 @@ $(document).ajaxStop(function(){
 
 
 $(document).ready(function() {
+    $("#showadd").click(function() {
+        $(".newaddress").show()
+    });
     $('.remove').on('click', function () {
         var button = $(this);
         let variantId=button.attr("data-variant");

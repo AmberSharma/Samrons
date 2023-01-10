@@ -1,6 +1,7 @@
 <?php
 
 use App\Utils\BaseConstants;
+use Ramsey\Uuid\Uuid;
 
 class User
 {
@@ -28,15 +29,112 @@ class User
 
         return json_encode([]);
     }
+    /*public function getColorAndSize($variantId)
+    {
+        $sql = 'SELECT pv.combination
+                        FROM product_variants as pv left join products p on p.id=pv.product_id
+                        WHERE pv.id in('.$variantId.')';
+        $variantData = $this->db->read($sql);
+
+        foreach($variantData as $key => $value) {
+            $variantCombinations = explode( "|",$value["combination"]);
+
+
+            $variantWithCombination = [];
+            foreach($variantCombinations as $key1 => $value1) {
+                $combinationArr = explode(",", $value1);
+                foreach ($combinationArr as $value2) {
+                    list($varaintname, $variantvalue) = explode(":", $value2);
+                    if (isset($variantWithCombination[$variantIds[$key1]])) {
+                        $variantWithCombination[$variantIds[$key1]] .= $variantvalue;
+                    } else {
+                        $variantWithCombination[$variantIds[$key1]] = [];
+                        $variantWithCombination[$variantIds[$key1]] = $variantvalue;
+                    }
+                    if (empty($variantOption[$varaintname]) || (!empty($variantOption[$varaintname]) && !in_array($variantvalue, $variantOption[$varaintname])))
+                        $variantOption[$varaintname][] = $variantvalue;
+
+                }
+            }
+    }}*/
         public function getVariantData($variantId)
         {
             print_r($variantId);
-            $sql = 'SELECT p.name, p.seller_price,p.vendor_id,pv.id as variant_id,sku_id,product_id,quantity,product_image
+            $sql = 'SELECT p.name, p.seller_price,p.vendor_id,pv.id as variant_id,sku_id,product_id,quantity,product_image, combination
                         FROM product_variants as pv left join products p on p.id=pv.product_id
                         WHERE pv.id in('.$variantId.')';
             $variantData = $this->db->read($sql);
             return $variantData;
         }
+    public function getAddresses($userUrlAddress)
+    {
+        print_r($userUrlAddress);
+        $data['url_add']=$userUrlAddress;
+        $sql = 'SELECT *
+                        FROM user_address 
+                        WHERE url_add =:url_add';
+        $addressData = $this->db->read($sql,$data);
+        return $addressData;
+    }
+        public function addAdress()
+        {
+            $data=array();
+            $data['add_line_1']=$_POST['add_line_1'];
+            $data['add_line_2']=$_POST['add_line_2'];
+            $data['country']=$_POST['country'];
+            $data['state']=$_POST['state'];
+            $data['city']=$_POST['city'];
+            $data['pincode']=$_POST['pincode'];
+            $data['url_add']=$_SESSION['url_address'];
+            $data['id']=Uuid::uuid4();
+            $query="insert into user_address(id,add_line_1,add_line_2,country,state,city,pincode,url_add) values(:id,:add_line_1,:add_line_2,:country,:state,:city,:pincode,:url_add)";
+            $result = $this->db->write($query, $data);
+
+            return $result;
+        }
+    public function saveOrder($orderData)
+    {
+        $data=array();
+        $data1=array();
+        $data['shipping_address_id']=$orderData['addressId'];
+        $data['user_url_add']=$_SESSION['url_address'];
+        $data['status']="paid";
+        $data['payment_type']="COD";
+        $productData=$this->getVariantData($orderData['variantIds']);
+
+        //print_r($productData);
+        $total=0;
+
+
+        foreach ($productData as $value)
+        {
+
+
+            $total=($value['seller_price']*$_SESSION['variantdata'][$value['variant_id']])+$total;
+
+
+        }
+        $data['total']=$total;
+        $data['timestamps']=date("Y-m-d H:i:s");
+        $data['id']= Uuid::uuid4();
+
+        $query="insert into orders(id, total,shipping_address_id,status,payment_type,user_url_add,timestamps ) values(:id,:total,:shipping_address_id,:status,:payment_type,:user_url_add,:timestamps)";
+        $orderid = $this->db->write($query, $data);
+
+        $data1['order_id']=$orderid;
+        foreach ($productData as $value)
+        {
+            $data1['variant_id']=$value['variant_id'];
+            $data1['item_quantity']=$_SESSION['variantdata'][$value['variant_id']];
+            $data1['price']=$value['seller_price'];
+            $data1['id']= Uuid::uuid4();
+            $query="insert into order_items(id, order_id, variant_id,item_quantity,price) values(:id,:order_id, :variant_id,:item_quantity,:price)";
+            $order_item_ids[] = $this->db->write($query, $data1);
+        }
+
+        return $order_item_ids;
+
+    }
     public function sign_up()
     {
         $data = array();
@@ -50,6 +148,7 @@ class User
         $data['url_address'] = $this->generateRandomString();
         $data['date'] = date('y-m-d H:i:s');
         $data['upass'] = hash('sha1', $data['upass']);
+        $data['id'] = Uuid::uuid4();
 
         if ($_POST['chktype'] == 'Vendor') {
             $data['aadhar'] = $_POST['aadhar'];
@@ -59,8 +158,10 @@ class User
             $data['cancelcheque'] = $this->generateRandomString();
             $data['photo'] = $this->generateRandomString();
             $data['sign'] = $this->generateRandomString();
-
+            $data['status'] = 0;
+            $data['type'] = 2;
             $query = "INSERT INTO " . BaseConstants::VENDOR_TABLE . " (
+                    id,
                     url_address,
                     create_datetime,
                     name,
@@ -73,8 +174,11 @@ class User
                     cheque,
                     photo,
                     signature,
-                    current_account_number) 
+                    current_account_number,
+                    status,
+                    type) 
                 values (
+                    :id,
                     :url_address,
                     :date,
                     :uname,
@@ -87,7 +191,9 @@ class User
                     :cancelcheque,
                     :photo,
                     :sign,
-                    :caccountnumber)";
+                    :caccountnumber,
+                    :status,
+                    :type)";
             $result = $this->db->write($query, $data);
 
             if (!file_exists(FILEUPLOAD . $result)) {
@@ -129,13 +235,15 @@ class User
             }
         } else {
             $query = "INSERT INTO users (
+                        id,
                         url_address,
                         create_datetime,
-                        username,
+                        name,
                         email,
                         password,
                         phone_number ) 
                     values (
+                        :id,
                         :url_address,
                         :date,
                         :uname,
@@ -147,7 +255,7 @@ class User
 
             if (!empty($result)) {
                 $message = "You are Successfully Registered. Please Proceed to Login";
-                header("Location:" . ROOT . "signup?message={$message}");
+                header("Location:signup?message={$message}");
             }
         }
     }
@@ -237,24 +345,27 @@ class User
                 $result = $this->db->read($query, $data);
                 if (is_array($result)) {
                     $_SESSION['url_address'] = $result[0]["url_address"];
-                    print_r($_SESSION['url_address']);
                     header("Location:" . ROOT . "home");
                 } else {
                     header("Location:" . ROOT . "login?message=Invalid Credentials!!!");
                 }
             } elseif ($_POST['chktype'] == 'Vendor') {
                 if ($phone == 1) {
-                    $query = "select * from vendors where phone_number=:uphone and password=:upass limit 1";
+                    $query = "select * from vendors where phone_number=:uphone and password=:upass and status != 0 limit 1";
                 } else {
-                    $query = "select * from vendors where email=:uemail and password=:upass limit 1";
+                    $query = "select * from vendors where email=:uemail and password=:upass and status != 0 limit 1";
                 }
                 $result = $this->db->read($query, $data);
 
                 if (is_array($result)) {
 
                     $_SESSION['url_address'] = $result[0]['url_address'];
-                    $_SESSION['type'] = $result[0]['status'];
-                    header("Location:" . ROOT . "vendor/dashboard");
+                    $_SESSION['type'] = $result[0]['type'];
+                    if ($result[0]['type'] == 1) {
+                        header("Location:" . ROOT . "admin/dashboard");
+                    } else {
+                        header("Location:" . ROOT . "vendor/dashboard");
+                    }
                 } else {
                     header("Location:" . ROOT . "login?message=Invalid Credentials!!!");
                 }
@@ -299,9 +410,8 @@ class User
 
     public function logout()
     {
-        if (isset($_SESSION["url_address"])) {
-            unset($_SESSION["url_address"]);
-        }
+        session_unset();
+        session_destroy();
         header("Location:" . ROOT . "home");
     }
 
