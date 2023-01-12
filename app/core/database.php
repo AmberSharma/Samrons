@@ -3,7 +3,7 @@
 class Database
 {
     protected static $conn = null;
-
+    public static $instance;
     function __construct()
     {
         try {
@@ -20,12 +20,14 @@ class Database
 
     public static function getInstance()
     {
-        if (self::$conn == null) {
-            return new self();
+
+        if (self::$instance) {
+            return self::$instance;
         }
 
-        return self::$conn;
+        return self::$instance = new self();
     }
+
 
     public function read($query, $data = [])
     {

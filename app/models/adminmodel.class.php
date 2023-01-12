@@ -15,9 +15,7 @@ class AdminModel extends basemodel
 
     public function get_vendor()
     {
-
-        $sql = "SELECT 
-                    id, 
+        $sql = "SELECT id,
                     name,
                     email,
                     phone_number,
@@ -26,12 +24,10 @@ class AdminModel extends basemodel
                     gst,
                     photo,
                     signature 
-                FROM vendors 
-                WHERE status = 0 AND type = 2";
-        $vendordata = $this->db->read($sql);
-
-        return $vendordata;
+                FROM vendors WHERE status=0 and type = 2";
+        return $this->db->read($sql);
     }
+
     public function approve_vendor($id)
     {
 

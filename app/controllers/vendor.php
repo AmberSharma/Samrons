@@ -53,11 +53,17 @@ class vendor extends controller
             return json_encode($data, true);
         }
     }
+    public function viewOrders(){
+
+        $this->view("samrons/vendor/viewOrders",$data);
+
+    }
+
 
     public function viewProducts($productId = "") {
         $data['page_title']="Home";
         $data['productData'] = $this->vendorModel->get_productDetails($productId);
-        $this->view("samrons/admin/dashboard",$data);
+        $this->view("samrons/admin/viewProducts",$data);
 
     }
     public function addProductDetails()

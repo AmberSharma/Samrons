@@ -95,7 +95,9 @@
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="bulkUploadImages">Bulk Upload Images</a></li>
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="bulkUploadProducts">Bulk Upload Products</a></li>
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="viewProducts">View Products</a></li>
-                        <?php
+                                <li><i class="menu-icon fa fa-sign-in"></i><a href="viewOrders">View Orders</a></li>
+
+                                <?php
                             }
                         ?>
                     </ul>

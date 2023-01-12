@@ -106,30 +106,53 @@ class vendormodel extends basemodel
         }
     }
 
-    public function get_productDetails($productId = "")
+    public function get_productDetails()
     {
         $sql = "SELECT 
                     p.id, 
-                    p.name, 
-                    p.description, 
-                    pv.quantity, 
-                    pv.price, 
+                    p.name,
+                    p.vendor_id,
+                    p.category_id,
+                    p.mrp, 
+                    p.seller_price, 
+                    pv.id as variant_id,
+                    pv.quantity,
                     pv.product_image, 
-                    o.name AS option_name, 
-                    ov.value_name
-                FROM products p 
-                LEFT JOIN product_variants pv 
-                    ON p.id = pv.product_id 
-                INNER JOIN vendors ven 
-                    ON p.vendor_id = ven.id
-                    AND ven.url_address = 'ojmcQKenIh'
-                LEFT JOIN variant_values vv 
-                    ON pv.id = vv.variant_id 
-                LEFT JOIN option_values ov 
-                    ON ov.id = vv.value_id 
-                LEFT JOIN options o 
-                    ON o.id = ov.option_id WHERE ven.url_address = 'ojmcQKenIh'";
+                    c.name as category_name 
+                FROM products as p 
+                LEFT JOIN product_variants pv on p.id = pv.product_id 
+                INNER JOIN vendors v ON v.id = p.vendor_id 
+                INNER JOIN categories c on c.id = p.category_id 
+                WHERE v.url_address = '".$_SESSION["url_address"]."' ";
+
+        $limit = 3;
+
+        $result = $this->db->read($sql);
+        $productData = [];
+
+        foreach($result as $key => $value) {
+            if (!isset($productData[$value["id"]])) {
+                $productData[$value["id"]] = [
+                    "name" => $value["name"],
+                    "vendor_id" => $value["vendor_id"],
+                    "category_id" => $value["category_id"],
+                    "mrp" => $value["mrp"],
+                    "seller_price" => $value["seller_price"],
+                    "category_name" => $value["category_name"]
+                ];
+            }
+
+            $productData[$value["id"]]["variant_data"][$value["variant_id"]] = [
+                "quantity" => $value["quantity"],
+                "product_image" => $value["product_image"]
+            ];
+        }
+
+        return array_chunk($productData, $limit);
     }
+
+
+
 
     public function add_bulkProductDetails()
     {
