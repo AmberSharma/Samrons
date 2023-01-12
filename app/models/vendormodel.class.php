@@ -255,7 +255,7 @@ class vendormodel extends basemodel
             if (empty($productId)) {
                 return ["success" => false, "error" => "Could not save product"];
             }
-            $productOption['product_id'] = $productId;
+            $productOption['product_id'] = $data['id'];
 //        foreach ($variantData['options'] as $key=>$optionId)
 //        {
 //            $productOption['option_id']=$optionId;
@@ -282,7 +282,7 @@ class vendormodel extends basemodel
                     $combination .= $optionDataArr[$value] . ":" . $valueCombination[$index] . ",";
                 }
                 $productVariant = array();
-                $productVariant['product_id'] = $productId;
+                $productVariant['product_id'] = $data['id'];
                 $productVariant['quantity'] = $variantData['quantity'][$key];
 
                 $productVariant['skuId'] = $variantsData;
@@ -498,7 +498,8 @@ class vendormodel extends basemodel
                         group_concat(quantity SEPARATOR "|") AS quantity, 
                         group_concat(combination SEPARATOR "|") AS combination,
                         group_concat(product_image SEPARATOR "|") AS image 
-                    FROM products AS p LEFT JOIN product_variants AS pv on p.id=pv.product_id where p.id="'.$categoryIds.'"';
+                    FROM products AS p LEFT JOIN product_variants AS pv on p.id=pv.product_id where p.id="'.$categoryIds.'" 
+                     group by p.name, p.description, p.vendor_id, p.category_id, p.mrp, p.seller_price, p.gst, p.brand, p.weight, p.style_code, p.fabric, p.sleeve_length, p.country_origin, p.fit_shape, p.occasion, p.pattern_type, p.packers_detail, p.collar, p.neck, p.solid, p.length, p.tag, p.final_price, p.auto_id';
             $productDetailsArr= $this->db->read($query);
 
             if (is_array($productDetailsArr) ){

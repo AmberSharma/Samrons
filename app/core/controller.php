@@ -16,7 +16,7 @@ class controller
     }
     function load_model($model)
     {
-        print_r($model);
+
         if(file_exists("../app/models/".$model.".class.php"))
         {
             include_once "../app/models/".$model.".class.php";

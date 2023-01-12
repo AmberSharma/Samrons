@@ -1,6 +1,6 @@
-$(document).ajaxStop(function(){
-    window.location.reload();
-});
+// $(document).ajaxStop(function(){
+//     window.location.reload();
+// });
 
 
 $(document).ready(function() {
@@ -28,6 +28,36 @@ $(document).ready(function() {
             }
         });
     });
+
+    $("#checkoutSubmitButton").click(function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        let addressId=$('input:radio:checked').val();
+
+        $.ajax({
+            url: '/checkout/saveorder',   // sending ajax request to this url
+            type: 'post',
+            dataType: "JSON",
+            data: {
+                "callFrom":"userjs",
+                "addresses":addressId,
+            },
+            success: function (response) {
+                response = JSON.parse(JSON.stringify(response));
+                console.log(response);
+                console.log(response.payment_session_id);
+                const paymentSessionId = response.payment_session_id;
+                const cashfree = new Cashfree(paymentSessionId);
+                cashfree.redirect();
+            },
+            error: function (e) {
+                $("#result").html("Some error encountered.");
+            }
+        });
+
+        // }
+    });
+
     // Product Quantity
     $('.quantitybutton').on('click', function () {
         var button = $(this);

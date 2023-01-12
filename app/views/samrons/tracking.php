@@ -45,20 +45,20 @@ $totalAmount=0;
         <div class="col-lg-3 d-none d-lg-block">
             <a href="" class="text-decoration-none">
                 <h1 class="m-0 display-5 font-weight-semi-bold"><span
-                            class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+                        class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
             </a>
         </div>
         <div class="col-lg-6 col-6 text-left">
-<!--            <form action="">-->
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for products">
-                    <div class="input-group-append">
+            <!--            <form action="">-->
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for products">
+                <div class="input-group-append">
                             <span class="input-group-text bg-transparent text-primary">
                                 <i class="fa fa-search"></i>
                             </span>
-                    </div>
                 </div>
-<!--            </form>-->
+            </div>
+            <!--            </form>-->
         </div>
         <div class="col-lg-3 col-6 text-right">
             <a href="" class="btn border">
@@ -89,7 +89,7 @@ $totalAmount=0;
                 <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link" data-toggle="dropdown">Dresses <i
-                                    class="fa fa-angle-down float-right mt-1"></i></a>
+                                class="fa fa-angle-down float-right mt-1"></i></a>
                         <div class="dropdown-menu position-absolute bg-secondary border-0 rounded-0 w-100 m-0">
                             <a href="" class="dropdown-item">Men's Dresses</a>
                             <a href="" class="dropdown-item">Women's Dresses</a>
@@ -112,7 +112,7 @@ $totalAmount=0;
             <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
                 <a href="" class="text-decoration-none d-block d-lg-none">
                     <h1 class="m-0 display-5 font-weight-semi-bold"><span
-                                class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
+                            class="text-primary font-weight-bold border px-3 mr-1">E</span>Shopper</h1>
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -158,172 +158,7 @@ $totalAmount=0;
 
 
 <!-- Checkout Start -->
-<div classclass="container-fluid pt-5">
-    <div class="row px-xl-5">
-        <div class="col-lg-8">
-            <?php
-            foreach ($data['addressdetails'] as $key => $value) {
-                ?>
-                <div class="mb-4">
-                    <div class="col-md-12 form-group">
-                        <div class="custom-control custom-checkbox">
-
-
-                            <input type="radio" name="addresses" value="<?php echo $value['id']?>">
-                            <label name="addresslabel" ><?php echo $value['add_line_1'] ?> <?php echo $value['add_line_2'] ?>
-                                <br><?php echo $value['city'] ?> <br><?php echo $value['state'] ?>
-                                <br><?php echo $value['pincode'] ?></label>
-
-                        </div>
-
-                    </div>
-                </div>
-                <?php
-            } ?>
-            <a href="#" id="showadd">Click Here To save New Address </a>
-        </div>
-    </div>
-</div>
-<div class="container-fluid pt-5">
-    <div class="row px-xl-5">
-        <div class="col-lg-8">
-            <div class="mb-4 newaddress" style="display: none">
-                <h4 class="font-weight-semi-bold mb-4">Billing Address</h4>
-           <form method="post" action="/checkout/addAddress">
-                    <div class="row">
-                        <!--      <div class="col-md-6 form-group">
-                                  <label>First Name</label>
-                                  <input class="form-control" type="text" placeholder="John">
-                              </div>
-                              <div class="col-md-6 form-group">
-                                  <label>Last Name</label>
-                                  <input class="form-control" type="text" placeholder="Doe">
-                              </div>
-                              <div class="col-md-6 form-group">
-                                  <label>E-mail</label>
-                                  <input class="form-control" type="text" placeholder="example@email.com">
-                              </div>
-                              <div class="col-md-6 form-group">
-                                  <label>Mobile No</label>
-                                  <input class="form-control" type="text" placeholder="+123 456 789">
-                              </div>-->
-                        <div class="col-md-6 form-group">
-                            <label>Address Line 1</label>
-                            <input name="add_line_1" class="form-control" type="text" placeholder="Enter your address">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>Address Line 2</label>
-                            <input name="add_line_2" class="form-control" type="text" placeholder="Enter Your Address">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>Country</label>
-                            <input name="country" class="form-control" type="text" placeholder="Enter Your Country">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>City</label>
-                            <input name="city" class="form-control" type="text" placeholder="Enter Your City">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>State</label>
-                            <input name="state" class="form-control" type="text" placeholder="Enter Your State">
-                        </div>
-                        <div class="col-md-6 form-group">
-                            <label>PIN Code</label>
-                            <input name="pincode" class="form-control" type="text" placeholder="123">
-                        </div>
-<!--                        <a href="/checkout/addAddress/">-->
-<!--                            <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Save</button>-->
-<!--                        </a>-->
-                        <!-- <div class="col-md-12 form-group">
-                             <div class="custom-control custom-checkbox">
-                                 <input type="checkbox" class="custom-control-input" id="newaccount">
-                                 <label class="custom-control-label" for="newaccount">Create an account</label>
-                             </div>
-                         </div>
-                         <div class="col-md-12 form-group">
-                             <div class="custom-control custom-checkbox">
-                                 <input type="checkbox" class="custom-control-input" id="shipto">
-                                 <label class="custom-control-label" for="shipto"  data-toggle="collapse" data-target="#shipping-address">Ship to different address</label>
-                             </div>
-                         </div>-->
-                    </div>
-           </form>
-            </div>
-
-        </div>
-
-        <div class="col-lg-4">
-<!--            <form onsubmit="return false;" id="paymentForm">-->
-            <div class="card border-secondary mb-5">
-                <div class="card-header bg-secondary border-0">
-                    <h4 class="font-weight-semi-bold m-0">Order Total</h4>
-                </div>
-                <div class="card-body">
-                    <h5 class="font-weight-medium mb-3">Products</h5>
-                    <?php foreach($data['variantData'] as $variantdata){
-                        $totalAmount=($variantdata['seller_price']*$_SESSION['variantdata'][$variantdata['variant_id']])+$totalAmount;
-                        ?>
-                        <div class="d-flex justify-content-between">
-                            <p><b><?php echo ucwords( $variantdata['name'])?> </b>(<?php echo $variantdata['combination']?>) X <?php echo $_SESSION['variantdata'][$variantdata['variant_id']]?> </p>
-                            <p><?php echo $variantdata['seller_price'] * $_SESSION['variantdata'][$variantdata['variant_id']]?></p>
-                        </div>
-                    <?php } ?>
-                    <!--   <div class="d-flex justify-content-between">
-                           <p>Colorful Stylish Shirt 2</p>
-                           <p>$150</p>
-                       </div>
-                       <div class="d-flex justify-content-between">
-                           <p>Colorful Stylish Shirt 3</p>
-                           <p>$150</p>
-                       </div>-->
-                    <hr class="mt-0">
-                    <div class="d-flex justify-content-between mb-3 pt-1">
-                        <h6 class="font-weight-medium">Subtotal</h6>
-                        <h6 class="font-weight-medium"><?php echo $totalAmount?></h6>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-medium">Shipping</h6>
-                        <h6 class="font-weight-medium">Free</h6>
-                    </div>
-                </div>
-                <div class="card-footer border-secondary bg-transparent">
-                    <div class="d-flex justify-content-between mt-2">
-                        <h5 class="font-weight-bold">Total</h5>
-                        <h5 class="font-weight-bold"><?php echo $totalAmount?></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="card border-secondary mb-5">
-                <div class="card-header bg-secondary border-0">
-                    <h4 class="font-weight-semi-bold m-0">Payment</h4>
-                </div>
-                <div class="card-body">
-                    <div class="form-group">
-                        <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input" name="payment" id="paypal" value="online">
-                            <label class="custom-control-label" for="paypal">Paytm</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="custom-control custom-radio">
-                            <input type="radio" class="custom-control-input" name="payment" id="COD" value="COD">
-                            <label class="custom-control-label" for="directcheck">Cash On Delivery</label>
-                        </div>
-                    </div>
-
-                    </div>
-                </div>
-                <div class="card-footer border-secondary bg-transparent">
-                    <button  type="button" class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3" id="checkoutSubmitButton"> Proceed to Payment</button>
-                </div>
-            </div>
-<!--            </form>-->
-        </div>
-
-
-
-    </div>
-
+<p>Order Placed Successfully !!!!!!</p>
 
 <!-- Checkout End -->
 
@@ -334,7 +169,7 @@ $totalAmount=0;
         <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
             <a href="" class="text-decoration-none">
                 <h1 class="mb-4 display-5 font-weight-semi-bold"><span
-                            class="text-primary font-weight-bold border border-white px-3 mr-1">E</span>Shopper</h1>
+                        class="text-primary font-weight-bold border border-white px-3 mr-1">E</span>Shopper</h1>
             </a>
             <p>Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no sit erat lorem et magna ipsum dolore
                 amet erat.</p>
@@ -370,22 +205,22 @@ $totalAmount=0;
                         <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                     </div>
                 </div>
-<!--                <div class="col-md-4 mb-5">-->
-<!--                    <h5 class="font-weight-bold text-dark mb-4">Newsletter</h5>-->
-<!--                    <form action="">-->
-<!--                        <div class="form-group">-->
-<!--                            <input type="text" class="form-control border-0 py-4" placeholder="Your Name"-->
-<!--                                   required="required"/>-->
-<!--                        </div>-->
-<!--                        <div class="form-group">-->
-<!--                            <input type="email" class="form-control border-0 py-4" placeholder="Your Email"-->
-<!--                                   required="required"/>-->
-<!--                        </div>-->
-<!--                        <div>-->
-<!--                            <button class="btn btn-primary btn-block border-0 py-3" type="submit">Subscribe Now</button>-->
-<!--                        </div>-->
-<!--                    </form>-->
-<!--                </div>-->
+                <!--                <div class="col-md-4 mb-5">-->
+                <!--                    <h5 class="font-weight-bold text-dark mb-4">Newsletter</h5>-->
+                <!--                    <form action="">-->
+                <!--                        <div class="form-group">-->
+                <!--                            <input type="text" class="form-control border-0 py-4" placeholder="Your Name"-->
+                <!--                                   required="required"/>-->
+                <!--                        </div>-->
+                <!--                        <div class="form-group">-->
+                <!--                            <input type="email" class="form-control border-0 py-4" placeholder="Your Email"-->
+                <!--                                   required="required"/>-->
+                <!--                        </div>-->
+                <!--                        <div>-->
+                <!--                            <button class="btn btn-primary btn-block border-0 py-3" type="submit">Subscribe Now</button>-->
+                <!--                        </div>-->
+                <!--                    </form>-->
+                <!--                </div>-->
             </div>
         </div>
     </div>

@@ -169,7 +169,7 @@ $this->view("samrons/header",$data);
                     </thead>
                     <tbody class="align-middle">
                     <?php
-                    if($data['variantData']!="")
+                    if(!empty($data['variantData']))
                     {
                     foreach ($data['variantData'] as $key => $value)
                     {
@@ -311,7 +311,7 @@ $this->view("samrons/header",$data);
                     <div class="card-footer border-secondary bg-transparent">
                         <div class="d-flex justify-content-between mt-2">
                             <h5 class="font-weight-bold">Total</h5>
-                            <h5 class="font-weight-bold"><b><span>&#8377; </span></b><?php echo $totalAmount?></h5>
+                            <h5 class="font-weight-bold"><b><span>&#8377;  </span></b><?php echo $totalAmount?></h5>
                         </div>
                         <a href="/checkout/" >
                         <button class="btn btn-block btn-primary my-3 py-3">Proceed To Checkout</button>
@@ -404,6 +404,7 @@ $this->view("samrons/header",$data);
     <!-- Contact Javascript File -->
     <script src="<?php echo ASSETS ?>js/mail/jqBootstrapValidation.min.js"></script>
     <script src="<?php echo ASSETS ?>js/mail/contact.js"></script>
+
 </body>
 
 </html>

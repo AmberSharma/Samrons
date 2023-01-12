@@ -1,5 +1,5 @@
 <?php
-
+use App\Utils\CurlRequest;
 use App\Utils\BaseConstants;
 use Ramsey\Uuid\Uuid;
 
@@ -59,11 +59,11 @@ class User
     }}*/
         public function getVariantData($variantId)
         {
-            print_r($variantId);
             $sql = 'SELECT p.name, p.seller_price,p.vendor_id,pv.id as variant_id,sku_id,product_id,quantity,product_image, combination
                         FROM product_variants as pv left join products p on p.id=pv.product_id
-                        WHERE pv.id in('.$variantId.')';
+                        WHERE pv.id in("'.$variantId.'")';
             $variantData = $this->db->read($sql);
+
             return $variantData;
         }
     public function getAddresses($userUrlAddress)
@@ -94,27 +94,68 @@ class User
         }
     public function saveOrder($orderData)
     {
-        $data=array();
-        $data1=array();
-        $data['shipping_address_id']=$orderData['addressId'];
-        $data['user_url_add']=$_SESSION['url_address'];
-        $data['status']="paid";
-        $data['payment_type']="COD";
-        $productData=$this->getVariantData($orderData['variantIds']);
-
-        //print_r($productData);
         $total=0;
+        $productData=$this->getVariantData(implode(",", array_keys($_SESSION['variantdata'])));
+        foreach ($productData as $value)
+        {
+            $total=($value['seller_price']*$_SESSION['variantdata'][$value['variant_id']])+$total;
+        }
 
+
+
+
+        $data['total']=$total;
+       $data['timestamps']=date("Y-m-d H:i:s");
+       $data['id']= $orderData['order_id'];
+       $data['shipping_address_id']=$orderData['addressId'];
+       $data['status']=$orderData['status'];
+        $data['payment_type']="online";
+        $data['user_url_add']=$_SESSION['url_address'];
+
+
+       $query="insert into orders(id, total,shipping_address_id,status,payment_type,user_url_add,timestamps ) values(:id,:total,:shipping_address_id,:status,:payment_type,:user_url_add,:timestamps)";
+       $orderid = $this->db->write($query, $data);
+
+       $data1['order_id']=$orderData['order_id'];
+       foreach ($productData as $value)
+       {
+           $data1['variant_id']=$value['variant_id'];
+           $data1['item_quantity']=$_SESSION['variantdata'][$value['variant_id']];
+           $data1['price']=$value['seller_price'];
+           $data1['id']= Uuid::uuid4();
+           $query="insert into order_items(id, order_id, variant_id,item_quantity,price) values(:id,:order_id, :variant_id,:item_quantity,:price)";
+           $order_item_ids[] = $this->db->write($query, $data1);
+       }
+
+       return $order_item_ids;
+
+    }
+    public function savePayment()
+    {
+        $total=0;
+        $productData=$this->getVariantData(implode('","', array_keys($_SESSION['variantdata'])));
 
         foreach ($productData as $value)
         {
-
-
             $total=($value['seller_price']*$_SESSION['variantdata'][$value['variant_id']])+$total;
-
-
         }
-        $data['total']=$total;
+        $arr["url"] = $_SESSION["url_address"];
+
+
+        $sql = "select id, name,email,phone_number from users where url_address=:url";
+        $userData= $this->db->read($sql,$arr);
+
+        $pdata["order_id"] = Uuid::uuid4();
+        $pdata["order_amount"] = $total;
+        $pdata["order_currency"] = "INR";
+        $pdata["customer_details"]["customer_id"] = $userData[0]['id'];
+        $pdata["customer_details"]["customer_name"] = $userData[0]['name'];
+        $pdata["customer_details"]["customer_phone"] = $userData[0]['phone_number'];
+        $pdata["order_meta"]["return_url"] = ROOT . "checkout/saveorder?order_id={order_id}";
+        $curlRequestData=CurlRequest::post(CF_URL."/orders", $pdata);
+        return $curlRequestData;
+
+         /*$data['total']=$total;
         $data['timestamps']=date("Y-m-d H:i:s");
         $data['id']= Uuid::uuid4();
 
@@ -132,7 +173,7 @@ class User
             $order_item_ids[] = $this->db->write($query, $data1);
         }
 
-        return $order_item_ids;
+        return $order_item_ids;*/
 
     }
     public function sign_up()
