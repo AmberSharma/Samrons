@@ -301,6 +301,8 @@ $this->view("samrons/header",$data);
                         </div>
                     </div>
                     <?php
+                    if($data['productdata']!="")
+                    {
                     foreach ($data['productdata'] as $key =>$productData)
                     {
                     ?>
@@ -321,7 +323,7 @@ $this->view("samrons/header",$data);
                             </div>
                         </div>
                     </div>
-                    <?php }?>
+                    <?php }}?>
 
                     <div class="col-12 pb-1">
                         <nav aria-label="Page navigation">

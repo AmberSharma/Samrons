@@ -169,7 +169,7 @@ $this->view("samrons/header",$data);
                     </thead>
                     <tbody class="align-middle">
                     <?php
-                    if($data['variantData']!="")
+                    if(!empty($data['variantData']))
                     {
                     foreach ($data['variantData'] as $key => $value)
                     {
@@ -177,24 +177,24 @@ $this->view("samrons/header",$data);
                         $totalAmount= ( ($value['seller_price']) * ($_SESSION['variantdata'][$value['variant_id']]) )+$totalAmount;
                         ?>
                         <tr>
-                            <td class="align-middle"><img src="http://samrons.local/images.php?filename=<?php echo $value['vendor_id']?>/<?php echo  $value['product_id']?>_<?php echo  $value['variant_id']?>/<?php echo $value['product_image']?>" alt="" style="width: 50px;"><?php echo $value['name']?></td>
-                            <td class="align-middle"><?php echo $value['seller_price']?></td>
+                            <td class="align-middle"><img src="http://samrons.local/images.php?filename=<?php echo $value['vendor_id']?>/<?php echo  $value['product_id']?>_<?php echo  $value['variant_id']?>/<?php echo $value['product_image']?>" alt="" style="width: 50px;">   <b><?php echo $value['name']?></b></td>
+                            <td class="align-middle"><b><span>&#8377; </span></b><?php echo $value['seller_price']?></td>
                             <td class="align-middle">
                                 <div class="input-group quantity mx-auto" style="width: 100px;">
                                     <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-minus quantitybutton" data-variant="<?php echo  $value['variant_id']?>">
+                                        <button style="min-height: 100%" class="btn btn-sm btn-primary btn-minus quantitybutton" data-variant="<?php echo  $value['variant_id']?>">
                                         <i class="fa fa-minus"></i>
                                         </button>
                                     </div>
                                     <input type="text" id="quantity" class="form-control form-control-sm bg-secondary text-center" value="<?php echo $_SESSION['variantdata'][$value['variant_id']]?>">
                                     <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-primary btn-plus quantitybutton" data-variant="<?php echo  $value['variant_id']?>">
+                                        <button style="min-height: 100%" class="btn btn-sm btn-primary btn-plus quantitybutton" data-variant="<?php echo  $value['variant_id']?>">
                                             <i class="fa fa-plus"></i>
                                         </button>
                                     </div>
                                 </div>
                             </td>
-                            <td class="align-middle"><?php echo ($value['seller_price']) * ($_SESSION['variantdata'][$value['variant_id']])  ?></td>
+                            <td class="align-middle"><b><span>&#8377; </span></b><?php echo ($value['seller_price']) * ($_SESSION['variantdata'][$value['variant_id']])  ?></td>
                             <td class="align-middle"><button class="btn btn-sm btn-primary remove"  data-variant="<?php echo  $value['variant_id']?>"><i class="fa fa-times"></i></button></td>
                         </tr>
                     <?php } }?>
@@ -301,17 +301,17 @@ $this->view("samrons/header",$data);
                     <div class="card-body">
                         <div class="d-flex justify-content-between mb-3 pt-1">
                             <h6 class="font-weight-medium">Subtotal</h6>
-                            <h6 class="font-weight-medium"><?php echo $totalAmount?></h6>
+                            <h6 class="font-weight-medium"><b><span>&#8377; </span></b><?php echo $totalAmount?></h6>
                         </div>
                         <div class="d-flex justify-content-between">
                             <h6 class="font-weight-medium">Shipping</h6>
-                            <h6 class="font-weight-medium">100</h6>
+                            <h6 class="font-weight-medium"><b><span>&#8377; </span></b>Free</h6>
                         </div>
                     </div>
                     <div class="card-footer border-secondary bg-transparent">
                         <div class="d-flex justify-content-between mt-2">
                             <h5 class="font-weight-bold">Total</h5>
-                            <h5 class="font-weight-bold"><?php echo $totalAmount + 100?></h5>
+                            <h5 class="font-weight-bold"><b><span>&#8377;  </span></b><?php echo $totalAmount?></h5>
                         </div>
                         <a href="/checkout/" >
                         <button class="btn btn-block btn-primary my-3 py-3">Proceed To Checkout</button>
@@ -404,6 +404,7 @@ $this->view("samrons/header",$data);
     <!-- Contact Javascript File -->
     <script src="<?php echo ASSETS ?>js/mail/jqBootstrapValidation.min.js"></script>
     <script src="<?php echo ASSETS ?>js/mail/contact.js"></script>
+
 </body>
 
 </html>

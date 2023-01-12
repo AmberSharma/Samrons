@@ -1,4 +1,5 @@
 <?php
+print_r($_SESSION);
 include_once "inc/header.php";
 ?>
 

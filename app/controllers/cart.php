@@ -36,21 +36,21 @@ public function addToCart()
 }
 public function viewCart()
 {
-    echo "<pre>";
     $user=$this->load_model("user");
-
     $data['page_title']="Add To Cart";
-    if(isset($_SESSION['variantdata']) && $_SESSION['variantdata']!="") {
-        $data['variantData'] = $user->getVariantData(implode(",", array_keys($_SESSION['variantdata'])));
+    echo "<pre>";print_r($_SESSION);echo "</pre>";
+    if(isset($_SESSION['variantdata']) && !empty($_SESSION['variantdata'])) {
+        $data['variantData'] = $user->getVariantData(implode('","', array_keys($_SESSION['variantdata'])));
     }
     else
         $data['variantData']="";
 
-    echo "</pre>";
+    print_r($data["variantData"]);
     $this->view("samrons/cart",$data);
 }
 public function removeFromCart()
 {
     unset($_SESSION['variantdata'][$_POST['variantId']]);
 }
+
 }

@@ -8,11 +8,14 @@ class Admin extends controller
 
     /** @var vendormodel $vendorModel */
     private $vendorModel;
+
+    /** @var adminmodel $adminModel */
     private $adminModel;
 
     public function __construct()
     {
-        $this->vendorModel = $this->load_model("vendormodel");
+        //$this->vendorModel = $this->load_model("vendormodel");
+        $this->adminModel = $this->load_model("adminmodel");
     }
 
     public function index(){
@@ -28,14 +31,12 @@ class Admin extends controller
 
     }
     public function approve_vendor() {
-        $admin=$this->load_model("adminmodel");
-        return $admin->approve_vendor($_POST["id"]);
+        return $this->adminModel->approve_vendor($_POST["id"]);
     }
     public function reject_vendor() {
-        $admin=$this->load_model("adminmodel");
-        return $admin->reject_vendor($_POST["id"]);
+        return $this->adminModel->reject_vendor($_POST["id"]);
     }
-    public function datatable(){
+    public function vendorList(){
 //        $user=$this->load_model("user");
 //        $user_data=$user->check_login();
 //        if(is_array($user_data))
@@ -43,9 +44,8 @@ class Admin extends controller
 //            $data['user_data']=$user_data;
 //        }
         $data['page_title']="Home";
-        $vendata = $this->load_model("adminmodel");
-        $data['vendordata']= $vendata->get_vendor();
-        $this->view("samrons/admin/datatable",$data);
+        $data['vendordata']= $this->adminModel->get_vendor();
+        $this->view("samrons/admin/vendorList",$data);
 
     }
     public function addNewCategory(){

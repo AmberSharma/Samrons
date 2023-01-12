@@ -1,25 +1,33 @@
 <?php
 use App\Utils\BaseConstants;
+require_once 'basemodel.class.php';
 
-class AdminModel
+class AdminModel extends basemodel
 {
-    private $db;
-
-    public function  __construct() {
-        $this->db = Database::getInstance();
-    }
     private $error = "";
 
+    protected $db;
 
+    public function __construct()
+    {
+        $this->db = Database::getInstance();
+    }
 
     public function get_vendor()
     {
-
-        $sql = "select id, username,email,phone_number,aadhar,pancard,gst,photo,signature from vendors where status=0";
-        $vendordata = $this->db->read($sql);
-
-        return $vendordata;
+        $sql = "SELECT id,
+                    name,
+                    email,
+                    phone_number,
+                    aadhar,
+                    pancard,
+                    gst,
+                    photo,
+                    signature 
+                FROM vendors WHERE status=0 and type = 2";
+        return $this->db->read($sql);
     }
+
     public function approve_vendor($id)
     {
 
