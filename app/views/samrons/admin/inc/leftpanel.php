@@ -75,7 +75,7 @@
 <!--                        <li><i class="menu-icon fa fa-street-view"></i><a href="maps-vector.html">Vector Maps</a></li>-->
 <!--                    </ul>-->
 <!--                </li>-->
-                <li class="menu-title">Extras</li>
+                <li class="menu-title">Important Links</li>
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                        aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Pages</a>

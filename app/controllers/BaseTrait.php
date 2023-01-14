@@ -81,6 +81,12 @@ trait BaseTrait
                     $this->setError($fieldName, "Invalid GST");
                 }
                 break;
+            case "uuid":
+                $this->data = trim($data);
+                if(strlen($this->data) != 36) {
+                    $this->setError($fieldName, "Should be system compatible Id".strlen($this->data));
+                }
+                break;
         }
 
         return $this->data;

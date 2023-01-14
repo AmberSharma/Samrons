@@ -19,6 +19,7 @@ class checkout extends controller
 //        }
             $data['page_title'] = "Check Out";
             $user = $this->load_model("user");
+            $data["category_subcategory"] = $user->get_category_subcategory_data();
             $data['addressdetails'] = $user->getAddresses($_SESSION['url_address']);
             if (isset($_SESSION['variantdata']) && $_SESSION['variantdata'] != "") {
                 $data['variantData'] = $user->getVariantData(implode('","', array_keys($_SESSION['variantdata'])));

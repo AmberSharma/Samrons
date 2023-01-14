@@ -3,7 +3,15 @@
 
 class cart extends controller
 {
-public function addToCart()
+    public function checkMinQuantity()
+    {
+
+        $user=$this->load_model("user");
+        $res=$user->checkMinQuantity($_POST);
+        print_r($res);
+    }
+
+    public function addToCart()
 {
 
     if($_POST['page']=='cart')
@@ -38,14 +46,13 @@ public function viewCart()
 {
     $user=$this->load_model("user");
     $data['page_title']="Add To Cart";
-    echo "<pre>";print_r($_SESSION);echo "</pre>";
+    $data["category_subcategory"] = $user->get_category_subcategory_data();
     if(isset($_SESSION['variantdata']) && !empty($_SESSION['variantdata'])) {
         $data['variantData'] = $user->getVariantData(implode('","', array_keys($_SESSION['variantdata'])));
     }
     else
         $data['variantData']="";
 
-    print_r($data["variantData"]);
     $this->view("samrons/cart",$data);
 }
 public function removeFromCart()

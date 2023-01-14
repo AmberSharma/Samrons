@@ -1366,3 +1366,592 @@ Stack trace:
 [16-Dec-2022 14:01:07 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 118
 [16-Dec-2022 17:28:54 Asia/Calcutta] PHP Notice:  Undefined index: url_address in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 37
 [16-Dec-2022 17:28:55 Asia/Calcutta] PHP Warning:  mkdir(): File exists in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 119
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: icon in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 63
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: count in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 67
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 68
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: icon in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 63
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: count in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 67
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 68
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: icon in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 63
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: count in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 67
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 68
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: icon in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 63
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: count in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 67
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 68
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: icon in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 63
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: count in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 67
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 68
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: icon in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 63
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: count in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 67
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 68
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: icon in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 63
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: count in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 67
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 68
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: icon in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 63
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: count in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 67
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 68
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: icon in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 63
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: count in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 67
+[12-Jan-2023 23:10:51 Asia/Calcutta] PHP Notice:  Undefined index: name in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 68
+[13-Jan-2023 00:01:58 Asia/Calcutta] PHP Notice:  Undefined index: parentid in /var/www/html/Samrons/public_html/app/controllers/admin.php on line 51
+[13-Jan-2023 22:23:05 Asia/Calcutta] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function User::get_categories(), 0 passed in /var/www/html/Samrons/public_html/app/controllers/home.php on line 15 and exactly 1 expected in /var/www/html/Samrons/public_html/app/models/user.class.php:36
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/home.php(15): User->get_categories()
+#1 /var/www/html/Samrons/public_html/app/core/app.php(52): Home->index('home')
+#2 /var/www/html/Samrons/public_html/public/index.php(17): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/user.class.php on line 36
+[13-Jan-2023 22:23:06 Asia/Calcutta] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function User::get_categories(), 0 passed in /var/www/html/Samrons/public_html/app/controllers/home.php on line 15 and exactly 1 expected in /var/www/html/Samrons/public_html/app/models/user.class.php:36
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/controllers/home.php(15): User->get_categories()
+#1 /var/www/html/Samrons/public_html/app/core/app.php(52): Home->index('favicon.ico')
+#2 /var/www/html/Samrons/public_html/public/index.php(17): App->__construct()
+#3 {main}
+  thrown in /var/www/html/Samrons/public_html/app/models/user.class.php on line 36
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 27
+[13-Jan-2023 22:23:25 Asia/Calcutta] PHP Notice:  Undefined index: category_id in /var/www/html/Samrons/public_html/app/models/user.class.php on line 29
+[13-Jan-2023 23:12:35 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/index.php on line 208
+[13-Jan-2023 23:12:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/index.php on line 208
+[13-Jan-2023 23:16:10 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/index.php on line 211
+[13-Jan-2023 23:16:10 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/index.php on line 211
+[13-Jan-2023 23:16:20 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/index.php on line 211
+[13-Jan-2023 23:16:21 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/index.php on line 211
+[13-Jan-2023 23:16:54 Asia/Calcutta] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/controllers/home.php on line 15
+[13-Jan-2023 23:16:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/index.php on line 211
+[13-Jan-2023 23:16:54 Asia/Calcutta] PHP Warning:  json_decode() expects parameter 1 to be string, array given in /var/www/html/Samrons/public_html/app/controllers/home.php on line 15
+[13-Jan-2023 23:16:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/index.php on line 211
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 131
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 176
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 199
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 240
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 131
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 176
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 199
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 240
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 131
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 176
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 199
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 240
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 131
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 176
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 199
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 240
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 131
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 176
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 199
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 240
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 131
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 176
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 199
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 240
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 131
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 176
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 199
+[14-Jan-2023 00:59:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 240
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:00:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:02:37 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to undefined method User::getProductDataForShop() in /var/www/html/Samrons/public_html/app/controllers/detail.php:28
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/core/app.php(52): detail->searchByCategory('1')
+#1 /var/www/html/Samrons/public_html/public/index.php(17): App->__construct()
+#2 {main}
+  thrown in /var/www/html/Samrons/public_html/app/controllers/detail.php on line 28
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:03:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 104
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 149
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 01:03:27 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 213
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:05:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:07:14 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:07:15 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:07:15 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:07:15 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:07:15 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:07:15 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:07:15 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:07:15 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:07:15 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:07:15 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:07:15 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:07:15 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:07:15 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:28 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:28 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:28 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:28 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:29 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:37 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:51 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:14:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:15:18 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:15:18 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:15:18 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:15:18 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 60
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 105
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 128
+[14-Jan-2023 01:15:19 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 169
+[14-Jan-2023 01:24:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 139
+[14-Jan-2023 01:24:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 180
+[14-Jan-2023 01:24:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 139
+[14-Jan-2023 01:24:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 180
+[14-Jan-2023 01:24:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 139
+[14-Jan-2023 01:24:55 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 180
+[14-Jan-2023 01:24:56 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 139
+[14-Jan-2023 01:24:56 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 180
+[14-Jan-2023 01:24:56 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 139
+[14-Jan-2023 01:24:56 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 180
+[14-Jan-2023 01:24:56 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 139
+[14-Jan-2023 01:24:56 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 180
+[14-Jan-2023 01:24:56 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 139
+[14-Jan-2023 01:24:56 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 180
+[14-Jan-2023 01:26:06 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 01:26:06 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 01:26:06 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 01:26:07 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 01:26:07 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 01:26:07 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 01:26:07 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 16:33:12 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 16:33:12 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 16:33:12 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 16:33:12 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 16:33:12 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 16:33:12 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 16:33:12 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:03:32 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:03:32 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:03:33 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:03:33 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:03:33 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:03:33 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:03:33 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:03:53 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'shop' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[14-Jan-2023 17:05:07 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:05:07 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:05:07 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:05:07 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:05:07 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:05:07 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:05:07 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:05:18 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:05:18 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:05:18 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:05:18 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:05:18 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:05:18 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:05:18 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:07:11 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:07:11 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:07:11 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:07:11 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:07:11 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:07:11 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:08:59 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'shop' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[14-Jan-2023 17:09:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:09:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:09:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:09:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:09:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:09:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:09:06 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'detail' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[14-Jan-2023 17:09:09 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:09:09 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:09:09 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:09:09 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:09:09 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:09:09 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 183
+[14-Jan-2023 17:11:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 172
+[14-Jan-2023 18:01:33 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'detail' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[14-Jan-2023 18:02:06 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'shop' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[14-Jan-2023 18:02:12 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'shop' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[14-Jan-2023 19:18:00 Asia/Calcutta] PHP Notice:  Undefined index: auto_id in /var/www/html/Samrons/public_html/app/views/samrons/admin/vendorList.php on line 84
+[14-Jan-2023 21:45:05 Asia/Calcutta] PHP Notice:  Undefined index: cancelcheque in /var/www/html/Samrons/public_html/app/views/samrons/admin/vendorList.php on line 86
+[14-Jan-2023 22:36:45 Asia/Calcutta] PHP Notice:  Undefined index: dashboardData in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:45 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:46 Asia/Calcutta] PHP Notice:  Undefined index: dashboardData in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:46 Asia/Calcutta] PHP Notice:  Undefined index: dashboardData in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:46 Asia/Calcutta] PHP Notice:  Undefined index: dashboardData in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:46 Asia/Calcutta] PHP Notice:  Undefined index: dashboardData in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:46 Asia/Calcutta] PHP Notice:  Undefined index: dashboardData in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:46 Asia/Calcutta] PHP Notice:  Undefined index: dashboardData in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:46 Asia/Calcutta] PHP Notice:  Undefined index: dashboardData in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:36:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/admin/dashboard.php on line 56
+[14-Jan-2023 22:56:22 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 162
+[14-Jan-2023 22:56:22 Asia/Calcutta] PHP Notice:  Undefined variable: dataCount in /var/www/html/Samrons/public_html/app/views/samrons/admin/viewProducts.php on line 132
+[14-Jan-2023 22:56:41 Asia/Calcutta] PHP Notice:  Undefined variable: data in /var/www/html/Samrons/public_html/app/controllers/vendor.php on line 58
+[14-Jan-2023 22:56:49 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 162
+[14-Jan-2023 22:56:49 Asia/Calcutta] PHP Notice:  Undefined variable: dataCount in /var/www/html/Samrons/public_html/app/views/samrons/admin/viewProducts.php on line 132
+[15-Jan-2023 00:07:44 Asia/Calcutta] PHP Notice:  Array to string conversion in /var/www/html/Samrons/public_html/app/controllers/BaseTrait.php on line 87
+[15-Jan-2023 00:07:49 Asia/Calcutta] PHP Notice:  Array to string conversion in /var/www/html/Samrons/public_html/app/controllers/BaseTrait.php on line 87
+[15-Jan-2023 00:08:02 Asia/Calcutta] PHP Notice:  Array to string conversion in /var/www/html/Samrons/public_html/app/controllers/BaseTrait.php on line 87
+[15-Jan-2023 00:08:22 Asia/Calcutta] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /var/www/html/Samrons/public_html/app/controllers/BaseTrait.php on line 87
+[15-Jan-2023 00:21:46 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 162
+[15-Jan-2023 00:21:46 Asia/Calcutta] PHP Notice:  Undefined variable: dataCount in /var/www/html/Samrons/public_html/app/views/samrons/admin/viewProducts.php on line 132
+[15-Jan-2023 01:03:25 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 162
+[15-Jan-2023 01:03:25 Asia/Calcutta] PHP Notice:  Undefined variable: dataCount in /var/www/html/Samrons/public_html/app/views/samrons/admin/viewProducts.php on line 143
+[15-Jan-2023 01:05:00 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 162
+[15-Jan-2023 01:05:03 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 162
+[15-Jan-2023 01:48:23 Asia/Calcutta] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /var/www/html/Samrons/public_html/app/controllers/vendor.php on line 71
+[15-Jan-2023 01:48:23 Asia/Calcutta] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /var/www/html/Samrons/public_html/app/controllers/vendor.php on line 71
+[15-Jan-2023 01:51:54 Asia/Calcutta] PHP Warning:  array_chunk() expects parameter 1 to be array, boolean given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 485
+[15-Jan-2023 01:51:54 Asia/Calcutta] PHP Notice:  Undefined variable: dataCount in /var/www/html/Samrons/public_html/app/views/samrons/admin/viewOrders.php on line 138
+[15-Jan-2023 01:53:17 Asia/Calcutta] PHP Warning:  array_chunk() expects parameter 1 to be array, boolean given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 485
+[15-Jan-2023 01:54:15 Asia/Calcutta] PHP Warning:  array_chunk() expects parameter 1 to be array, boolean given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 485
+[15-Jan-2023 01:54:23 Asia/Calcutta] PHP Warning:  array_chunk() expects parameter 1 to be array, boolean given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 485
+[15-Jan-2023 01:54:35 Asia/Calcutta] PHP Warning:  array_chunk() expects parameter 1 to be array, boolean given in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 485
+[15-Jan-2023 02:12:52 Asia/Calcutta] PHP Notice:  Undefined index: size in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 220
+[15-Jan-2023 02:12:52 Asia/Calcutta] PHP Notice:  Undefined index: color in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 220
+[15-Jan-2023 02:12:53 Asia/Calcutta] PHP Notice:  Undefined index:  in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 342
+[15-Jan-2023 02:12:53 Asia/Calcutta] PHP Notice:  Undefined index:  in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 342
+[15-Jan-2023 02:12:53 Asia/Calcutta] PHP Notice:  Undefined index:  in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 342
+[15-Jan-2023 02:12:53 Asia/Calcutta] PHP Notice:  Undefined index:  in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 342
+[15-Jan-2023 02:12:53 Asia/Calcutta] PHP Notice:  Undefined index:  in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 342
+[15-Jan-2023 02:12:53 Asia/Calcutta] PHP Notice:  Undefined index:  in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 342
+[15-Jan-2023 02:12:53 Asia/Calcutta] PHP Notice:  Undefined index: size in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 220
+[15-Jan-2023 02:12:53 Asia/Calcutta] PHP Notice:  Undefined index: color in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 220
+[15-Jan-2023 02:12:53 Asia/Calcutta] PHP Notice:  Undefined index:  in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 342
+[15-Jan-2023 02:12:53 Asia/Calcutta] PHP Notice:  Undefined index:  in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 342
+[15-Jan-2023 02:12:53 Asia/Calcutta] PHP Notice:  Undefined index:  in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 342
+[15-Jan-2023 02:12:53 Asia/Calcutta] PHP Notice:  Undefined index:  in /var/www/html/Samrons/public_html/app/models/vendormodel.class.php on line 342
+[15-Jan-2023 02:37:53 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/views/samrons/shop.php on line 222
+[15-Jan-2023 02:37:53 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/views/samrons/shop.php on line 224
+[15-Jan-2023 02:37:53 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/views/samrons/shop.php on line 222
+[15-Jan-2023 02:37:53 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/views/samrons/shop.php on line 224
+[15-Jan-2023 02:38:14 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/views/samrons/shop.php on line 222
+[15-Jan-2023 02:38:14 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/views/samrons/shop.php on line 224
+[15-Jan-2023 02:38:14 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/views/samrons/shop.php on line 222
+[15-Jan-2023 02:38:14 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/views/samrons/shop.php on line 224
+[15-Jan-2023 02:49:06 Asia/Calcutta] PHP Notice:  Undefined index: vendor_id in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 71
+[15-Jan-2023 02:49:06 Asia/Calcutta] PHP Notice:  Undefined index: id in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 71
+[15-Jan-2023 02:49:06 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 103
+[15-Jan-2023 02:50:31 Asia/Calcutta] PHP Notice:  Undefined index: vendor_id in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 71
+[15-Jan-2023 02:50:31 Asia/Calcutta] PHP Notice:  Undefined index: id in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 71
+[15-Jan-2023 02:50:31 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 103
+[15-Jan-2023 02:51:44 Asia/Calcutta] PHP Notice:  Undefined index: vendor_id in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 71
+[15-Jan-2023 02:51:44 Asia/Calcutta] PHP Notice:  Undefined index: id in /var/www/html/Samrons/public_html/app/views/samrons/detail.php on line 71
+[15-Jan-2023 03:24:51 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'cart' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[15-Jan-2023 03:26:37 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'cart' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[15-Jan-2023 03:26:40 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'cart' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[15-Jan-2023 03:27:06 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'cart' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[15-Jan-2023 03:29:17 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'cart' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[15-Jan-2023 03:29:35 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'cart' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[15-Jan-2023 03:30:09 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'cart' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[15-Jan-2023 03:30:38 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'cart' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[15-Jan-2023 03:31:09 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'cart' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[15-Jan-2023 03:32:30 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'cart' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[15-Jan-2023 03:33:13 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'cart' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[15-Jan-2023 03:34:20 Asia/Calcutta] PHP Notice:  Undefined property: cart::$userModel in /var/www/html/Samrons/public_html/app/controllers/cart.php on line 49
+[15-Jan-2023 03:34:20 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to a member function get_category_subcategory_data() on null in /var/www/html/Samrons/public_html/app/controllers/cart.php:49
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/core/app.php(52): cart->viewCart('home')
+#1 /var/www/html/Samrons/public_html/public/index.php(17): App->__construct()
+#2 {main}
+  thrown in /var/www/html/Samrons/public_html/app/controllers/cart.php on line 49
+[15-Jan-2023 03:34:46 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'cart' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[15-Jan-2023 03:35:29 Asia/Calcutta] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'cart' does not have a method 'index' in /var/www/html/Samrons/public_html/app/core/app.php on line 52
+[15-Jan-2023 03:39:00 Asia/Calcutta] PHP Notice:  Undefined index: page_title in /var/www/html/Samrons/public_html/app/views/samrons/header.php on line 8
+[15-Jan-2023 03:41:23 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/checkout.php on line 165
+[15-Jan-2023 03:41:23 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/checkout.php on line 165
+[15-Jan-2023 03:44:16 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/checkout.php on line 63
+[15-Jan-2023 03:44:45 Asia/Calcutta] PHP Notice:  Undefined variable: user in /var/www/html/Samrons/public_html/app/controllers/checkout.php on line 21
+[15-Jan-2023 03:44:45 Asia/Calcutta] PHP Fatal error:  Uncaught Error: Call to a member function get_category_subcategory_data() on null in /var/www/html/Samrons/public_html/app/controllers/checkout.php:21
+Stack trace:
+#0 /var/www/html/Samrons/public_html/app/core/app.php(52): checkout->index('home')
+#1 /var/www/html/Samrons/public_html/public/index.php(17): App->__construct()
+#2 {main}
+  thrown in /var/www/html/Samrons/public_html/app/controllers/checkout.php on line 21
+[15-Jan-2023 03:45:01 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/checkout.php on line 63
+[15-Jan-2023 03:45:48 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/views/samrons/checkout.php on line 63
+[15-Jan-2023 04:09:23 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/models/user.class.php on line 198
+[15-Jan-2023 04:09:42 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/models/user.class.php on line 198
+[15-Jan-2023 04:11:45 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/models/user.class.php on line 143
+[15-Jan-2023 04:11:45 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/models/user.class.php on line 166
+[15-Jan-2023 04:15:10 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/views/samrons/cart.php on line 78
+[15-Jan-2023 04:15:10 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/views/samrons/cart.php on line 82
+[15-Jan-2023 04:15:10 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/views/samrons/cart.php on line 98
+[15-Jan-2023 04:16:04 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/views/samrons/cart.php on line 78
+[15-Jan-2023 04:17:40 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/models/user.class.php on line 143
+[15-Jan-2023 04:21:15 Asia/Calcutta] PHP Notice:  Undefined index: seller_price in /var/www/html/Samrons/public_html/app/models/user.class.php on line 174
+[15-Jan-2023 04:27:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/user.class.php on line 141
+[15-Jan-2023 04:27:36 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /var/www/html/Samrons/public_html/app/models/user.class.php on line 170
+[15-Jan-2023 04:27:36 Asia/Calcutta] PHP Notice:  Undefined variable: order_item_ids in /var/www/html/Samrons/public_html/app/models/user.class.php on line 181

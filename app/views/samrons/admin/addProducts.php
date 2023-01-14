@@ -30,30 +30,30 @@ include_once "inc/leftpanel.php";
     ?>
     <!-- Header-->
 
-    <div class="breadcrumbs">
-        <div class="breadcrumbs-inner">
-            <div class="row m-0">
-                <div class="col-sm-4">
-                    <div class="page-header float-left">
-                        <div class="page-title">
-                            <h1>Dashboard</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-8">
-                    <div class="page-header float-right">
-                        <div class="page-title">
-                            <ol class="breadcrumb text-right">
-                                <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">Table</a></li>
-                                <li class="active">Add Product</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div class="breadcrumbs">-->
+<!--        <div class="breadcrumbs-inner">-->
+<!--            <div class="row m-0">-->
+<!--                <div class="col-sm-4">-->
+<!--                    <div class="page-header float-left">-->
+<!--                        <div class="page-title">-->
+<!--                            <h1>Dashboard</h1>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-sm-8">-->
+<!--                    <div class="page-header float-right">-->
+<!--                        <div class="page-title">-->
+<!--                            <ol class="breadcrumb text-right">-->
+<!--                                <li><a href="#">Dashboard</a></li>-->
+<!--                                <li><a href="#">Table</a></li>-->
+<!--                                <li class="active">Add Product</li>-->
+<!--                            </ol>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     <div class="content">
         <div class="animated fadeIn">
             <form method="post" enctype="multipart/form-data" id="addProductForm">
@@ -271,8 +271,10 @@ include_once "inc/leftpanel.php";
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-header" style="background-color: #587319;"><strong>Final Price</strong></div>
-                            <div class="card-body card-block" style="background-color: #8ead45;"></div>
+                            <div class="card-header" style="background-color: #587319;"><strong>Amount to Seller</strong></div>
+                            <div class="card-body card-block" style="background-color: #8ead45;" id="finalAmount">
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -315,4 +317,5 @@ include_once "inc/leftpanel.php";
 
 
 </body>
+    <script src="<?php echo ASSETS ?>js/vendor.js"></script>
 </html>

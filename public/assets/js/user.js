@@ -129,25 +129,41 @@ $(document).ready(function() {
         });
 
     });
-   /* $(".quantitybutton").click(function () {
 
-        let variantId=$('#variantId').val();
-        let quantity=$('#quantity').val();
-        console.log(variantId);
+    $(".quantitycheck").change(function () {
 
-        console.log(quantity);
+        let variantcombination="";
+        $('input:radio:checked').each(function() {
+            variantcombination += $(this).val();
+
+        });
+        let variantId=$('#'+variantcombination).val();
+
 
         $.ajax({
-            url: '/cart/addToCart',   // sending ajax request to this url
+            url: '/cart/checkMinQuantity',   // sending ajax request to this url
             type: 'post',
             dataType: "JSON",
 
             data: {
                 'variantId':variantId,
-                'quantity':quantity,
-                'page':"cart",
+
             },
             success: function (data) {
+                console.log(data);
+                if(data=="1")
+                {
+                    console.log("inside data");
+                    $("#outOfStock").css("display","block").css("color", "Red");
+                    $("#outOfStock").html("Out Of Stock!!!!!");
+                    $("#addToCart").prop('disabled', true);
+
+                }
+                else{
+                    console.log("inside else");
+                    $("#outOfStock").css("display","none");
+                    $("#addToCart").prop('disabled', false);
+                }
 
             },
             error: function (e) {
@@ -155,6 +171,34 @@ $(document).ready(function() {
             }
         });
 
-    });*/
+    });
+
+    /* $(".quantitybutton").click(function () {
+
+         let variantId=$('#variantId').val();
+         let quantity=$('#quantity').val();
+         console.log(variantId);
+
+         console.log(quantity);
+
+         $.ajax({
+             url: '/cart/addToCart',   // sending ajax request to this url
+             type: 'post',
+             dataType: "JSON",
+
+             data: {
+                 'variantId':variantId,
+                 'quantity':quantity,
+                 'page':"cart",
+             },
+             success: function (data) {
+
+             },
+             error: function (e) {
+                 $("#result").html("Some error encountered.");
+             }
+         });
+
+     });*/
 
 });

@@ -8,7 +8,6 @@ $(document).ready(function() {
     }
 
     function renderSubCategory(element) {
-        console.log("Fdsgsdgsd");
         let self = element;
         let elementId = element.attr("id");
         let elementIdNum = elementId.split("__")[1];
@@ -161,63 +160,6 @@ $(document).ready(function() {
         element.parent().next().append(html);
     }
 
-    $("#addCategoryButton").click(function () {
-        if($("#addCategoryForm").valid()) {
-            let data = new FormData();
-            let formData = $("#addCategoryForm").serializeArray();
-            data.append('source',  'script');
-
-            $.each(formData, function (key, input) {
-                if(input.name == "category") {
-                    if (input.value != 0) {
-                        data.append(input.name, input.value);
-                    }
-                } else {
-                    data.append(input.name, input.value);
-                }
-            });
-            let formField = $('input[name="categoryimage"]');
-            formField.each(function(key, item) {
-                let fileData = item.files;
-                for (var i = 0; i < fileData.length; i++) {
-                    data.append("categoryimage", fileData[i]);
-                }
-            })
-
-            $.ajax({
-                url: '/admin/addCategories',   // sending ajax request to this url
-                type: 'post',
-                dataType: "JSON",
-                processData: false,
-                contentType: false,
-                data: data,
-                success: function (data) {
-                    let response = JSON.parse(JSON.stringify(data));
-                    $(".invalid-feedback").remove();
-                    if(response.success == false) {
-                        $.each(response.error, function(index,jsonObject){
-                            $.each(jsonObject, function(key,val){
-                                let html = '<div id="'+index+'-error" class="error invalid-feedback">';
-                                html += val;
-                                html += '</div>';
-                                $("#"+index).addClass("is-invalid").after(html);
-                            });
-                        });
-                    }
-
-                    if (response.success == true) {
-                        $('.alert').show()
-                        autoHideAlert();
-                        $("#addCategoryForm")[0].reset();
-                    }
-                },
-                error: function (e) {
-                    $("#result").html("Some error encountered.");
-                }
-            });
-        }
-    });
-
     $('#plus').on('click',function () {
         let self = $(this);
         $.ajax({
@@ -274,12 +216,12 @@ $(document).ready(function() {
     });
 
     $("#addProductDetails").click(function () {
-        // if (hasVariantCombinationSelected !== 1) {
-        //     $(".alert-danger").html("Variant Details and Option Value should be selected").show();
-        //     autoHideAlert();
-        //     return;
-        // }
-        // if($("#addProductForm").valid()) {
+        if (hasVariantCombinationSelected !== 1) {
+            $(".alert-danger").html("Variant Details and Option Value should be selected").show();
+            autoHideAlert();
+            return;
+        }
+        if($("#addProductForm").valid()) {
 
             let data = new FormData();
             let formData = $('form').serializeArray();
@@ -336,7 +278,34 @@ $(document).ready(function() {
                     $("#result").html("Some error encountered.");
                 }
             });
-        // }
+        }
+    });
+    $(".updatevariant").click(function () {
+        let quantity=$("#quantity_"+$(this).attr("data-id")).val();
+        let price=$("#price").val();
+        let mrp=$("#mrp").val();
+        $.ajax({
+            url: '/vendor/updateQuantityPrice',   // sending ajax request to this url
+            type: 'post',
+            data: {
+                'id': $(this).attr("data-id"),
+                'proid':$(this).attr("data-pro-id"),
+                'mrp':mrp,
+                'quantity':quantity,
+                'price':price,
+            },
+            success: function (response) {
+                response = JSON.parse(response);
+                if (response.success == true) {
+                    $(".alert-success").html(response.message).show();
+                    autoHideAlert();
+                }
+            },
+            error: function (e) {
+                $("#result").html("Some error encountered.");
+            }
+
+        });
     });
 
     $("input[name=tags]").each(function(i, obj) {
@@ -459,5 +428,30 @@ $(document).ready(function() {
             .attr("value", categoryId)
             .appendTo("#bulkUploadProductForm");
         return true;
+    });
+
+    $('#prosellerprice').change(function() {
+        let sellerPrice = $(this).val();
+        if (!$.isNumeric(sellerPrice)) {
+            $("#finalAmount").html("Amount to be Received: 0");
+        } else {
+            $.ajax({
+                url: '/vendor/get_seller_amount',   // sending ajax request to this url
+                type: 'post',
+                dataType: "JSON",
+                data: {
+                    "seller_price": sellerPrice,
+                },
+                success: function (response) {
+                    $.isNumeric(parseInt(response))
+                    {
+                        $("#finalAmount").html("Amount to be Received: " + response);
+                    }
+                },
+                error: function (e) {
+                    $("#result").html("Some error encountered.");
+                }
+            });
+        }
     });
 });

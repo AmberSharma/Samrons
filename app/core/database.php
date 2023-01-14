@@ -33,7 +33,7 @@ class Database
     {
         $stm = self::$conn->prepare($query);
         $result = $stm->execute($data);
-        //$stm->debugDumpParams();die("Fdsfsd");
+//        $stm->debugDumpParams();
         if ($result) {
             $data = $stm->fetchAll(PDO::FETCH_ASSOC);
             if (is_array($data) && !empty($data)) {
@@ -47,11 +47,13 @@ class Database
     {
         $stm = self::$conn->prepare($query);
         $stm->execute($data);
-
         //$stm->debugDumpParams();die("Fdsfsd");
         if (self::$conn->lastInsertId() != "") {
             return self::$conn->lastInsertId();
+        } else if ($stm->rowCount()) {
+            return $stm->rowCount();
         }
+
         return false;
     }
 

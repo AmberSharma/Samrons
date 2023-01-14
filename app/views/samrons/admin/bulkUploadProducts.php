@@ -239,4 +239,5 @@ include_once "inc/leftpanel.php";
 
 
 </body>
+<script src="<?php echo ASSETS ?>js/vendor.js"></script>
 </html>

@@ -35,6 +35,10 @@ class BaseConstants
     const UPHONE = "uphone";
     const UPASS = "upass";
 
+    const EXTRA_AMOUNT=50;
+    const MINIMUM_QUANTITY=100;
+
+
     const DESCRIPTION = "description";
     const VENDOR_ID = "vendor_id";
     const MRP = "mrp";

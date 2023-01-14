@@ -14,6 +14,42 @@ class User
 
     private $error = "";
 
+    public function get_category_subcategory_data() {
+        $sql = "SELECT id, name, category_image, parent_id, auto_id FROM categories ORDER BY parent_id, auto_id, name";
+        $result = $this->db->read($sql);
+
+        $data = [];
+
+        foreach($result as $key => $value) {
+            $sub_data["id"] = $value["id"];
+            $sub_data["name"] = $value["name"];
+            $sub_data["category_image"] = $value["category_image"];
+            $sub_data["parent_id"] = $value["parent_id"];
+            $data[] = $sub_data;
+        }
+        foreach($data as $key => &$value)
+        {
+            $output[$value["id"]] = &$value;
+        }
+        foreach($data as $key => &$value)
+        {
+            if($value["parent_id"] && isset($output[$value["parent_id"]]))
+            {
+                $output[$value["parent_id"]]["child"][] = &$value;
+            }
+        }
+        foreach($data as $key => &$value)
+        {
+            if($value["parent_id"] && isset($output[$value["parent_id"]]))
+            {
+                unset($data[$key]);
+            }
+        }
+
+        return $data;
+
+    }
+
     public function get_categories($parentid)
     {
         $data['parent_id'] = $parentid;
@@ -59,16 +95,22 @@ class User
     }}*/
         public function getVariantData($variantId)
         {
-            $sql = 'SELECT p.name, p.seller_price,p.vendor_id,pv.id as variant_id,sku_id,product_id,quantity,product_image, combination
-                        FROM product_variants as pv left join products p on p.id=pv.product_id
-                        WHERE pv.id in("'.$variantId.'")';
+            $sql = 'SELECT 
+                        p.auto_id as product_auto_id,
+                        pv.auto_id as variant_auto_id,
+                        v.auto_id as vendor_auto_id,
+                        p.name, p.final_price,pv.id as variant_id,p.vendor_id,sku_id,product_id,quantity,product_image, combination 
+                    FROM product_variants as pv 
+                    INNER JOIN products p on p.id=pv.product_id
+                    INNER JOIN vendors v on p.vendor_id=v.id
+                    WHERE pv.id in("'.$variantId.'")';
+
             $variantData = $this->db->read($sql);
 
             return $variantData;
         }
     public function getAddresses($userUrlAddress)
     {
-        print_r($userUrlAddress);
         $data['url_add']=$userUrlAddress;
         $sql = 'SELECT *
                         FROM user_address 
@@ -98,7 +140,7 @@ class User
         $productData=$this->getVariantData(implode(",", array_keys($_SESSION['variantdata'])));
         foreach ($productData as $value)
         {
-            $total=($value['seller_price']*$_SESSION['variantdata'][$value['variant_id']])+$total;
+            $total=($value['final_price']*$_SESSION['variantdata'][$value['variant_id']])+$total;
         }
 
 
@@ -113,7 +155,15 @@ class User
         $data['user_url_add']=$_SESSION['url_address'];
 
 
-       $query="insert into orders(id, total,shipping_address_id,status,payment_type,user_url_add,timestamps ) values(:id,:total,:shipping_address_id,:status,:payment_type,:user_url_add,:timestamps)";
+       $query="INSERT INTO orders(
+            id, 
+            total,
+            shipping_address_id,
+            status,
+            payment_type,
+            user_url_add,
+            timestamps 
+        ) values(:id,:total,:shipping_address_id,:status,:payment_type,:user_url_add,:timestamps)";
        $orderid = $this->db->write($query, $data);
 
        $data1['order_id']=$orderData['order_id'];
@@ -121,15 +171,31 @@ class User
        {
            $data1['variant_id']=$value['variant_id'];
            $data1['item_quantity']=$_SESSION['variantdata'][$value['variant_id']];
-           $data1['price']=$value['seller_price'];
+           $data1['price']=$value['final_price'];
+           $data1['vendor_id']=$value['vendor_id'];
            $data1['id']= Uuid::uuid4();
-           $query="insert into order_items(id, order_id, variant_id,item_quantity,price) values(:id,:order_id, :variant_id,:item_quantity,:price)";
+           $query="insert into order_items(id, order_id, variant_id,item_quantity,price,vendor_id) values(:id,:order_id, :variant_id,:item_quantity,:price,:vendor_id)";
            $order_item_ids[] = $this->db->write($query, $data1);
        }
 
        return $order_item_ids;
 
     }
+    public function checkMinQuantity()
+    {
+        $data['variantId']=$_POST['variantId'];
+        $sql = "select quantity from product_variants where id=:variantId";
+        $quantity= $this->db->read($sql,$data);
+        $count=$quantity[0]['quantity'];
+
+        if(($count)<BaseConstants::MINIMUM_QUANTITY){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
+
     public function savePayment()
     {
         $total=0;
@@ -137,7 +203,7 @@ class User
 
         foreach ($productData as $value)
         {
-            $total=($value['seller_price']*$_SESSION['variantdata'][$value['variant_id']])+$total;
+            $total=($value['final_price']*$_SESSION['variantdata'][$value['variant_id']])+$total;
         }
         $arr["url"] = $_SESSION["url_address"];
 
@@ -196,9 +262,19 @@ class User
             $data['pancard'] = $_POST['pancard'];
             $data['gst'] = $_POST['gst'];
             $data['caccountnumber'] = $_POST['caccountnumber'];
-            $data['cancelcheque'] = $this->generateRandomString();
-            $data['photo'] = $this->generateRandomString();
-            $data['sign'] = $this->generateRandomString();
+
+            $info = pathinfo($_FILES["cancelcheque"]["name"]);
+            $ext = $info["extension"];
+            $data['cancelcheque'] = $this->generateRandomString().".".$ext;
+
+            $info = pathinfo($_FILES["photo"]["name"]);
+            $ext = $info["extension"];
+            $data['photo'] = $this->generateRandomString().".".$ext;
+
+            $info = pathinfo($_FILES["sign"]["name"]);
+            $ext = $info["extension"];
+            $data['sign'] = $this->generateRandomString().".".$ext;
+
             $data['status'] = 0;
             $data['type'] = 2;
             $query = "INSERT INTO " . BaseConstants::VENDOR_TABLE . " (
@@ -241,25 +317,19 @@ class User
                 $dir_path = getcwd() . "/../app/uploads/";
                 mkdir(getcwd() . "/../app/uploads/" . $result, 0777, true);
 
-                $info = pathinfo($_FILES["cancelcheque"]["name"]);
-                $ext = $info["extension"];
-                $filename = $data['cancelcheque'] . "." . $ext;
+                $filename = $data['cancelcheque'];
 
 
                 $target_dir = $dir_path . $result . "/" . $filename;
                 move_uploaded_file($_FILES["cancelcheque"]["tmp_name"], $target_dir);
 
-                $info = pathinfo($_FILES["photo"]["name"]);
-                $ext = $info["extension"];
-                $filename = $data['photo'] . "." . $ext;
+                $filename = $data['photo'];
 
 
                 $target_dir = $dir_path . $result . "/" . $filename;
                 move_uploaded_file($_FILES["photo"]["tmp_name"], $target_dir);
 
-                $info = pathinfo($_FILES["sign"]["name"]);
-                $ext = $info["extension"];
-                $filename = $data['sign'] . "." . $ext;
+                $filename = $data['sign'];
 
 
                 $target_dir = $dir_path . $result . "/" . $filename;
@@ -386,6 +456,7 @@ class User
                 $result = $this->db->read($query, $data);
                 if (is_array($result)) {
                     $_SESSION['url_address'] = $result[0]["url_address"];
+                    $_SESSION['name'] = strtok($result[0]['name'], " ");
                     header("Location:" . ROOT . "home");
                 } else {
                     header("Location:" . ROOT . "login?message=Invalid Credentials!!!");
@@ -401,6 +472,7 @@ class User
                 if (is_array($result)) {
 
                     $_SESSION['url_address'] = $result[0]['url_address'];
+                    $_SESSION['name'] = strtok($result[0]['name'], " ");
                     $_SESSION['type'] = $result[0]['type'];
                     if ($result[0]['type'] == 1) {
                         header("Location:" . ROOT . "admin/dashboard");
@@ -437,12 +509,12 @@ class User
             $arr["url"] = $_SESSION["url_address"];
 
 
-            $sql = "select * from users where url_address=:url";
+            $sql = "SELECT * FROM users WHERE url_address=:url limit 1";
 
             $checklogin = $this->db->read($sql, $arr);
 
             if (is_array($checklogin)) {
-                return json_decode(json_encode($checklogin[0]), true);
+                return $checklogin[0];
             }
 
         }

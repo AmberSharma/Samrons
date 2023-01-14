@@ -91,30 +91,30 @@ include_once "inc/leftpanel.php";
     include_once 'inc/menu.php';
     ?>
 
-    <div class="breadcrumbs">
-        <div class="breadcrumbs-inner">
-            <div class="row m-0">
-                <div class="col-sm-4">
-                    <div class="page-header float-left">
-                        <div class="page-title">
-                            <h1>Dashboard</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-8">
-                    <div class="page-header float-right">
-                        <div class="page-title">
-                            <ol class="breadcrumb text-right">
-                                <li><a href="#">Dashboard</a></li>
-                                <li><a href="#">Pages</a></li>
-                                <li class="active">Bulk Upload Images</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div class="breadcrumbs">-->
+<!--        <div class="breadcrumbs-inner">-->
+<!--            <div class="row m-0">-->
+<!--                <div class="col-sm-4">-->
+<!--                    <div class="page-header float-left">-->
+<!--                        <div class="page-title">-->
+<!--                            <h1>Dashboard</h1>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-sm-8">-->
+<!--                    <div class="page-header float-right">-->
+<!--                        <div class="page-title">-->
+<!--                            <ol class="breadcrumb text-right">-->
+<!--                                <li><a href="#">Dashboard</a></li>-->
+<!--                                <li><a href="#">Pages</a></li>-->
+<!--                                <li class="active">Bulk Upload Images</li>-->
+<!--                            </ol>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     <div class="content">
         <div class="animated fadeIn">
             <div class="row">
@@ -153,20 +153,20 @@ include_once "inc/leftpanel.php";
     </div><!-- .content -->
 
 
-    <div class="clearfix"></div>
-
-    <footer class="site-footer">
-        <div class="footer-inner bg-white">
-            <div class="row">
-                <div class="col-sm-6">
-                    Copyright &copy; 2018 Ela Admin
-                </div>
-                <div class="col-sm-6 text-right">
-                    Designed by <a href="https://colorlib.com">Colorlib</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+<!--    <div class="clearfix"></div>-->
+<!---->
+<!--    <footer class="site-footer">-->
+<!--        <div class="footer-inner bg-white">-->
+<!--            <div class="row">-->
+<!--                <div class="col-sm-6">-->
+<!--                    Copyright &copy; 2018 Ela Admin-->
+<!--                </div>-->
+<!--                <div class="col-sm-6 text-right">-->
+<!--                    Designed by <a href="https://colorlib.com">Colorlib</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </footer>-->
 
 </div><!-- /#right-panel -->
 
@@ -176,4 +176,5 @@ include_once "inc/leftpanel.php";
 
 
 </body>
+<script src="<?php echo ASSETS ?>js/vendor.js"></script>
 </html>

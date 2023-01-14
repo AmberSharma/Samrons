@@ -21,9 +21,13 @@ class vendor extends controller
     public function index(){
 
         $data['page_title']="Home";
-
+        $data["dashboardData"] = $this->vendorModel->get_dashboardData();
         $this->view("samrons/admin/dashboard",$data);
 
+    }
+
+    public function get_seller_amount() {
+        print_r($this->vendorModel->getAmountToSeller($_POST["seller_price"]));
     }
 
     public function addProducts(){
@@ -53,11 +57,7 @@ class vendor extends controller
             return json_encode($data, true);
         }
     }
-    public function viewOrders(){
 
-        $this->view("samrons/vendor/viewOrders",$data);
-
-    }
 
 
     public function viewProducts($productId = "") {
@@ -66,6 +66,11 @@ class vendor extends controller
         $this->view("samrons/admin/viewProducts",$data);
 
     }
+    public function updateQuantityPrice()
+    {
+        print_r(json_encode($this->vendorModel->updateQuantityPrice($_POST), true));
+    }
+
     public function addProductDetails()
     {
         $this->validateFieldExists([
@@ -100,7 +105,7 @@ class vendor extends controller
             BaseConstants::MRP => "number",
             BaseConstants::SELLER_PRICE => "number",
             BaseConstants::GST => "number",
-            BaseConstants::CATEGORY_ID => "number",
+            BaseConstants::CATEGORY_ID => "uuid",
         );
 
         foreach($inputValidationFields as $key => $value) {
@@ -116,6 +121,14 @@ class vendor extends controller
 
         print_r(json_encode(["success" => false, "error" => $this->getError()], true));
     }
+    public function viewOrders(){
+        $data['page_title']="View Orders";
+        $data['orderData'] = $this->vendorModel->get_orderDetails($_SESSION['url_address']);
+
+        $this->view("samrons/admin/viewOrders",$data);
+
+    }
+
 
     public function bulkUploadProducts()
     {

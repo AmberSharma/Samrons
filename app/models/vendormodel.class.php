@@ -14,6 +14,35 @@ class vendormodel extends basemodel
         $this->db = Database::getInstance();
     }
 
+    public function get_dashboardData() {
+        $dashboardData = [];
+        $activeVendorSql = "SELECT count(1) as count from order_items oi INNER JOIN vendors v on v.id = oi.vendor_id WHERE v.url_address = :url_address";
+        $result = $this->db->read($activeVendorSql, ["url_address" => $_SESSION["url_address"]]);
+        $dashboardData["header"][] = [
+            "name" => "Orders Till Date",
+            "count" => $result[0]["count"],
+            "icon" => "pe-7s-cart"
+        ];
+
+        $activeVendorSql = "SELECT count(1) as count from order_items oi INNER JOIN vendors v on v.id = oi.vendor_id WHERE v.url_address = :url_address AND oi.status = :status";
+        $result = $this->db->read($activeVendorSql, ["url_address" => $_SESSION["url_address"], "status" => "delivered"]);
+        $dashboardData["header"][] = [
+            "name" => "Active Orders",
+            "count" => $result[0]["count"],
+            "icon" => "pe-7s-cart"
+        ];
+
+        $activeVendorSql = "SELECT count(1) as count from order_items oi INNER JOIN vendors v on v.id = oi.vendor_id WHERE v.url_address = :url_address AND oi.status = :status";
+        $result = $this->db->read($activeVendorSql, ["url_address" => $_SESSION["url_address"], "status" => "pending"]);
+        $dashboardData["header"][] = [
+            "name" => "Pending Orders",
+            "count" => $result[0]["count"],
+            "icon" => "pe-7s-cart"
+        ];
+
+        return $dashboardData;
+    }
+
     public function add_categories()
     {
         $data = array();
@@ -21,7 +50,7 @@ class vendormodel extends basemodel
 
         $data['cname'] = $_POST['cname'];
         $data['description'] = $_POST['desc'];
-        $data['parentcat'] = isset($_POST['category']) && ctype_digit($_POST['category']) ? $_POST['category'] : 0;
+        $data['parentcat'] = isset($_POST['category']) ? $_POST['category'] : 0;
         $data['catimage'] = $this->generateRandomString();
         $info = pathinfo($_FILES["categoryimage"]["name"]);
         $ext = $info["extension"];
@@ -110,12 +139,15 @@ class vendormodel extends basemodel
     {
         $sql = "SELECT 
                     p.id, 
+                    p.auto_id as product_auto_id,
                     p.name,
                     p.vendor_id,
+                    v.auto_id as vendor_auto_id,
                     p.category_id,
                     p.mrp, 
                     p.seller_price, 
                     pv.id as variant_id,
+                    pv.auto_id as variant_auto_id,
                     pv.quantity,
                     pv.product_image, 
                     c.name as category_name 
@@ -123,32 +155,37 @@ class vendormodel extends basemodel
                 LEFT JOIN product_variants pv on p.id = pv.product_id 
                 INNER JOIN vendors v ON v.id = p.vendor_id 
                 INNER JOIN categories c on c.id = p.category_id 
-                WHERE v.url_address = '".$_SESSION["url_address"]."' ";
+               WHERE v.url_address = '" . $_SESSION["url_address"] . "'  and p.mrp>0 and p.seller_price>0 and pv.quantity>0";
 
         $limit = 3;
 
         $result = $this->db->read($sql);
         $productData = [];
 
-        foreach($result as $key => $value) {
-            if (!isset($productData[$value["id"]])) {
-                $productData[$value["id"]] = [
-                    "name" => $value["name"],
-                    "vendor_id" => $value["vendor_id"],
-                    "category_id" => $value["category_id"],
-                    "mrp" => $value["mrp"],
-                    "seller_price" => $value["seller_price"],
-                    "category_name" => $value["category_name"]
+        if (!empty($result)) {
+            foreach ($result as $key => $value) {
+                if (!isset($productData[$value["id"]])) {
+                    $productData[$value["id"]] = [
+                        "product_auto_id" => $value["product_auto_id"],
+                        "name" => $value["name"],
+                        "vendor_id" => $value["vendor_id"],
+                        "vendor_auto_id" => $value["vendor_auto_id"],
+                        "category_id" => $value["category_id"],
+                        "mrp" => $value["mrp"],
+                        "seller_price" => $value["seller_price"],
+                        "category_name" => $value["category_name"]
+                    ];
+                }
+
+                $productData[$value["id"]]["variant_data"][$value["variant_id"]] = [
+                    "variant_auto_id" => $value["variant_auto_id"],
+                    "quantity" => $value["quantity"],
+                    "product_image" => $value["product_image"]
                 ];
             }
-
-            $productData[$value["id"]]["variant_data"][$value["variant_id"]] = [
-                "quantity" => $value["quantity"],
-                "product_image" => $value["product_image"]
-            ];
         }
 
-        return array_chunk($productData, $limit);
+        return array_chunk($productData, $limit,true);
     }
 
 
@@ -166,7 +203,7 @@ class vendormodel extends basemodel
             $productData = array();
 
             $urladd['url_address'] = $_SESSION["url_address"];
-            $query = "select id from vendors where url_address=:url_address";
+            $query = "select id, auto_id from vendors where url_address=:url_address";
             $vendor_id = $this->db->read($query, $urladd);
             $query = "select id,name from options";
             $optionData = $this->db->read($query);
@@ -180,7 +217,7 @@ class vendormodel extends basemodel
                 switch ($column) {
                     case "size":
                     case "color":
-                        $variantData["options"][] = $optionDataRevArr[$column];
+                        $variantData["options"][] = $optionDataRevArr[ucfirst($column)];
                         unset($_POST["productdetails"][$column]);
                         break;
                     case "image_url":
@@ -313,7 +350,9 @@ class vendormodel extends basemodel
                     $productVariantImageUrl['url'] = $productVariant['productImage'] = $variantData['image_url'][$key];
                     unset($variantData['image_url'][$key]);
                 } else {
-                    $productVariant['productImage'] = $this->generateRandomString();
+                    $info = pathinfo($_FILES["productimage"]["name"][$key]);
+                    $ext = $info["extension"];
+                    $productVariant['productImage'] = $this->generateRandomString().".".$ext;
                 }
 
                 $productVariant["combination"] = trim($combination, ",");
@@ -338,13 +377,13 @@ class vendormodel extends basemodel
                     return ["success" => false, "error" => "Could not save product variant"];
                 }
 
-                if (!is_dir(getcwd() . "/../app/uploads/" . $data['vendor_id'] . "/" . $productId . "_" . $productVariantId[$key])) {
-                    mkdir(getcwd() . "/../app/uploads/" . $data['vendor_id'] . "/" . $productId . "_" . $productVariantId[$key], 0777, true);
+                if (!is_dir(getcwd() . "/../app/uploads/" . $vendor_id[0]['auto_id'] . "/" . $productId . "_" . $productVariantId[$key])) {
+                    mkdir(getcwd() . "/../app/uploads/" . $vendor_id[0]['auto_id'] . "/" . $productId . "_" . $productVariantId[$key], 0777, true);
                 }
                 if (!empty($productVariantImageUrl['url'])) {
                     $oldFile = getcwd() . "/../app/uploads/bulk_images/" . $urladd['url_address'] . "/" . $productVariantImageUrl['url'];
                     $dummyImgPath = getcwd() . "/../app/uploads/bulk_images/dummy-product.jpg";
-                    $newName = getcwd() . "/../app/uploads/" . $data['vendor_id'] . "/" . $productId . "_" . $productVariantId[$key] . "/" . $productVariantImageUrl['url'];
+                    $newName = getcwd() . "/../app/uploads/" . $vendor_id[0]['auto_id'] . "/" . $productId . "_" . $productVariantId[$key] . "/" . $productVariantImageUrl['url'];
                     $renamed = false;
                     if ( file_exists($oldFile) && is_readable($oldFile) ) {
                         $renamed = rename($oldFile, $newName);
@@ -357,14 +396,12 @@ class vendormodel extends basemodel
 
                     $dir_path = getcwd() . "/../app/uploads/";
 
-                    $info = pathinfo($_FILES["productimage"]["name"][$key]);
-                    $ext = $info["extension"];
                     $filename = $productVariant['productImage'];
-                    $target_dir = $dir_path .$data['vendor_id']."/". $productId . "_" . $productVariantId[$key] . "/" . $filename;
+                    $target_dir = $dir_path .$vendor_id[0]['auto_id']."/". $productId . "_" . $productVariantId[$key] . "/" . $filename;
                     $moved = move_uploaded_file($_FILES["productimage"]["tmp_name"][$key], $target_dir);
                     if (!$moved) {
                         $dummyImgPath = getcwd() . "/../app/uploads/bulk_images/dummy-product.jpg";
-                        $newName = getcwd() . "/../app/uploads/" . $data['vendor_id'] . "/" . $productId . "_" . $productVariantId[$key] . "/" . $productVariantImageUrl['url'];
+                        $newName = getcwd() . "/../app/uploads/" . $vendor_id[0]['auto_id'] . "/" . $productId . "_" . $productVariantId[$key] . "/" . $productVariantImageUrl['url'];
                         copy($dummyImgPath , $newName);
                     }
                 }
@@ -420,6 +457,59 @@ class vendormodel extends basemodel
             return json_encode($optionvalues, true);
         }
     }
+    public function get_orderDetails($vendor_id)
+    {
+        $sql = "select oi.auto_id as id,
+            o.timestamps ,
+            oi.item_quantity,
+            oi.price,
+            oi.variant_id,
+            oi.vendor_id,
+            pv.product_id,
+            ua.add_line_1,
+            ua.add_line_2,
+            ua.country,
+            ua.state,
+            ua.city,
+            ua.pincode,
+            pv.product_image from order_items oi 
+            left join orders o on oi.order_id=o.id  
+            inner join user_address ua on o.shipping_address_id=ua.id  
+            inner join vendors v on oi.vendor_id = v.id
+            inner join product_variants pv on oi.variant_id=pv.id where v.url_address = '" . $vendor_id . "' ";
+
+        $limit = 2;
+
+        $orderData = $this->db->read($sql);
+        if (!empty($orderData)) {
+            return array_chunk($orderData, $limit);
+        } else {
+            return [];
+        }
+    }
+
+    public function updateQuantityPrice()
+    {
+        $updatedata['id'] = $_POST["id"];
+        $updatedata['quantity'] = $_POST["quantity"];
+
+
+        $sql = "UPDATE product_variants SET quantity=:quantity WHERE id=:id";
+        $this->db->write($sql, $updatedata);
+
+
+        $updatepdata['price'] = $_POST["price"];
+        $updatepdata['mrp'] = $_POST["mrp"];
+        $updatepdata['proid'] = $_POST["proid"];
+        $query = "UPDATE products SET seller_price=:price,mrp=:mrp WHERE id=:proid";
+        $this->db->write($query, $updatepdata);
+
+
+        return ["success" => true, "message" => "Updated Successfully"];
+
+
+    }
+
 
     public function get_options()
     {
@@ -499,11 +589,39 @@ class vendormodel extends basemodel
         return $amountToSeller;
     }
 
+    function searchProducts($searchText)
+    {
+        $query = 'SELECT *,pv.id as variant_id FROM products as p left join product_variants as pv on p.id=pv.product_id WHERE p.tag like "%' . $searchText . '%" and pv.quantity>0';
+        print_r($query);
+        $catIdArr = $this->db->read($query);
+        if (is_array($catIdArr)) {
+            $productDetails = [];
+
+            foreach ($catIdArr as $key => $value) {
+                $productDetails[$value['product_id']] = $value;
+            }
+            return $productDetails;
+        }
+    }
+
     function getProductDataForShop($categoryIds,$type){
 
         if ($type == 'shop') {
 
-            $query='SELECT *,pv.id as variant_id FROM products as p left join product_variants as pv on p.id=pv.product_id WHERE p.category_id in('.$categoryIds.')';
+            $query='SELECT 
+                    p.auto_id as product_auto_id,
+                    pv.auto_id as variant_auto_id,
+                    v.auto_id as vendor_auto_id,
+                    pv.product_image,
+                    p.name,
+                    p.mrp,
+                    p.final_price,
+                    pv.product_id,
+                    pv.id as variant_id 
+                    FROM products as p 
+                    LEFT JOIN product_variants as pv ON p.id=pv.product_id 
+                    INNER JOIN vendors v ON v.id = p.vendor_id
+                    WHERE p.category_id in("'.$categoryIds.'") and pv.quantity > 0';
 
             $catIdArr= $this->db->read($query);
             if (is_array($catIdArr) ) {
@@ -517,12 +635,22 @@ class vendormodel extends basemodel
 
         elseif ($type=='detail')
         {
-            $query='SELECT p.*,group_concat(pv.id SEPARATOR "|") AS variant_id, 
+            $query='SELECT 
+                        p.auto_id as product_auto_id,
+                        v.auto_id as vendor_auto_id,
+                        p.name,
+                        p.mrp,
+                        p.final_price,
+                        p.description,
+                        group_concat(pv.auto_id SEPARATOR "|") AS variant_auto_id, 
+                        group_concat(pv.id SEPARATOR "|") AS variant_id, 
                         group_concat(quantity SEPARATOR "|") AS quantity, 
                         group_concat(combination SEPARATOR "|") AS combination,
                         group_concat(product_image SEPARATOR "|") AS image 
-                    FROM products AS p LEFT JOIN product_variants AS pv on p.id=pv.product_id where p.id="'.$categoryIds.'" 
-                     group by p.name, p.description, p.vendor_id, p.category_id, p.mrp, p.seller_price, p.gst, p.brand, p.weight, p.style_code, p.fabric, p.sleeve_length, p.country_origin, p.fit_shape, p.occasion, p.pattern_type, p.packers_detail, p.collar, p.neck, p.solid, p.length, p.tag, p.final_price, p.auto_id';
+                        FROM product_variants AS pv 
+                        INNER JOIN products AS p on p.id=pv.product_id 
+                        INNER JOIN vendors v ON v.id = p.vendor_id
+                        WHERE p.id="'.$categoryIds.'" group by p.auto_id, v.auto_id';
             $productDetailsArr= $this->db->read($query);
 
             if (is_array($productDetailsArr) ){
@@ -534,6 +662,7 @@ class vendormodel extends basemodel
                     $variantCombinations = explode( "|",$value["combination"]);
                     $variantImages = explode( "|",$value["image"]);
                     $variantIds = explode( "|",$value["variant_id"]);
+                    $variantAutoIds = explode( "|",$value["variant_auto_id"]);
                     $quantity = explode( "|",$value["quantity"]);
                     $variantWithCombination = [];
                     foreach($variantCombinations as $key1 => $value1) {
@@ -557,7 +686,7 @@ class vendormodel extends basemodel
                     unset($productDetailsArr[$key]["quantity"]);
                 }
 
-                return [$productDetailsArr, $variantIds, $variantOption, $variantImages, $quantity, $variantWithCombination];
+                return [$productDetailsArr, $variantIds, $variantOption, $variantImages, $quantity, $variantWithCombination, $variantAutoIds];
             }
         }
     }

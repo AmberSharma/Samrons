@@ -5,6 +5,10 @@ $(document).ready(function() {
             return this.optional(element) || /^[a-z\s]+$/i.test(value);
     }, "Only Alphabetical characters");
 
+    jQuery.validator.addMethod("alphanumeric", function(value, element) {
+        return this.optional(element) || /^[\w., ']+$/i.test(value);
+    }, "Letters, numbers, comma, space and dot only please");
+
     $.validator.addMethod(
         "regex",
         function(value, element, regexp) {
@@ -174,9 +178,9 @@ $(document).ready(function() {
                 required: true,
             },
             description: {
-                letterswithspace: true,
+                alphanumeric: true,
                 required: true,
-                maxlength: 255
+                maxlength: 1000
             }
         },
         messages:{

@@ -14,19 +14,13 @@ class Admin extends controller
 
     public function __construct()
     {
-        //$this->vendorModel = $this->load_model("vendormodel");
+        $this->vendorModel = $this->load_model("vendormodel");
         $this->adminModel = $this->load_model("adminmodel");
     }
 
     public function index(){
-//        $user=$this->load_model("user");
-//        $user_data=$user->check_login();
-//        if(is_array($user_data))
-//        {
-//            $data['user_data']=$user_data;
-//        }
         $data['page_title']="Home";
-
+        $data["dashboardData"] = $this->adminModel->get_dashboardData();
         $this->view("samrons/admin/dashboard",$data);
 
     }
@@ -37,12 +31,6 @@ class Admin extends controller
         return $this->adminModel->reject_vendor($_POST["id"]);
     }
     public function vendorList(){
-//        $user=$this->load_model("user");
-//        $user_data=$user->check_login();
-//        if(is_array($user_data))
-//        {
-//            $data['user_data']=$user_data;
-//        }
         $data['page_title']="Home";
         $data['vendordata']= $this->adminModel->get_vendor();
         $this->view("samrons/admin/vendorList",$data);
@@ -53,6 +41,16 @@ class Admin extends controller
         $data['categories']=$this->vendorModel->get_categories(0);
 
         $this->view("samrons/admin/addCategories",$data);
+    }
+
+    public function getsubcategories()
+    {
+        if (!empty($_POST["source"]) && $_POST["source"] == "script") {
+            print_r($this->vendorModel->get_categories($_POST['parentid']));
+        } else {
+            $data['categories'] = $this->vendorModel->get_categories($_POST['parentid']);
+            return $data;
+        }
     }
 
     public function addCategories()
